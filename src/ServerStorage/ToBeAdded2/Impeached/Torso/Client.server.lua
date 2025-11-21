@@ -1,0 +1,124 @@
+-- Saved by UniversalSynSaveInstance (Join to Copy Games) https://discord.gg/wx4ThpAsmw
+
+-- Bytecode (Base64):
+-- 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
+
+-- Decompiled with the Synapse Z Luau decompiler.
+-- NOTE: Currently in beta! Not representative of final product.
+
+local v0_0_ = script
+local v0_2_ = workspace
+v0_0_ = v0_0_:IsDescendantOf(v0_2_)
+if not v0_0_ then
+    return
+end
+v0_0_ = game
+v0_2_ = "RunService"
+v0_0_ = v0_0_:GetService(v0_2_)
+local v0_3_ = script
+v0_2_ = v0_3_.Parent
+local v0_1_ = v0_2_.Parent
+v0_3_ = "Torso"
+v0_1_ = v0_1_:WaitForChild(v0_3_)
+v0_3_ = "Title"
+v0_1_ = v0_1_:WaitForChild(v0_3_)
+v0_3_ = "TitleUI"
+v0_1_ = v0_1_:WaitForChild(v0_3_)
+v0_2_ = v0_1_:GetChildren()
+local v0_4_ = script
+v0_3_ = v0_4_.Parent
+local v0_6_ = script
+local v0_5_ = v0_6_.Parent
+v0_4_ = v0_5_.Parent
+v0_6_ = "HumanoidRootPart"
+v0_4_ = v0_4_:WaitForChild(v0_6_)
+local v0_7_ = "Orbs"
+v0_5_ = v0_4_:WaitForChild(v0_7_)
+local v0_8_ = "Top"
+v0_6_ = v0_4_:WaitForChild(v0_8_)
+if not v0_1_ then
+    return
+end
+v0_7_ = 0
+v0_8_ = function(a1, a2, a3)
+    local v1_5_ = a3 / a2
+    local sin = math.sin
+    local v1_4_ = sin(v1_5_)
+    local v1_3_ = a1 * v1_4_
+    return v1_3_
+end
+local v0_9_ = ipairs
+local v0_10_ = v0_2_
+local v0_9_, v0_10_, v0_11_ = v0_9_(v0_10_)
+for v0_12_, v0_13_ in v0_9_, v0_10_, v0_11_ do
+    local v0_16_ = "O"
+    local v0_17_ = v0_13_.Position
+    v0_13_:SetAttribute(v0_16_, v0_17_)
+end
+v0_9_ = nil
+v0_10_ = nil
+local v0_13_ = "ChainWeld"
+v0_11_ = v0_3_:WaitForChild(v0_13_)
+v0_11_.Part0 = v0_3_
+v0_13_ = "ImpaleWeld"
+v0_11_ = v0_3_:WaitForChild(v0_13_)
+v0_11_.Part0 = v0_3_
+v0_13_ = "ChainWeld"
+v0_11_ = v0_3_:WaitForChild(v0_13_)
+local v0_14_ = "Chain"
+local v0_12_ = v0_3_:WaitForChild(v0_14_)
+v0_11_.Part1 = v0_12_
+v0_13_ = "ImpaleWeld"
+v0_11_ = v0_3_:WaitForChild(v0_13_)
+v0_14_ = "Impale"
+v0_12_ = v0_3_:WaitForChild(v0_14_)
+v0_11_.Part1 = v0_12_
+v0_13_ = "BaseWeld"
+v0_11_ = v0_4_:WaitForChild(v0_13_)
+v0_11_.Part0 = v0_4_
+v0_13_ = "FloorWeld"
+v0_11_ = v0_4_:WaitForChild(v0_13_)
+v0_11_.Part0 = v0_4_
+v0_13_ = "BaseWeld"
+v0_11_ = v0_4_:WaitForChild(v0_13_)
+v0_14_ = "Base"
+v0_12_ = v0_4_:WaitForChild(v0_14_)
+v0_11_.Part1 = v0_12_
+v0_13_ = "FloorWeld"
+v0_11_ = v0_4_:WaitForChild(v0_13_)
+v0_14_ = "FloorPart"
+v0_12_ = v0_4_:WaitForChild(v0_14_)
+v0_11_.Part1 = v0_12_
+v0_11_ = v0_0_.RenderStepped
+v0_13_ = function(a1)
+    local v2_1_ = v0_1_
+    if v2_1_ then
+        v2_1_ = script
+        local v2_3_ = game
+        v2_1_ = v2_1_:IsDescendantOf(v2_3_)
+        if not v2_1_ then
+            v2_1_ = v0_9_
+            v2_1_:Disconnect()
+            v2_1_ = v0_10_
+            v2_1_:Disconnect()
+            return
+        end
+    end
+    v2_1_ = v0_9_
+    v2_1_:Disconnect()
+    v2_1_ = v0_10_
+    v2_1_:Disconnect()
+    return
+end
+v0_11_ = v0_11_:Connect(v0_13_)
+v0_9_ = v0_11_
+v0_12_ = script
+v0_11_ = v0_12_.AncestryChanged
+v0_13_ = function()
+    local v3_0_ = v0_9_
+    v3_0_:Disconnect()
+    v3_0_ = v0_10_
+    v3_0_:Disconnect()
+end
+v0_11_ = v0_11_:Once(v0_13_)
+v0_10_ = v0_11_

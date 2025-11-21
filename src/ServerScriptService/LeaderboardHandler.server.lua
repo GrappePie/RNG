@@ -1,0 +1,1 @@
+print("Hello Leaderboard Handler!")

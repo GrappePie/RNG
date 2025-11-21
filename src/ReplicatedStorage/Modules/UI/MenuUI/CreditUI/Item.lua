@@ -1,0 +1,239 @@
+-- Saved by UniversalSynSaveInstance (Join to Copy Games) https://discord.gg/wx4ThpAsmw
+
+-- Decompiled with the Synapse Z Luau decompiler.
+-- NOTE: Currently in beta! Not representative of final product.
+
+local v0_0_ = game
+local v0_2_ = "Players"
+v0_0_ = v0_0_:GetService(v0_2_)
+local v0_1_ = game
+local v0_3_ = "ReplicatedStorage"
+v0_1_ = v0_1_:GetService(v0_3_)
+local v0_4_ = "Modules"
+v0_2_ = v0_1_:WaitForChild(v0_4_)
+local v0_5_ = "UI"
+v0_3_ = v0_2_:WaitForChild(v0_5_)
+local v0_6_ = "Components"
+v0_4_ = v0_3_:WaitForChild(v0_6_)
+v0_5_ = require
+local v0_8_ = "Quad"
+v0_5_ = v0_5_(v0_3_:WaitForChild(v0_8_))
+v0_6_ = require
+local v0_9_ = "Utility"
+v0_6_ = v0_6_(v0_2_:WaitForChild(v0_9_))
+local v0_7_ = v0_5_.Lang
+v0_8_ = v0_5_.Round
+v0_9_ = v0_5_.Class
+local v0_10_ = v0_5_.Mount
+local v0_11_ = v0_5_.Store
+local v0_12_ = v0_5_.Event
+local v0_13_ = v0_5_.Tween
+local v0_14_ = v0_5_.Signal
+local v0_15_ = v0_9_
+local v0_16_ = "Frame"
+v0_15_ = v0_15_(v0_16_)
+v0_16_ = v0_9_
+local v0_17_ = "CanvasGroup"
+v0_16_ = v0_16_(v0_17_)
+v0_17_ = v0_9_
+local v0_18_ = "ImageLabel"
+v0_17_ = v0_17_(v0_18_)
+v0_18_ = v0_9_
+local v0_19_ = "TextLabel"
+v0_18_ = v0_18_(v0_19_)
+v0_19_ = v0_9_
+local v0_20_ = "UIStroke"
+v0_19_ = v0_19_(v0_20_)
+v0_20_ = v0_9_
+local v0_21_ = "UIGradient"
+v0_20_ = v0_20_(v0_21_)
+v0_21_ = v0_9_
+local v0_24_ = "Corner"
+v0_21_ = v0_21_(v0_4_:WaitForChild(v0_24_))
+local v0_22_ = v0_9_.Extend
+v0_22_ = v0_22_()
+local new = Color3.new
+local v0_23_ = new()
+v0_15_.BackgroundColor3 = v0_23_
+v0_23_ = 0
+v0_15_.BorderSizePixel = v0_23_
+local new = Color3.new
+v0_23_ = new()
+v0_16_.BackgroundColor3 = v0_23_
+v0_23_ = 0
+v0_16_.BorderSizePixel = v0_23_
+local new = Color3.new
+v0_23_ = new()
+v0_17_.BackgroundColor3 = v0_23_
+v0_23_ = 0
+v0_17_.BorderSizePixel = v0_23_
+local new = Color3.new
+v0_24_ = 1
+local v0_25_ = 1
+local v0_26_ = 1
+v0_23_ = new(v0_24_, v0_25_, v0_26_)
+v0_18_.TextColor3 = v0_23_
+v0_23_ = v0_5_.FontBold
+v0_18_.FontFace = v0_23_
+v0_23_ = 0
+v0_18_.BorderSizePixel = v0_23_
+local new = Color3.new
+v0_23_ = new()
+v0_18_.BackgroundColor3 = v0_23_
+local new = Color3.new
+v0_24_ = 1
+v0_25_ = 1
+v0_26_ = 1
+v0_23_ = new(v0_24_, v0_25_, v0_26_)
+v0_19_.Color = v0_23_
+local Border = Enum.ApplyStrokeMode.Border
+v0_19_.ApplyStrokeMode = Border
+v0_23_ = 1.500000
+v0_19_.Thickness = v0_23_
+v0_23_ = 0.500000
+v0_19_.Transparency = v0_23_
+v0_23_ = 90
+v0_20_.Rotation = v0_23_
+v0_23_ = function(a1, a2)
+    local v1_4_ = "IsHead"
+    local v1_5_ = false
+    a2:Default(v1_4_, v1_5_)
+    v1_4_ = "RobloxId"
+    v1_5_ = 0
+    a2:Default(v1_4_, v1_5_)
+    v1_4_ = "Role"
+    v1_5_ = "Developer"
+    a2:Default(v1_4_, v1_5_)
+    v1_4_ = "Color"
+    local new = ColorSequence.new
+    local new_0 = Color3.new
+    local v1_7_ = 1
+    local v1_8_ = 1
+    local v1_9_ = 1
+    a2:Default(new(new_0(v1_7_, v1_8_, v1_9_)))
+    v1_4_ = "Order"
+    v1_5_ = 0
+    a2:Default(v1_4_, v1_5_)
+end
+v0_22_.Init = v0_23_
+v0_23_ = function(a1, a2)
+    local v2_2_ = v0_16_
+    local v2_3_ = table.create(4)
+    local v2_8_ = a2
+    local v2_9_ = "IsHead"
+    v2_8_ = v2_8_(v2_9_)
+    local v2_10_ = function(a1, a2)
+        local fromScale = UDim2.fromScale
+        local v3_3_ = 1
+        if a2 then
+            local v3_4_ = 0.120000
+        else
+            local v3_4_ = 0.090000
+        end
+        local v3_2_ = fromScale(v3_3_, nil)
+        return v3_2_
+    end
+    v2_8_ = v2_8_:With(v2_10_)
+    v2_3_.Size = v2_8_
+    v2_8_ = 1
+    v2_3_.BackgroundTransparency = v2_8_
+    local v2_4_ = v0_20_
+    local v2_5_ = {}
+    local v2_6_ = a2
+    local v2_7_ = "Color"
+    v2_6_ = v2_6_(v2_7_)
+    v2_5_.Color = v2_6_
+    v2_4_ = v2_4_(v2_5_)
+    v2_5_ = v0_15_
+    v2_6_ = table.create(1)
+    v2_8_ = 0.600000
+    v2_6_.BackgroundTransparency = v2_8_
+    local fromScale = UDim2.fromScale
+    v2_9_ = 1
+    v2_10_ = 1
+    v2_8_ = fromScale(v2_9_, v2_10_)
+    v2_6_.Size = v2_8_
+    v2_7_ = v0_18_
+    v2_8_ = {}
+    local new = Vector2.new
+    v2_10_ = 0
+    local v2_11_ = 0.500000
+    v2_9_ = new(v2_10_, v2_11_)
+    v2_8_.AnchorPoint = v2_9_
+    v2_9_ = 1
+    v2_8_.BackgroundTransparency = v2_9_
+    local fromScale = UDim2.fromScale
+    v2_10_ = 0.900000
+    v2_11_ = 0.900000
+    v2_9_ = fromScale(v2_10_, v2_11_)
+    v2_8_.Size = v2_9_
+    local fromScale = UDim2.fromScale
+    v2_10_ = 0.010000
+    v2_11_ = 0.500000
+    v2_9_ = fromScale(v2_10_, v2_11_)
+    v2_8_.Position = v2_9_
+    v2_9_ = true
+    v2_8_.TextScaled = v2_9_
+    local Left = Enum.TextXAlignment.Left
+    v2_8_.TextXAlignment = Left
+    v2_9_ = "Loading..."
+    v2_8_.Text = v2_9_
+    v2_10_ = v0_12_
+    v2_9_ = v2_10_.CreatedAsync
+    v2_10_ = function(a1)
+        local v4_1_ = function()
+            local v5_0_ = a1
+            local v5_2_ = "@%* | %*"
+            local v5_5_ = v0_6_
+            local v5_4_ = v5_5_.GetUsernameById
+            local v5_6_ = a2
+            v5_5_ = v5_6_.RobloxId
+            v5_4_ = v5_4_(v5_5_)
+            v5_6_ = a2
+            v5_5_ = v5_6_.Role
+            v5_2_ = v5_2_:format(v5_4_, v5_5_)
+            local v5_1_ = v5_2_
+            v5_0_.Text = v5_1_
+        end
+        local v4_3_ = "@%* | %*"
+        local v4_6_ = v0_6_
+        local v4_5_ = v4_6_.GetUsernameById
+        local v4_7_ = a2
+        v4_6_ = v4_7_.RobloxId
+        v4_5_ = v4_5_(v4_6_)
+        v4_7_ = a2
+        v4_6_ = v4_7_.Role
+        v4_3_ = v4_3_:format(v4_5_, v4_6_)
+        local v4_2_ = v4_3_
+        a1.Text = v4_2_
+        v4_2_ = a2
+        v4_3_ = "RobloxId,Role"
+        v4_2_ = v4_2_(v4_3_)
+        local v4_4_ = v4_1_
+        v4_2_:Observe(v4_4_)
+    end
+    v2_8_[v2_9_] = v2_10_
+    -- WARNING: SETLIST_C0, output may be wrong!
+    v2_6_ = {v2_7_, v2_7_(v2_8_)}
+    v2_5_ = v2_5_(v2_6_)
+    v2_6_ = v0_19_
+    v2_7_ = table.create(1)
+    v2_8_ = v0_20_
+    v2_9_ = {}
+    v2_10_ = a2
+    v2_11_ = "Color"
+    v2_10_ = v2_10_(v2_11_)
+    v2_9_.Color = v2_10_
+    -- WARNING: SETLIST_C0, output may be wrong!
+    v2_7_ = {v2_8_, v2_8_(v2_9_)}
+    v2_6_ = v2_6_(v2_7_)
+    v2_7_ = v0_21_
+    v2_8_ = {}
+    v2_9_ = 0.300000
+    v2_8_.Size = v2_9_
+    -- WARNING: SETLIST_C0, output may be wrong!
+    v2_3_ = {v2_4_, v2_7_(v2_8_)}
+    return v2_2_(v2_3_)
+end
+v0_22_.Render = v0_23_
+return v0_22_

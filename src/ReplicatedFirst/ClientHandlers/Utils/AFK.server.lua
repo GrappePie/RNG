@@ -1,0 +1,8 @@
+local UserInputService = game:GetService("UserInputService")
+local module_upvr = require(game:GetService("ReplicatedStorage"):WaitForChild("Packets"):WaitForChild("Global"))
+UserInputService.WindowFocused:Connect(function()
+	module_upvr.SetAFK.send(false)
+end)
+UserInputService.WindowFocusReleased:Connect(function()
+	module_upvr.SetAFK.send(true)
+end)

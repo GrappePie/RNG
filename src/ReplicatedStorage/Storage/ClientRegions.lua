@@ -1,0 +1,112 @@
+-- Saved by UniversalSynSaveInstance (Join to Copy Games) https://discord.gg/wx4ThpAsmw
+
+-- Decompiled with the Synapse Z Luau decompiler.
+-- NOTE: Currently in beta! Not representative of final product.
+
+local v0_0_ = {}
+local v0_1_ = {}
+local v0_2_ = "Sol's Island"
+v0_1_.DisplayName = v0_2_
+v0_2_ = "island of the beginning"
+v0_1_.Description = v0_2_
+v0_0_.MainWorld = v0_1_
+v0_1_ = {}
+v0_2_ = "The Cave"
+v0_1_.DisplayName = v0_2_
+v0_2_ = "a place where magic and spirits hide"
+v0_1_.Description = v0_2_
+v0_2_ = true
+v0_1_.UseCustomSound = v0_2_
+v0_0_.Cave = v0_1_
+v0_1_ = {}
+v0_2_ = "Stella's Sanctuary"
+v0_1_.DisplayName = v0_2_
+v0_2_ = 1
+v0_1_.Priority = v0_2_
+local new = Color3.new
+local v0_3_ = 1
+local v0_4_ = 0.878431
+local v0_5_ = 0.431373
+v0_2_ = new(v0_3_, v0_4_, v0_5_)
+v0_1_.RegionColor3 = v0_2_
+v0_2_ = true
+v0_1_.UseCustomSound = v0_2_
+v0_2_ = "A witch's dwelling hidden by dark spell."
+v0_1_.Description = v0_2_
+v0_0_.Stella = v0_1_
+v0_1_ = {}
+v0_2_ = "Nova's Shelter"
+v0_1_.DisplayName = v0_2_
+v0_2_ = 1
+v0_1_.Priority = v0_2_
+local new = Color3.new
+v0_3_ = 1
+v0_4_ = 0.878431
+v0_5_ = 0.400000
+v0_2_ = new(v0_3_, v0_4_, v0_5_)
+v0_1_.RegionColor3 = v0_2_
+v0_2_ = true
+v0_1_.UseCustomSound = v0_2_
+v0_0_.Nova = v0_1_
+v0_1_ = {}
+v0_2_ = "Unknown Place"
+v0_1_.DisplayName = v0_2_
+v0_2_ = 1
+v0_1_.Priority = v0_2_
+local new = Color3.new
+v0_3_ = 0.486275
+v0_4_ = 0.607843
+v0_5_ = 1
+v0_2_ = new(v0_3_, v0_4_, v0_5_)
+v0_1_.RegionColor3 = v0_2_
+v0_2_ = true
+v0_1_.UseCustomSound = v0_2_
+v0_2_ = "[ you feel a sense of familiarity ]"
+v0_1_.Description = v0_2_
+v0_0_.KindaHidden = v0_1_
+v0_1_ = {}
+v0_2_ = "???"
+v0_1_.DisplayName = v0_2_
+v0_2_ = 2
+v0_1_.Priority = v0_2_
+local new = Color3.new
+v0_3_ = 0.403922
+v0_4_ = 0.423529
+v0_5_ = 0.545098
+v0_2_ = new(v0_3_, v0_4_, v0_5_)
+v0_1_.RegionColor3 = v0_2_
+v0_2_ = true
+v0_1_.UseCustomSound = v0_2_
+v0_2_ = ""
+v0_1_.Description = v0_2_
+v0_0_.LaLaLa = v0_1_
+v0_1_ = v0_0_
+v0_2_ = nil
+v0_3_ = nil
+v0_5_.Name = v0_4_
+local v0_7_ = v0_5_.DisplayName
+local v0_6_ = v0_7_ or v0_4_
+v0_5_.DisplayName = v0_6_
+v0_6_ = v0_5_.RegionColor3
+if not v0_6_ then
+    local new = Color3.new
+    v0_7_ = 1
+    local v0_8_ = 1
+    local v0_9_ = 1
+    v0_6_ = new(v0_7_, v0_8_, v0_9_)
+end
+v0_5_.RegionColor3 = v0_6_
+v0_7_ = v0_5_.Priority
+v0_6_ = v0_7_ or 0.000000
+v0_5_.Priority = v0_6_
+v0_7_ = v0_5_.UseCustomSound
+if v0_7_ ~= nil then
+    v0_6_ = v0_5_.UseCustomSound
+else
+    v0_6_ = false
+end
+v0_5_.UseCustomSound = v0_6_
+v0_7_ = v0_5_.Description
+v0_6_ = v0_7_ or "SOMEBODY PUT SOMETHING HERE!!!!!!!"
+v0_5_.Description = v0_6_
+return v0_0_
