@@ -1490,7 +1490,7 @@ local _=[[
                             }
                         },
                         {
-                            "Name": "debug0o",
+                            "Name": "debugInfo",
                             "Type": {
                                 "Category": "Group",
                                 "Name": "Variant"
@@ -6524,7 +6524,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetBadge0oAsync",
+                    "Name": "GetBadgeInfoAsync",
                     "Parameters": [
                         {
                             "Name": "badgeId",
@@ -7947,7 +7947,7 @@ local _=[[
                 {
                     "Category": "Appearance",
                     "MemberType": "Property",
-                    "Name": "Light0luence",
+                    "Name": "LightInfluence",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -14505,7 +14505,7 @@ local _=[[
                 {
                     "Category": "Cylinder",
                     "MemberType": "Property",
-                    "Name": "Inclinatio0gle",
+                    "Name": "InclinationAngle",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -15914,7 +15914,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetAllBoundAction0o",
+                    "Name": "GetAllBoundActionInfo",
                     "Parameters": [
                     ],
                     "ReturnType": {
@@ -15926,7 +15926,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetAllBoundCoreAction0o",
+                    "Name": "GetAllBoundCoreActionInfo",
                     "Parameters": [
                     ],
                     "ReturnType": {
@@ -15938,7 +15938,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetBoundAction0o",
+                    "Name": "GetBoundActionInfo",
                     "Parameters": [
                         {
                             "Name": "actionName",
@@ -15957,7 +15957,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetBoundCoreAction0o",
+                    "Name": "GetBoundCoreActionInfo",
                     "Parameters": [
                         {
                             "Name": "actionName",
@@ -16208,7 +16208,7 @@ local _=[[
                             }
                         },
                         {
-                            "Name": "function0oTable",
+                            "Name": "functionInfoTable",
                             "Type": {
                                 "Category": "Group",
                                 "Name": "Dictionary"
@@ -16266,7 +16266,7 @@ local _=[[
                             }
                         },
                         {
-                            "Name": "function0oTable",
+                            "Name": "functionInfoTable",
                             "Type": {
                                 "Category": "Group",
                                 "Name": "Dictionary"
@@ -17387,7 +17387,7 @@ local _=[[
                 }
             ],
             "MemoryCategory": "Instances",
-            "Name": "DataStore0o",
+            "Name": "DataStoreInfo",
             "Superclass": "Instance",
             "Tags": [
                 "NotCreatable",
@@ -17521,7 +17521,7 @@ local _=[[
                 }
             ],
             "MemoryCategory": "Instances",
-            "Name": "DataStoreKey0o",
+            "Name": "DataStoreKeyInfo",
             "Superclass": "Instance",
             "Tags": [
                 "NotCreatable",
@@ -17598,7 +17598,7 @@ local _=[[
                 }
             ],
             "MemoryCategory": "Instances",
-            "Name": "DataStoreObjectVersion0o",
+            "Name": "DataStoreObjectVersionInfo",
             "Superclass": "Instance",
             "Tags": [
                 "NotCreatable",
@@ -24264,7 +24264,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetGroup0oAsync",
+                    "Name": "GetGroupInfoAsync",
                     "Parameters": [
                         {
                             "Name": "groupId",
@@ -29436,7 +29436,7 @@ local _=[[
                 {
                     "Category": "Data",
                     "MemberType": "Property",
-                    "Name": "Light0luence",
+                    "Name": "LightInfluence",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -29974,7 +29974,7 @@ local _=[[
                 {
                     "Category": "Data",
                     "MemberType": "Property",
-                    "Name": "Light0luence",
+                    "Name": "LightInfluence",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -36250,7 +36250,7 @@ local _=[[
                 {
                     "Category": "Animation",
                     "MemberType": "Property",
-                    "Name": "Ru0imation",
+                    "Name": "RunAnimation",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -41467,7 +41467,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Event",
-                    "Name": "Log0ailed",
+                    "Name": "LoginFailed",
                     "Parameters": [
                         {
                             "Name": "loginError",
@@ -42513,7 +42513,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetProduct0o",
+                    "Name": "GetProductInfo",
                     "Parameters": [
                         {
                             "Name": "assetId",
@@ -42524,10 +42524,10 @@ local _=[[
                         },
                         {
                             "Default": "Asset",
-                            "Name": "0oType",
+                            "Name": "infoType",
                             "Type": {
                                 "Category": "Enum",
-                                "Name": "0oType"
+                                "Name": "InfoType"
                             }
                         }
                     ],
@@ -42590,10 +42590,10 @@ local _=[[
                     "Name": "PerformPurchase",
                     "Parameters": [
                         {
-                            "Name": "0oType",
+                            "Name": "infoType",
                             "Type": {
                                 "Category": "Enum",
-                                "Name": "0oType"
+                                "Name": "InfoType"
                             }
                         },
                         {
@@ -43233,7 +43233,7 @@ local _=[[
                     "Name": "ProcessReceipt",
                     "Parameters": [
                         {
-                            "Name": "receipt0o",
+                            "Name": "receiptInfo",
                             "Type": {
                                 "Category": "Group",
                                 "Name": "Dictionary"
@@ -53093,7 +53093,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "Unjo0romOutsiders",
+                    "Name": "UnjoinFromOutsiders",
                     "Parameters": [
                         {
                             "Name": "objects",
@@ -53875,7 +53875,7 @@ local _=[[
                 {
                     "Category": "Appearance",
                     "MemberType": "Property",
-                    "Name": "Light0luence",
+                    "Name": "LightInfluence",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -57987,7 +57987,7 @@ local _=[[
                 {
                     "Category": "Behavior",
                     "MemberType": "Property",
-                    "Name": "SerializedEmulatedPolicy0o",
+                    "Name": "SerializedEmulatedPolicyInfo",
                     "Security": {
                         "Read": "RobloxSecurity",
                         "Write": "RobloxSecurity"
@@ -58007,7 +58007,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetEmulatedPolicy0o",
+                    "Name": "GetEmulatedPolicyInfo",
                     "Parameters": [
                     ],
                     "ReturnType": {
@@ -58038,10 +58038,10 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "SetEmulatedPolicy0o",
+                    "Name": "SetEmulatedPolicyInfo",
                     "Parameters": [
                         {
-                            "Name": "emulatedPolicy0o",
+                            "Name": "emulatedPolicyInfo",
                             "Type": {
                                 "Category": "Group",
                                 "Name": "Dictionary"
@@ -58679,7 +58679,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "SetLocalPlayer0o",
+                    "Name": "SetLocalPlayerInfo",
                     "Parameters": [
                         {
                             "Name": "userId",
@@ -58905,7 +58905,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetCharacterAppearance0oAsync",
+                    "Name": "GetCharacterAppearanceInfoAsync",
                     "Parameters": [
                         {
                             "Name": "userId",
@@ -60051,10 +60051,10 @@ local _=[[
                             }
                         },
                         {
-                            "Name": "dockWidgetPluginGui0o",
+                            "Name": "dockWidgetPluginGuiInfo",
                             "Type": {
                                 "Category": "DataType",
-                                "Name": "DockWidgetPluginGui0o"
+                                "Name": "DockWidgetPluginGuiInfo"
                             }
                         }
                     ],
@@ -61237,7 +61237,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetPolicy0oForPlayerAsync",
+                    "Name": "GetPolicyInfoForPlayerAsync",
                     "Parameters": [
                         {
                             "Name": "player",
@@ -61259,7 +61259,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetPolicy0oForServerRobloxOnlyAsync",
+                    "Name": "GetPolicyInfoForServerRobloxOnlyAsync",
                     "Parameters": [
                     ],
                     "ReturnType": {
@@ -61702,7 +61702,7 @@ local _=[[
                 {
                     "Category": "State",
                     "MemberType": "Property",
-                    "Name": "0ocusRadius",
+                    "Name": "InFocusRadius",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -62556,7 +62556,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "Report0luxSeries",
+                    "Name": "ReportInfluxSeries",
                     "Parameters": [
                         {
                             "Name": "seriesName",
@@ -66575,7 +66575,7 @@ local _=[[
                     }
                 },
                 {
-                    "Category": "Job0o",
+                    "Category": "JobInfo",
                     "MemberType": "Property",
                     "Name": "JobId",
                     "Security": {
@@ -66975,7 +66975,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetJobs0o",
+                    "Name": "GetJobsInfo",
                     "Parameters": [
                     ],
                     "ReturnType": {
@@ -67965,7 +67965,7 @@ local _=[[
                 {
                     "Category": "Appearance",
                     "MemberType": "Property",
-                    "Name": "Moo0gularSize",
+                    "Name": "MoonAngularSize",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -68127,7 +68127,7 @@ local _=[[
                 {
                     "Category": "Appearance",
                     "MemberType": "Property",
-                    "Name": "Su0gularSize",
+                    "Name": "SunAngularSize",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -74891,7 +74891,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "SetTeamCreateOnPublish0o",
+                    "Name": "SetTeamCreateOnPublishInfo",
                     "Parameters": [
                         {
                             "Name": "shouldTurnOnTcOnPublish",
@@ -77157,7 +77157,7 @@ local _=[[
                     "ThreadSafety": "ReadSafe",
                     "ValueType": {
                         "Category": "Enum",
-                        "Name": "Terra0ace"
+                        "Name": "TerrainFace"
                     }
                 },
                 {
@@ -78729,7 +78729,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "GetFamily0oAsync",
+                    "Name": "GetFamilyInfoAsync",
                     "Parameters": [
                         {
                             "Name": "assetId",
@@ -79447,7 +79447,7 @@ local _=[[
                 {
                     "Category": "Appearance",
                     "MemberType": "Property",
-                    "Name": "Light0luence",
+                    "Name": "LightInfluence",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -79827,7 +79827,7 @@ local _=[[
                 {
                     "Category": "Data",
                     "MemberType": "Property",
-                    "Name": "Tween0o",
+                    "Name": "TweenInfo",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -79843,7 +79843,7 @@ local _=[[
                     "ThreadSafety": "ReadSafe",
                     "ValueType": {
                         "Category": "DataType",
-                        "Name": "Tween0o"
+                        "Name": "TweenInfo"
                     }
                 }
             ],
@@ -79865,10 +79865,10 @@ local _=[[
                             }
                         },
                         {
-                            "Name": "tween0o",
+                            "Name": "tweenInfo",
                             "Type": {
                                 "Category": "DataType",
-                                "Name": "Tween0o"
+                                "Name": "TweenInfo"
                             }
                         },
                         {
@@ -80299,7 +80299,7 @@ local _=[[
                 {
                     "Category": "Behavior",
                     "MemberType": "Property",
-                    "Name": "Domi0tAxis",
+                    "Name": "DominantAxis",
                     "Security": {
                         "Read": "None",
                         "Write": "None"
@@ -80311,7 +80311,7 @@ local _=[[
                     "ThreadSafety": "ReadSafe",
                     "ValueType": {
                         "Category": "Enum",
-                        "Name": "Domi0tAxis"
+                        "Name": "DominantAxis"
                     }
                 }
             ],
@@ -82368,7 +82368,7 @@ local _=[[
                 },
                 {
                     "MemberType": "Function",
-                    "Name": "0ullScreen",
+                    "Name": "InFullScreen",
                     "Parameters": [
                     ],
                     "ReturnType": {
@@ -84073,7 +84073,7 @@ local _=[[
             "Members": [
                 {
                     "MemberType": "Function",
-                    "Name": "GetUser0osByUserIdsAsync",
+                    "Name": "GetUserInfosByUserIdsAsync",
                     "Parameters": [
                         {
                             "Name": "userIds",
@@ -87023,7 +87023,7 @@ local _=[[
                     "Name": "PlayerMicActivitySignalChange",
                     "Parameters": [
                         {
-                            "Name": "activity0o",
+                            "Name": "activityInfo",
                             "Type": {
                                 "Category": "Group",
                                 "Name": "Dictionary"
@@ -87531,7 +87531,7 @@ local _=[[
                     "Value": 1
                 },
                 {
-                    "Name": "0ormation",
+                    "Name": "Information",
                     "Value": 2
                 },
                 {
@@ -87921,7 +87921,7 @@ local _=[[
                     "Value": 52
                 },
                 {
-                    "Name": "Ru0imation",
+                    "Name": "RunAnimation",
                     "Value": 53
                 },
                 {
@@ -88149,7 +88149,7 @@ local _=[[
                     "Value": 52
                 },
                 {
-                    "Name": "Ru0imation",
+                    "Name": "RunAnimation",
                     "Value": 53
                 },
                 {
@@ -89085,11 +89085,11 @@ local _=[[
                     "Value": 273
                 },
                 {
-                    "Name": "DisconnectDevMainte0ce",
+                    "Name": "DisconnectDevMaintenance",
                     "Value": 274
                 },
                 {
-                    "Name": "DisconnectRobloxMainte0ce",
+                    "Name": "DisconnectRobloxMaintenance",
                     "Value": 275
                 },
                 {
@@ -89839,7 +89839,7 @@ local _=[[
                     "Value": 1
                 }
             ],
-            "Name": "Domi0tAxis"
+            "Name": "DominantAxis"
         },
         {
             "Items": [
@@ -90623,7 +90623,7 @@ local _=[[
                     "Value": 0
                 },
                 {
-                    "Name": "Tow0dCity",
+                    "Name": "TownAndCity",
                     "Value": 1
                 },
                 {
@@ -91161,7 +91161,7 @@ local _=[[
                     "Value": 4
                 }
             ],
-            "Name": "0oType"
+            "Name": "InfoType"
         },
         {
             "Items": [
@@ -92903,7 +92903,7 @@ local _=[[
                     "Value": 0
                 },
                 {
-                    "Name": "Message0o",
+                    "Name": "MessageInfo",
                     "Value": 1
                 },
                 {
@@ -93215,7 +93215,7 @@ local _=[[
                     "Value": 1
                 },
                 {
-                    "Name": "I0dOut",
+                    "Name": "InAndOut",
                     "Value": 2
                 }
             ],
@@ -95036,7 +95036,7 @@ local _=[[
                     "Value": 44
                 },
                 {
-                    "Name": "0oText",
+                    "Name": "InfoText",
                     "Value": 45
                 },
                 {
@@ -95092,7 +95092,7 @@ local _=[[
                     "Value": 58
                 },
                 {
-                    "Name": "ScriptBuilt0unction",
+                    "Name": "ScriptBuiltInFunction",
                     "Value": 59
                 },
                 {
@@ -95132,7 +95132,7 @@ local _=[[
                     "Value": 67
                 },
                 {
-                    "Name": "DiffTextHunk0o",
+                    "Name": "DiffTextHunkInfo",
                     "Value": 68
                 },
                 {
@@ -95272,11 +95272,11 @@ local _=[[
                     "Value": 102
                 },
                 {
-                    "Name": "0oBarWarningBackground",
+                    "Name": "InfoBarWarningBackground",
                     "Value": 103
                 },
                 {
-                    "Name": "0oBarWarningText",
+                    "Name": "InfoBarWarningText",
                     "Value": 104
                 },
                 {
@@ -95689,7 +95689,7 @@ local _=[[
                     "Value": 2
                 }
             ],
-            "Name": "Terra0ace"
+            "Name": "TerrainFace"
         },
         {
             "Items": [
@@ -96123,7 +96123,7 @@ local _=[[
                     "Value": 0
                 },
                 {
-                    "Name": "UiMessage0o",
+                    "Name": "UiMessageInfo",
                     "Value": 1
                 }
             ],

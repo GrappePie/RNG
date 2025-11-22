@@ -19,12 +19,12 @@ local v_u_15 = script:WaitForChild("RollBGM")
 local v_u_16 = {
 	["Chromatic"] = { "rbxassetid://16680130430", 76.25, 9.23 }
 }
-local v_u_17 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_18 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_19 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_20 = Tween0o.new(2, Enum.EasingStyle.Quart)
-local v_u_21 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-Tween0o.new(1)
+local v_u_17 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_18 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_19 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_20 = TweenInfo.new(2, Enum.EasingStyle.Quart)
+local v_u_21 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+TweenInfo.new(1)
 local v_u_22 = {
 	["BackgroundTransparency"] = 0.6
 }
@@ -140,7 +140,7 @@ local function v_u_48(p42, p43, p44)
 		v45.Rotation = math.random(0, 360)
 		v45.BorderSizePixel = 0
 		local v47 = math.random(80, 150) / 100
-		v_u_2:Create(v45, Tween0o.new(v47, Enum.EasingStyle.Quart), {
+		v_u_2:Create(v45, TweenInfo.new(v47, Enum.EasingStyle.Quart), {
 			["Size"] = UDim2.fromScale(0, 0),
 			["Position"] = UDim2.fromScale(math.random(10, 90) / 100, math.random(10, 90) / 100),
 			["Rotation"] = math.random(0, 360)
@@ -174,12 +174,12 @@ _self = {
 				local v63 = p50.Break2
 				local v64 = p51:WaitForChild("ShakeAmount")
 				local v65 = p51:WaitForChild("StarSpinSpeed")
-				v_u_2:Create(v60, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_22)
-				v_u_2:Create(v60, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_23)
-				local v66 = v_u_2:Create(v58, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+				v_u_2:Create(v60, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_22)
+				v_u_2:Create(v60, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_23)
+				local v66 = v_u_2:Create(v58, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 					["ImageTransparency"] = 0
 				})
-				local v67 = v_u_2:Create(v58, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+				local v67 = v_u_2:Create(v58, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 					["ImageTransparency"] = 1
 				})
 				local v68 = v_u_2:Create(v_u_57, v_u_17, v_u_24)
@@ -206,14 +206,14 @@ _self = {
 						v_u_15.TimePosition = 0
 						v_u_15:Play()
 						v_u_15.Volume = 0.15
-						v_u_2:Create(v_u_15, Tween0o.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 2), {
+						v_u_2:Create(v_u_15, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 2), {
 							["Volume"] = 0
 						}):Play()
 						task.wait(v_u_16[p_u_53][3])
 						v_u_15.TimePosition = v_u_16[p_u_53][2]
 						v_u_15:Play()
 						v_u_15.Volume = 0.5
-						v_u_2:Create(v_u_15, Tween0o.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 2.5), {
+						v_u_2:Create(v_u_15, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 2.5), {
 							["Volume"] = 0
 						}):Play()
 					end)()

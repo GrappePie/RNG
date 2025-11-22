@@ -23,7 +23,7 @@
 	signal:Fire(arg)
 	```
 
-	:::0o
+	:::info
 	Why this over a direct [BindableEvent]? Well, in this case, the signal
 	prevents Roblox from trying to serialize and desialize each table reference
 	fired through the BindableEvent.
@@ -154,7 +154,7 @@ end
 --[=[
 	Disconnects all connected events to the signal.
 
-	:::0o
+	:::info
 	Disconnect all handlers. Since we use a linked list it suffices to clear the
 	reference to the head handler.
 	:::
@@ -166,7 +166,7 @@ end
 --[=[
 	Fire the event with the given arguments. All handlers will be invoked. Handlers follow
 
-	::: 0o
+	::: info
 	Signal:Fire(...) is implemented by running the handler functions on the
 	coRunnerThread, and any time the resulting thread yielded without returning
 	to us, that means that it yielded to the Roblox scheduler and has been taken
@@ -194,7 +194,7 @@ end
 --[=[
 	Wait for fire to be called, and return the arguments it was given.
 
-	::: 0o
+	::: info
 	Signal:Wait() is implemented in terms of a temporary connection using
 	a Signal:Connect() which disconnects itself.
 	:::
@@ -217,7 +217,7 @@ end
 --[=[
 	Connect a new, one-time handler to the event. Returns a connection object that can be disconnected.
 
-	::: 0o
+	::: info
 	-- Implement Signal:Once() in terms of a connection which disconnects
 	-- itself before running the handler.
 	:::

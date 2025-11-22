@@ -1177,7 +1177,7 @@ local function _(arg1, arg2, arg3) -- Line 1168
 	return arg1 + (arg2 - arg1) * arg3
 end
 local TweenService_upvr = game:GetService("TweenService")
-local Tween0o_new_result1_upvr = Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut)
+local TweenInfo_new_result1_upvr = TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut)
 local Debris_upvr = game:GetService("Debris")
 local function _() -- Line 1173, Named "SpawnDecoLines_upvr"
 	--[[ Upvalues[7]:
@@ -1186,7 +1186,7 @@ local function _() -- Line 1173, Named "SpawnDecoLines_upvr"
 		[3]: Mount_upvr (readonly)
 		[4]: var254_upvr (readonly)
 		[5]: TweenService_upvr (readonly)
-		[6]: Tween0o_new_result1_upvr (readonly)
+		[6]: TweenInfo_new_result1_upvr (readonly)
 		[7]: Debris_upvr (readonly)
 	]]
 	local Class_result1_upvr_2_result1 = Class_result1_upvr_2({
@@ -1201,7 +1201,7 @@ local function _() -- Line 1173, Named "SpawnDecoLines_upvr"
 		})
 	})
 	Mount_upvr(var254_upvr, Class_result1_upvr_2_result1)
-	TweenService_upvr:Create(Class_result1_upvr_2_result1, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(Class_result1_upvr_2_result1, TweenInfo_new_result1_upvr, {
 		Position = UDim2.fromScale(2, 0.02);
 	}):Play()
 	Debris_upvr:AddItem(Class_result1_upvr_2_result1, 1)
@@ -1217,7 +1217,7 @@ local function _() -- Line 1173, Named "SpawnDecoLines_upvr"
 		})
 	})
 	Mount_upvr(var254_upvr, var51_result1)
-	TweenService_upvr:Create(var51_result1, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(var51_result1, TweenInfo_new_result1_upvr, {
 		Position = UDim2.fromScale(-1, 0.98);
 	}):Play()
 	Debris_upvr:AddItem(var51_result1, 1)

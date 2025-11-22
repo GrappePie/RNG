@@ -15,7 +15,7 @@ local function onClientEvent(receivedBuffer, ref)
 	read(receivedBuffer, ref)
 end
 
--- Shared with: src/process/server.luau, src/process/read.luau (0easible to split this into another file)
+-- Shared with: src/process/server.luau, src/process/read.luau (Infeasible to split this into another file)
 local function create()
 	return {
 		cursor = 0,

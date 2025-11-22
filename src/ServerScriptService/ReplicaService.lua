@@ -620,7 +620,7 @@ function Replica:SetParent(new_parent)
 			old_creation_data[string_id] = nil
 			new_creation_data[string_id] = creation_data_of_one
 		end
-		-- 0orm clients about the change:
+		-- Inform clients about the change:
 		-- 1) Clients who have this replica AND the new parent replica only need to know the new parent id
 		local no_replication_check = ActivePlayers
 		if new_replication.All ~= true then

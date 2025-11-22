@@ -415,7 +415,7 @@ v0_31_ = function(a1)
     v9_7_.Player = nil
     local v9_9_ = v0_6_
     if nil == v9_9_ then
-        local v9_8_ = 0
+        local v9_8_ = inf
     else
         local v9_10_ = "Rolls"
         local v9_8_ = nil:GetAttribute(v9_10_)

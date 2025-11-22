@@ -28,13 +28,13 @@ local v18 = {
 	"O", 
 	"N"
 };
-local l_Server0o_0 = l_ReplicatedStorage_0:WaitForChild("Server0o");
+local l_ServerInfo_0 = l_ReplicatedStorage_0:WaitForChild("ServerInfo");
 local function __(v20)
 	local v21 = true;
-	if l_Server0o_0:GetAttribute("CurrentTime") ~= v20 then
+	if l_ServerInfo_0:GetAttribute("CurrentTime") ~= v20 then
 		v21 = true;
-		if l_Server0o_0:GetAttribute("CurrentBiome") ~= v20 then
-			v21 = l_Server0o_0:GetAttribute("CurrentBiome") == "Glitched";
+		if l_ServerInfo_0:GetAttribute("CurrentBiome") ~= v20 then
+			v21 = l_ServerInfo_0:GetAttribute("CurrentBiome") == "Glitched";
 		end;
 	end;
 	return v21;
@@ -176,14 +176,14 @@ v10.GetRollTable = function(v62)
 			SkinChance = v66.SkinChance
 		};
 		if v66.UnlockBy then
-			local l_l_Server0o_0_Attribute_0 = l_Server0o_0:GetAttribute("Multiply_" .. v66.UnlockBy);
-			if not l_l_Server0o_0_Attribute_0 or l_l_Server0o_0_Attribute_0 == math.huge then
+			local l_l_ServerInfo_0_Attribute_0 = l_ServerInfo_0:GetAttribute("Multiply_" .. v66.UnlockBy);
+			if not l_l_ServerInfo_0_Attribute_0 or l_l_ServerInfo_0_Attribute_0 == math.huge then
 				local l_UnlockBy_0 = v66.UnlockBy;
 				local v70 = true;
-				if l_Server0o_0:GetAttribute("CurrentTime") ~= l_UnlockBy_0 then
+				if l_ServerInfo_0:GetAttribute("CurrentTime") ~= l_UnlockBy_0 then
 					v70 = true;
-					if l_Server0o_0:GetAttribute("CurrentBiome") ~= l_UnlockBy_0 then
-						v70 = l_Server0o_0:GetAttribute("CurrentBiome") == "Glitched";
+					if l_ServerInfo_0:GetAttribute("CurrentBiome") ~= l_UnlockBy_0 then
+						v70 = l_ServerInfo_0:GetAttribute("CurrentBiome") == "Glitched";
 					end;
 				end;
 				if not v70 then
@@ -193,14 +193,14 @@ v10.GetRollTable = function(v62)
 			if not v64[v66.UnlockBy] then
 				local l_UnlockBy_1 = v66.UnlockBy;
 				local v72 = true;
-				if l_Server0o_0:GetAttribute("CurrentTime") ~= l_UnlockBy_1 then
+				if l_ServerInfo_0:GetAttribute("CurrentTime") ~= l_UnlockBy_1 then
 					v72 = true;
-					if l_Server0o_0:GetAttribute("CurrentBiome") ~= l_UnlockBy_1 then
-						v72 = l_Server0o_0:GetAttribute("CurrentBiome") == "Glitched";
+					if l_ServerInfo_0:GetAttribute("CurrentBiome") ~= l_UnlockBy_1 then
+						v72 = l_ServerInfo_0:GetAttribute("CurrentBiome") == "Glitched";
 					end;
 				end;
 				if not v72 then
-					v67.Rarity = v67.Rarity * l_l_Server0o_0_Attribute_0;
+					v67.Rarity = v67.Rarity * l_l_ServerInfo_0_Attribute_0;
 					v67.Breakthrough = true;
 				end;
 			end;
@@ -220,13 +220,13 @@ v10.IsBreakThrough = function(v73, v74)
 	local v75 = v74 or {};
 	for _, v77 in ipairs(l_RarityDB_0) do
 		if v77.Value == v73 then
-			if (l_Server0o_0:GetAttribute("CurrentBiome") ~= "Glitched" and v77.UnlockBy) and not v75[v77.UnlockBy] then
+			if (l_ServerInfo_0:GetAttribute("CurrentBiome") ~= "Glitched" and v77.UnlockBy) and not v75[v77.UnlockBy] then
 				local l_UnlockBy_2 = v77.UnlockBy;
 				local v79 = true;
-				if l_Server0o_0:GetAttribute("CurrentTime") ~= l_UnlockBy_2 then
+				if l_ServerInfo_0:GetAttribute("CurrentTime") ~= l_UnlockBy_2 then
 					v79 = true;
-					if l_Server0o_0:GetAttribute("CurrentBiome") ~= l_UnlockBy_2 then
-						v79 = l_Server0o_0:GetAttribute("CurrentBiome") == "Glitched";
+					if l_ServerInfo_0:GetAttribute("CurrentBiome") ~= l_UnlockBy_2 then
+						v79 = l_ServerInfo_0:GetAttribute("CurrentBiome") == "Glitched";
 					end;
 				end;
 				if not v79 then
@@ -637,7 +637,7 @@ v10.Dump = function(v224, v225)
 				"Random", 
 				"Region3", 
 				"Rect", 
-				"Tween0o", 
+				"TweenInfo", 
 				"collectgarbage", 
 				"not", 
 				"utf8", 

@@ -25,20 +25,20 @@ function ConversionMethod.Convert(RBXSerialize,CInstance : PVInstance ,SubRoot)
 			InstanceData ..= RBXSerialize.Binary.Describe("ValueType","<<Attributes>>")..RBXSerialize.Binary.Describe("Value",AttributeData)
 		end
 		
-		for PropertyName,Property0o in pairs(Class.GetInhertitedProperties()) do 
-			if Property0o.Is("ReadOnly") then 
+		for PropertyName,PropertyInfo in pairs(Class.GetInhertitedProperties()) do 
+			if PropertyInfo.Is("ReadOnly") then 
 				continue
 			end
 			if PropertyName == "Parent" then 
 				continue;
 			end
-			if Property0o.Security then 
-				if typeof(Property0o.Security) == "string" then 
-					if Property0o.Security ~= "None" then 
+			if PropertyInfo.Security then 
+				if typeof(PropertyInfo.Security) == "string" then 
+					if PropertyInfo.Security ~= "None" then 
 						continue;
 					end
 				else 
-					if Property0o.Security.Read ~= "None" or Property0o.Security.Write ~= "None" then 
+					if PropertyInfo.Security.Read ~= "None" or PropertyInfo.Security.Write ~= "None" then 
 						continue;
 					end
 				end
@@ -47,9 +47,9 @@ function ConversionMethod.Convert(RBXSerialize,CInstance : PVInstance ,SubRoot)
 				continue
 			end
 			
-			local ValueType = Property0o.ValueType.Name
+			local ValueType = PropertyInfo.ValueType.Name
 			local PropertySuperClassInstance = ValueType == "Instance" 
-			if Property0o.ValueType.Category == "Class"  then
+			if PropertyInfo.ValueType.Category == "Class"  then
 				local PropertyClass = RBXSerialize.API.Classes[ValueType]
 				if PropertyClass then 
 					PropertySuperClassInstance = true 
@@ -62,7 +62,7 @@ function ConversionMethod.Convert(RBXSerialize,CInstance : PVInstance ,SubRoot)
 				local PropertyValue = CInstance[PropertyName]
 	
 				if DefaultValue ~= PropertyValue or PropertySuperClassInstance  or SaveTable[PropertyName] then 			
-					local ParamaterClass = RBXSerialize.API.Classes[Property0o.ValueType.Name] 
+					local ParamaterClass = RBXSerialize.API.Classes[PropertyInfo.ValueType.Name] 
 					if PropertySuperClassInstance then 
 						if SubRoot then 
 							SubRoot.DescribeInstanceRegistry(PropertyValue,PropertyName)
@@ -83,6 +83,6 @@ function ConversionMethod.Convert(RBXSerialize,CInstance : PVInstance ,SubRoot)
 		
 		return InstanceData
 	end
-	RBXSerialize.Warn(("No api 0ormation for the class %s."):format(CInstance.ClassName))
+	RBXSerialize.Warn(("No api information for the class %s."):format(CInstance.ClassName))
 end
 return ConversionMethod

@@ -11,10 +11,10 @@ local v_u_8 = v5:GetArrivingTeleportGui()
 local function v_u_9()
 	-- upvalues: (copy) v_u_3, (copy) v_u_8, (copy) v_u_1
 	task.wait(3)
-	v_u_3:Create(v_u_8:WaitForChild("ImageLabel"), Tween0o.new(1, Enum.EasingStyle.Linear), {
+	v_u_3:Create(v_u_8:WaitForChild("ImageLabel"), TweenInfo.new(1, Enum.EasingStyle.Linear), {
 		["ImageTransparency"] = 1
 	}):Play()
-	v_u_3:Create(v_u_8:WaitForChild("ImageLabel"):WaitForChild("Frame"):WaitForChild("UIScale"), Tween0o.new(1, Enum.EasingStyle.Linear), {
+	v_u_3:Create(v_u_8:WaitForChild("ImageLabel"):WaitForChild("Frame"):WaitForChild("UIScale"), TweenInfo.new(1, Enum.EasingStyle.Linear), {
 		["Scale"] = 0
 	}):Play()
 	v_u_1:AddItem(v_u_8, 2)

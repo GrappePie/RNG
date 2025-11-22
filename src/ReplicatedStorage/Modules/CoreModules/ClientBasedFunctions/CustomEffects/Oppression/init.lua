@@ -8,12 +8,12 @@ local v_u_5 = script
 local v_u_6 = v_u_5.Chain
 local v_u_7 = script.parry
 local v_u_8 = script["Boom Impact Deep Distant Thumping Hits Boomi (SFX)"]
-local v_u_9 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_10 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_11 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_12 = Tween0o.new(5, Enum.EasingStyle.Quart)
-local v_u_13 = Tween0o.new(2, Enum.EasingStyle.Quad)
-local v_u_14 = Tween0o.new(0.75, Enum.EasingStyle.Linear)
+local v_u_9 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_10 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_11 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_12 = TweenInfo.new(5, Enum.EasingStyle.Quart)
+local v_u_13 = TweenInfo.new(2, Enum.EasingStyle.Quad)
+local v_u_14 = TweenInfo.new(0.75, Enum.EasingStyle.Linear)
 local v_u_15 = require(v4.Modules:WaitForChild("UICache"))
 local v_u_16 = {}
 v_u_16.__index = v_u_16
@@ -109,7 +109,7 @@ local function v_u_60(p54, p55, p56, p57)
 		v58.Rotation = math.random(0, 360)
 		v58.BorderSizePixel = 0
 		local v59 = math.random(80, 150) / 100
-		v_u_1:Create(v58, Tween0o.new(v59, Enum.EasingStyle.Quart), {
+		v_u_1:Create(v58, TweenInfo.new(v59, Enum.EasingStyle.Quart), {
 			["Size"] = UDim2.fromScale(0, 0),
 			["Position"] = UDim2.fromScale(p57.X.Scale + math.random(-20, 20) / 100, p57.Y.Scale + math.random(-20, 20) / 100),
 			["Rotation"] = math.random(0, 360)
@@ -195,7 +195,7 @@ return function(_, p_u_61, _, p62, _)
 	v83.CFrame = CFrame.new(Vector3.new(0, 0, -20), Vector3.zero)
 	v71.CurrentCamera = v83
 	local v_u_84 = v_u_15.new(v67, 60, v66)
-	v_u_1:Create(v_u_63, Tween0o.new(0.3), {
+	v_u_1:Create(v_u_63, TweenInfo.new(0.3), {
 		["BackgroundTransparency"] = 0
 	}):Play()
 	v_u_2:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
@@ -222,7 +222,7 @@ return function(_, p_u_61, _, p62, _)
 	v71.Visible = true
 	v68.Position = UDim2.fromScale(0.5, 0.5)
 	v83.FieldOfView = 73
-	local v88 = v_u_1:Create(v83, Tween0o.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.In, -1, true), {
+	local v88 = v_u_1:Create(v83, TweenInfo.new(0.5, Enum.EasingStyle.Sine, Enum.EasingDirection.In, -1, true), {
 		["FieldOfView"] = 70
 	})
 	v88:Play()
@@ -264,10 +264,10 @@ return function(_, p_u_61, _, p62, _)
 	v85.Visible = true
 	v85.Chain.ImageTransparency = 0.5
 	v85.smoke.ImageTransparency = 1
-	v_u_1:Create(v85.Chain, Tween0o.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
+	v_u_1:Create(v85.Chain, TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
 		["ImageTransparency"] = 0
 	}):Play()
-	v_u_1:Create(v85.smoke, Tween0o.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
+	v_u_1:Create(v85.smoke, TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
 		["ImageTransparency"] = 0
 	}):Play()
 	local v91 = v_u_1:Create(v85, v_u_14, {
@@ -286,10 +286,10 @@ return function(_, p_u_61, _, p62, _)
 	v91.Completed:Wait()
 	v85.Chain.AnchorPoint = Vector2.new(0, 0)
 	v85.smoke.AnchorPoint = Vector2.new(0, 0)
-	v_u_1:Create(v85.Chain, Tween0o.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
+	v_u_1:Create(v85.Chain, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
 		["AnchorPoint"] = Vector2.new(0, 0.5)
 	}):Play()
-	v_u_1:Create(v85.smoke, Tween0o.new(1.7, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
+	v_u_1:Create(v85.smoke, TweenInfo.new(1.7, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
 		["AnchorPoint"] = Vector2.new(0, 0.5)
 	}):Play()
 	task.wait(4)
@@ -301,10 +301,10 @@ return function(_, p_u_61, _, p62, _)
 	v86.Visible = true
 	v86.Chain.ImageTransparency = 0.5
 	v86.smoke.ImageTransparency = 1
-	v_u_1:Create(v86.Chain, Tween0o.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
+	v_u_1:Create(v86.Chain, TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
 		["ImageTransparency"] = 0
 	}):Play()
-	v_u_1:Create(v86.smoke, Tween0o.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
+	v_u_1:Create(v86.smoke, TweenInfo.new(0.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), {
 		["ImageTransparency"] = 0
 	}):Play()
 	local v94 = v_u_1:Create(v86, v_u_14, {
@@ -322,17 +322,17 @@ return function(_, p_u_61, _, p62, _)
 	v94.Completed:Wait()
 	v86.Chain.AnchorPoint = Vector2.new(0, 0)
 	v86.smoke.AnchorPoint = Vector2.new(0, 0)
-	v_u_1:Create(v86.Chain, Tween0o.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
+	v_u_1:Create(v86.Chain, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
 		["AnchorPoint"] = Vector2.new(0, 0.5)
 	}):Play()
-	v_u_1:Create(v86.smoke, Tween0o.new(1.7, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
+	v_u_1:Create(v86.smoke, TweenInfo.new(1.7, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {
 		["AnchorPoint"] = Vector2.new(0, 0.5)
 	}):Play()
 	task.wait(4)
-	v_u_1:Create(v_u_74, Tween0o.new(0.5), {
+	v_u_1:Create(v_u_74, TweenInfo.new(0.5), {
 		["Size"] = v_u_74.Size * 1.5
 	}):Play()
-	v_u_1:Create(v_u_73, Tween0o.new(0.5), {
+	v_u_1:Create(v_u_73, TweenInfo.new(0.5), {
 		["Size"] = v_u_73.Size * 1.5
 	}):Play()
 	v_u_79 = 100
@@ -348,10 +348,10 @@ return function(_, p_u_61, _, p62, _)
 	task.cancel(v87)
 	task.wait(1.5)
 	v_u_63.BackgroundColor3 = Color3.new(0.7, 0.7, 0.7)
-	v_u_1:Create(v_u_74, Tween0o.new(0.5), {
+	v_u_1:Create(v_u_74, TweenInfo.new(0.5), {
 		["Size"] = v_u_74.Size * 1.5
 	}):Play()
-	v_u_1:Create(v_u_73, Tween0o.new(0.5), {
+	v_u_1:Create(v_u_73, TweenInfo.new(0.5), {
 		["Size"] = v_u_73.Size * 1.5
 	}):Play()
 	v_u_79 = 200
@@ -364,32 +364,32 @@ return function(_, p_u_61, _, p62, _)
 	task.wait(1.5)
 	v_u_63.BackgroundColor3 = Color3.new(1, 1, 1)
 	v88:Cancel()
-	v_u_1:Create(v_u_74, Tween0o.new(1), {
+	v_u_1:Create(v_u_74, TweenInfo.new(1), {
 		["Size"] = v_u_74.Size * 5
 	}):Play()
-	v_u_1:Create(v_u_73, Tween0o.new(1), {
+	v_u_1:Create(v_u_73, TweenInfo.new(1), {
 		["Size"] = v_u_73.Size * 5
 	}):Play()
 	v_u_79 = 0
 	v_u_5.GlassBreak2:Play()
 	v_u_76 = v_u_76 + Vector3.new(-50, -1, 5)
 	v_u_75 = v_u_75 + Vector3.new(50, -1, 5)
-	v_u_1:Create(v_u_63, Tween0o.new(0.5), {
+	v_u_1:Create(v_u_63, TweenInfo.new(0.5), {
 		["BackgroundTransparency"] = 1
 	}):Play()
-	v_u_1:Create(v85.Chain, Tween0o.new(0.5), {
+	v_u_1:Create(v85.Chain, TweenInfo.new(0.5), {
 		["ImageTransparency"] = 1
 	}):Play()
-	v_u_1:Create(v85.smoke, Tween0o.new(0.5), {
+	v_u_1:Create(v85.smoke, TweenInfo.new(0.5), {
 		["ImageTransparency"] = 1
 	}):Play()
-	v_u_1:Create(v86.Chain, Tween0o.new(0.5), {
+	v_u_1:Create(v86.Chain, TweenInfo.new(0.5), {
 		["ImageTransparency"] = 1
 	}):Play()
-	v_u_1:Create(v86.smoke, Tween0o.new(0.5), {
+	v_u_1:Create(v86.smoke, TweenInfo.new(0.5), {
 		["ImageTransparency"] = 1
 	}):Play()
-	v_u_1:Create(v71, Tween0o.new(0.5), {
+	v_u_1:Create(v71, TweenInfo.new(0.5), {
 		["ImageTransparency"] = 1
 	}):Play()
 	v_u_79 = 1000

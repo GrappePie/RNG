@@ -1,7 +1,7 @@
 -- What the sigma?
 
 return function(p_u_1)
-	local v_u_2 = game:GetService("TweenService"):Create(p_u_1, Tween0o.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+	local v_u_2 = game:GetService("TweenService"):Create(p_u_1, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		["Offset"] = Vector2.new(1, 0)
 	})
 	local function v_u_3()

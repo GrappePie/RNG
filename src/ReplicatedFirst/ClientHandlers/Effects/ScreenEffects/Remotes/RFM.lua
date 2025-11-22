@@ -39,7 +39,7 @@ function module_2.Emit() -- Line 57
 	if var11_upvw then
 		var11_upvw:Destroy()
 	end
-	var11_upvw = TweenService_upvr:Create(var8_upvr, Tween0o.new(1.5 / any_NextNumber_result1), {
+	var11_upvw = TweenService_upvr:Create(var8_upvr, TweenInfo.new(1.5 / any_NextNumber_result1), {
 		GroupTransparency = 1;
 		Size = UDim2.fromScale(0.4, 0.4);
 	})

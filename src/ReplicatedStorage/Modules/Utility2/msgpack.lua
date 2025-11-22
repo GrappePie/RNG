@@ -1012,11 +1012,11 @@ local v0_38_ = function(a1, a2)
                     v15_3_ = 5
                     return v15_3_
                 end
-                if a1 == 0 then
+                if a1 == inf then
                     v15_3_ = 5
                     return v15_3_
                 end
-                if a1 == 0 then
+                if a1 == -inf then
                     v15_3_ = 5
                     return v15_3_
                 end
@@ -1379,12 +1379,12 @@ v0_40_ = function(a1, a2, a3)
                     v16_4_ = writestring
                     local v16_5_ = a1
                     local v16_6_ = a2
-                    local v16_7_ = "��\0"
+                    local v16_7_ = "��\0"
                     v16_4_(v16_5_, v16_6_, v16_7_)
                     v16_4_ = a2 + 5.000000
                     return v16_4_
                 end
-                if a3 == 0 then
+                if a3 == inf then
                     v16_4_ = writestring
                     local v16_5_ = a1
                     local v16_6_ = a2
@@ -1393,7 +1393,7 @@ v0_40_ = function(a1, a2, a3)
                     v16_4_ = a2 + 5.000000
                     return v16_4_
                 end
-                if a3 == 0 then
+                if a3 == -inf then
                     v16_4_ = writestring
                     local v16_5_ = a1
                     local v16_6_ = a2

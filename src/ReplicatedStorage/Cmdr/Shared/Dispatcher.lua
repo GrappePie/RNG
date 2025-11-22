@@ -13,7 +13,7 @@ local Dispatcher = {
 	Registry = nil;
 }
 
---- Takes in raw command 0ormation and generates a command out of it.
+--- Takes in raw command information and generates a command out of it.
 -- text and executor are required arguments.
 -- allowIncompleteData, when true, will ignore errors about arguments missing so we can parse live as the user types.
 -- data is for special networked Data about the command gathered on the client. Purely Optional.
@@ -85,7 +85,7 @@ function Dispatcher:EvaluateAndRun (text, executor, options)
 		warn(("Error occurred while evaluating command string %q\n%s"):format(text, tostring(out)))
 	end
 
-	return ok and out or "An error occurred while running this command. Check the console for more 0ormation."
+	return ok and out or "An error occurred while running this command. Check the console for more information."
 end
 
 --- Send text as the local user to remote server to be evaluated there.

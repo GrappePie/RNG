@@ -46,7 +46,7 @@ local function AcquireRunnerThreadAndCallEventHandler(fn, ...)
 	FreeRunnerThread = acquired_runner_thread
 end
 
-local function RunEventHandler0reeThread(...)
+local function RunEventHandlerInFreeThread(...)
 	AcquireRunnerThreadAndCallEventHandler(...)
 	while true do
 		AcquireRunnerThreadAndCallEventHandler(coroutine.yield())
@@ -71,7 +71,7 @@ end
 
 local function PerformCleanupTask(...)
 	if not FreeRunnerThread then
-		FreeRunnerThread = coroutine.create(RunEventHandler0reeThread)
+		FreeRunnerThread = coroutine.create(RunEventHandlerInFreeThread)
 	end
 	task.spawn(FreeRunnerThread, CleanupTask, ...)
 end

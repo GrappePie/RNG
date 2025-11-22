@@ -13,7 +13,7 @@ local Quad = Enum.EasingStyle.Quad
 local InOut = Enum.EasingDirection.InOut
 local v0_3_ = {}
 local v0_4_ = function(a1, a2, a3, a4)
-    local new = Tween0o.new
+    local new = TweenInfo.new
     local v1_5_ = a2
     local v1_6_ = Quad
     local v1_7_ = InOut
@@ -35,7 +35,7 @@ local v0_4_ = function(a1, a2, a3, a4)
     v1_6_:Play()
     v1_7_ = v1_6_.Completed
     v1_7_:Wait()
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v1_8_ = a2
     v1_9_ = Quad
     v1_10_ = InOut
@@ -92,7 +92,7 @@ v0_4_ = function(a1, a2, a3)
     v2_9_ = rad(v2_10_)
     v2_6_ = Angles(v2_7_, v2_8_, v2_9_)
     v2_4_ = v2_5_ * v2_6_
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v2_6_ = a2
     v2_7_ = Quad
     v2_8_ = InOut
@@ -116,5 +116,5 @@ v0_4_ = function(a1, a2, a3)
     v2_8_ = v2_7_.Completed
     v2_8_:Wait()
 end
-v0_3_.changePositio0dOrientation = v0_4_
+v0_3_.changePositionAndOrientation = v0_4_
 return v0_3_

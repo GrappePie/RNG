@@ -60,7 +60,7 @@ local function RemoveLabel_upvr(arg1, arg2) -- Line 42, Named "RemoveLabel"
 		else
 			var21 = 2
 		end
-		TweenService_upvr:Create(arg1, Tween0o.new(var21, Enum.EasingStyle.Quart), {
+		TweenService_upvr:Create(arg1, TweenInfo.new(var21, Enum.EasingStyle.Quart), {
 			TextTransparency = 1;
 		}):Play()
 		Debris_upvr:AddItem(arg1, var21)
@@ -113,7 +113,7 @@ local function Emit(...) -- Line 59
 		i_3.Width1 = v_3[2]
 		i_3.Color = ColorSequence.new(unpacked_value_1_2)
 		i_3.Enabled = true
-		TweenService_upvr:Create(i_3, Tween0o.new(1.5, Enum.EasingStyle.Quart), {
+		TweenService_upvr:Create(i_3, TweenInfo.new(1.5, Enum.EasingStyle.Quart), {
 			Width0 = 0;
 			Width1 = 0;
 		}):Play()
@@ -134,7 +134,7 @@ local function Emit(...) -- Line 59
 			i_6.Width1 = v_6[2]
 			i_6.Color = ColorSequence.new(unpacked_value_1)
 			i_6.Enabled = true
-			TweenService_upvr:Create(i_6, Tween0o.new(0.5, Enum.EasingStyle.Quart), {
+			TweenService_upvr:Create(i_6, TweenInfo.new(0.5, Enum.EasingStyle.Quart), {
 				Width0 = 0;
 				Width1 = 0;
 			}):Play()

@@ -1256,5 +1256,5 @@ v0_7_ = function(a1, a2, a3, a4)
     end
     v29_4_:add(v29_11_)
 end
-v0_0_.jo0eature = v0_7_
+v0_0_.joinFeature = v0_7_
 return v0_0_

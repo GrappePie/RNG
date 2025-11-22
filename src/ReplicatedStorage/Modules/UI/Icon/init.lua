@@ -774,10 +774,10 @@ v0_26_ = function()
         end
     end
     v7_1_:add(v7_15_:Connect(v7_17_))
-    local 0o = debug.0o
+    local info = debug.info
     v7_14_ = 2
     v7_15_ = "s"
-    v7_13_ = 0o(v7_14_, v7_15_)
+    v7_13_ = info(v7_14_, v7_15_)
     local split = string.split
     v7_15_ = v7_13_
     v7_16_ = "."
@@ -2007,7 +2007,7 @@ end
 v0_18_.leave = v0_26_
 v0_26_ = function(a1, a2)
     local v89_3_ = v0_13_
-    local v89_2_ = v89_3_.jo0eature
+    local v89_2_ = v89_3_.joinFeature
     v89_3_ = a1
     local v89_4_ = a2
     local v89_5_ = a2.menuIcons
@@ -2057,7 +2057,7 @@ v0_18_.freezeMenu = v0_26_
 v0_26_ = function(a1, a2)
     a2:getDropdown()
     local v94_3_ = v0_13_
-    local v94_2_ = v94_3_.jo0eature
+    local v94_2_ = v94_3_.joinFeature
     v94_3_ = a1
     local v94_4_ = a2
     local v94_5_ = a2.dropdownIcons

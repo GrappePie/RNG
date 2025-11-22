@@ -2,11 +2,11 @@
 
 local v_u_1 = game:GetService("StarterGui")
 local v_u_2 = game:GetService("TweenService")
-local v_u_3 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_4 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_5 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_6 = Tween0o.new(2, Enum.EasingStyle.Quart)
-local v_u_7 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_3 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_4 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_5 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_6 = TweenInfo.new(2, Enum.EasingStyle.Quart)
+local v_u_7 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 local v8 = game:GetService("ReplicatedStorage")
 local v_u_9 = game:GetService("RunService")
 local v_u_10 = v8.Assets.SFXs
@@ -104,12 +104,12 @@ return function(_, p36, p37, p38, _)
 	local _ = p36.Break2
 	local v43 = p37:WaitForChild("ShakeAmount")
 	local v44 = p37:WaitForChild("StarSpinSpeed")
-	v_u_2:Create(v41, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_11)
-	v_u_2:Create(v41, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_12)
-	local v45 = v_u_2:Create(v40, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	v_u_2:Create(v41, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_11)
+	v_u_2:Create(v41, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_12)
+	local v45 = v_u_2:Create(v40, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		["ImageTransparency"] = 0
 	})
-	local v46 = v_u_2:Create(v40, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+	local v46 = v_u_2:Create(v40, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		["ImageTransparency"] = 1
 	})
 	local v47 = v_u_2:Create(v_u_39, v_u_3, v_u_13)

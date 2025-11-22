@@ -18,11 +18,11 @@ local v_u_10 = {
 local v_u_11 = {
 	["BackgroundTransparency"] = 0
 }
-local v_u_12 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_13 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_14 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_15 = Tween0o.new(2, Enum.EasingStyle.Quart)
-Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_12 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_13 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_14 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_15 = TweenInfo.new(2, Enum.EasingStyle.Quart)
+TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 local v_u_16 = game:GetService("ReplicatedStorage"):WaitForChild("Assets"):WaitForChild("SFXs")
 function v8.Init() end
 local function v_u_26(p17, p18)
@@ -103,12 +103,12 @@ return setmetatable(v8, {
 		local _ = p27.Break2
 		local v40 = script:WaitForChild("Message"):Clone()
 		local v_u_41 = v40:WaitForChild("UIGradient")
-		v_u_3:Create(v39, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_9)
-		v_u_3:Create(v39, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_10)
-		local v42 = v_u_3:Create(v_u_38, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+		v_u_3:Create(v39, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_9)
+		v_u_3:Create(v39, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_10)
+		local v42 = v_u_3:Create(v_u_38, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 			["ImageTransparency"] = 0
 		})
-		local v43 = v_u_3:Create(v_u_38, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+		local v43 = v_u_3:Create(v_u_38, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 			["ImageTransparency"] = 1
 		})
 		local v44 = v_u_3:Create(v_u_37, v_u_12, v_u_11)
@@ -137,46 +137,46 @@ return setmetatable(v8, {
 		p29.Visible = false
 		v44:Play()
 		v40.Parent = p27
-		v_u_3:Create(v_u_41, Tween0o.new(4, Enum.EasingStyle.Linear), {
+		v_u_3:Create(v_u_41, TweenInfo.new(4, Enum.EasingStyle.Linear), {
 			["Offset"] = Vector2.new(1, 0)
 		}):Play()
-		v_u_3:Create(v40:WaitForChild("UIStroke"):WaitForChild("UIGradient"), Tween0o.new(4, Enum.EasingStyle.Linear), {
+		v_u_3:Create(v40:WaitForChild("UIStroke"):WaitForChild("UIGradient"), TweenInfo.new(4, Enum.EasingStyle.Linear), {
 			["Offset"] = Vector2.new(1, 0)
 		}):Play()
 		task.delay(2, function()
 			-- upvalues: (ref) v_u_3, (copy) v_u_34, (copy) v_u_33, (copy) v_u_31, (copy) v_u_32, (copy) v_u_36
-			v_u_3:Create(v_u_34, Tween0o.new(2.5, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut), {
+			v_u_3:Create(v_u_34, TweenInfo.new(2.5, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut), {
 				["Size"] = UDim2.fromScale(1, 1),
 				["ImageTransparency"] = 0
 			}):Play()
-			v_u_3:Create(v_u_33, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
-				["Size"] = UDim2.fromScale(1, 1),
-				["ImageTransparency"] = 0
-			}):Play()
-			task.wait(1)
-			v_u_3:Create(v_u_31, Tween0o.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut), {
-				["Size"] = UDim2.fromScale(1, 1),
-				["ImageTransparency"] = 0
-			}):Play()
-			v_u_3:Create(v_u_32, Tween0o.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+			v_u_3:Create(v_u_33, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 				["Size"] = UDim2.fromScale(1, 1),
 				["ImageTransparency"] = 0
 			}):Play()
 			task.wait(1)
-			v_u_3:Create(v_u_36:WaitForChild("UIGradient"), Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+			v_u_3:Create(v_u_31, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut), {
+				["Size"] = UDim2.fromScale(1, 1),
+				["ImageTransparency"] = 0
+			}):Play()
+			v_u_3:Create(v_u_32, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+				["Size"] = UDim2.fromScale(1, 1),
+				["ImageTransparency"] = 0
+			}):Play()
+			task.wait(1)
+			v_u_3:Create(v_u_36:WaitForChild("UIGradient"), TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 				["Offset"] = Vector2.new(1, 0)
 			}):Play()
 		end)
 		v_u_16:WaitForChild("OneMilPlus"):Play()
 		task.wait(5.8)
-		v_u_3:Create(v35, Tween0o.new(2.7, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+		v_u_3:Create(v35, TweenInfo.new(2.7, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 			["ImageTransparency"] = 0.2
 		}):Play()
-		v_u_3:Create(v30, Tween0o.new(3, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+		v_u_3:Create(v30, TweenInfo.new(3, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 			["Size"] = UDim2.fromScale(1.2, 1.2),
 			["Rotation"] = 360
 		}):Play()
-		v_u_3:Create(v_u_36, Tween0o.new(3, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+		v_u_3:Create(v_u_36, TweenInfo.new(3, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 			["Size"] = UDim2.fromScale(0.65, 0.65)
 		}):Play()
 		task.wait(0.5)

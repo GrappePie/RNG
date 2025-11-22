@@ -2,11 +2,11 @@
 
 local v_u_1 = game:GetService("StarterGui")
 local v_u_2 = game:GetService("TweenService")
-local v_u_3 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_4 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_5 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_6 = Tween0o.new(2, Enum.EasingStyle.Quart)
-local v_u_7 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_3 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_4 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_5 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_6 = TweenInfo.new(2, Enum.EasingStyle.Quart)
+local v_u_7 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 local v8 = game:GetService("ReplicatedStorage")
 local v_u_9 = game:GetService("RunService")
 local v_u_10 = v8.Assets.SFXs
@@ -59,7 +59,7 @@ local function v_u_29(p15, p16)
 		end
 	end)()
 end
-local v_u_30 = Tween0o.new(0.7, Enum.EasingStyle.Quart)
+local v_u_30 = TweenInfo.new(0.7, Enum.EasingStyle.Quart)
 local function v_u_33(p31)
 	-- upvalues: (copy) v_u_2, (copy) v_u_30, (copy) v_u_14
 	local v32 = Instance.new("ImageLabel", p31)
@@ -143,12 +143,12 @@ return function(_, p49, p50, p51, _)
 	local _ = p49.Break2
 	local v56 = p50:WaitForChild("ShakeAmount")
 	local v57 = p50:WaitForChild("StarSpinSpeed")
-	v_u_2:Create(v54, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_11)
-	v_u_2:Create(v54, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_12)
-	local v58 = v_u_2:Create(v53, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	v_u_2:Create(v54, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_11)
+	v_u_2:Create(v54, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_12)
+	local v58 = v_u_2:Create(v53, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		["ImageTransparency"] = 0
 	})
-	local v59 = v_u_2:Create(v53, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+	local v59 = v_u_2:Create(v53, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		["ImageTransparency"] = 1
 	})
 	local v60 = v_u_2:Create(v_u_52, v_u_3, v_u_13)

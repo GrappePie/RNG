@@ -39,7 +39,7 @@ local Class_result1_5 = Class(Components:WaitForChild("Corner"))
 local var17_result1_3 = Class(Components:WaitForChild("AuraLabel"))
 local Class_result1 = Class(Components:WaitForChild("TextButton"))
 local any_GetStore_result1_upvr = module_upvr_3.Store.GetStore("Wiki")
-any_GetStore_result1_upvr.Music0o = false
+any_GetStore_result1_upvr.MusicInfo = false
 any_GetStore_result1_upvr.MusicName = "Music Name"
 any_GetStore_result1_upvr.MusicCreator = "Music Creator"
 any_GetStore_result1_upvr.MusicPlaying = true
@@ -163,7 +163,7 @@ tbl_3[4] = var17_result1_4({})
 local tbl_8 = {
 	AnchorPoint = Vector2.new(0, 1);
 	BackgroundTransparency = 0.4;
-	Position = any_GetStore_result1_upvr("Music0o"):With(function(arg1, arg2) -- Line 330
+	Position = any_GetStore_result1_upvr("MusicInfo"):With(function(arg1, arg2) -- Line 330
 		local var78
 		if arg2 then
 			var78 = 0.84
@@ -330,7 +330,7 @@ tbl_11[2] = Class_result1_9({
 	BackgroundTransparency = 0.4;
 	Position = UDim2.fromScale(0.225, 0.95);
 	Size = UDim2.fromScale(0.2, 0.1);
-	GroupTransparency = any_GetStore_result1_upvr("Music0o"):With(function(arg1, arg2) -- Line 227
+	GroupTransparency = any_GetStore_result1_upvr("MusicInfo"):With(function(arg1, arg2) -- Line 227
 		if arg2 then
 			return 0
 		end
@@ -402,7 +402,7 @@ tbl_11[2] = Class_result1_9({
 						[3]: AudioSource_upvw (read and write)
 						[4]: arg1 (readonly)
 					]]
-					if var38_upvw and var38_upvw.Enabled and any_GetStore_result1_upvr.Music0o and any_GetStore_result1_upvr.AudioSource then
+					if var38_upvw and var38_upvw.Enabled and any_GetStore_result1_upvr.MusicInfo and any_GetStore_result1_upvr.AudioSource then
 						any_GetStore_result1_upvr.AudioSource.Playing = any_GetStore_result1_upvr.MusicPlaying
 						if any_GetStore_result1_upvr.MusicPlaying then
 							AudioSource_upvw = any_GetStore_result1_upvr.AudioSource
@@ -444,7 +444,7 @@ tbl_11[2] = Class_result1_9({
 	}), Class_result1_2({}), Class_result1_5({
 		Size = 0.1;
 	}), var17_result1_4({
-		Transparency = any_GetStore_result1_upvr("Music0o"):With(function(arg1, arg2) -- Line 324
+		Transparency = any_GetStore_result1_upvr("MusicInfo"):With(function(arg1, arg2) -- Line 324
 			if arg2 then
 				return 0.5
 			end
@@ -895,7 +895,7 @@ local function _(arg1) -- Line 844, Named "LoadSkill"
 	end
 end
 local module_upvr = require(ReplicatedStorage:WaitForChild("Packets"):WaitForChild("Aura"))
-local function Load0o_upvr(arg1) -- Line 851, Named "Load0o"
+local function LoadInfo_upvr(arg1) -- Line 851, Named "LoadInfo"
 	--[[ Upvalues[5]:
 		[1]: any_GetStore_result1_upvr (readonly)
 		[2]: module_upvr_5 (readonly)
@@ -948,7 +948,7 @@ task.defer(function() -- Line 926
 		[3]: Class_result1_7_upvr (readonly)
 		[4]: Mount_upvr (readonly)
 		[5]: var39_upvw (read and write)
-		[6]: Load0o_upvr (readonly)
+		[6]: LoadInfo_upvr (readonly)
 	]]
 	local tbl_2_upvr = {}
 	local any_GetList_result1_upvr = module_upvr_5:GetList()
@@ -992,10 +992,10 @@ task.defer(function() -- Line 926
 			}
 			local function Callback() -- Line 954
 				--[[ Upvalues[2]:
-					[1]: Load0o_upvr (copied, readonly)
+					[1]: LoadInfo_upvr (copied, readonly)
 					[2]: v_3_upvr (readonly)
 				]]
-				Load0o_upvr(v_3_upvr.Value)
+				LoadInfo_upvr(v_3_upvr.Value)
 			end
 			tbl.Callback = Callback
 			any_new_result1_upvr:insert(Class_result1_7_upvr, tbl):andThen(function(arg1) -- Line 932
@@ -1045,10 +1045,10 @@ task.defer(function() -- Line 926
 					tbl_10.Order = var211 + 1
 					function tbl_10.Callback() -- Line 986
 						--[[ Upvalues[2]:
-							[1]: Load0o_upvr (copied, readonly)
+							[1]: LoadInfo_upvr (copied, readonly)
 							[2]: v_4_upvr (readonly)
 						]]
-						Load0o_upvr(v_4_upvr.Value)
+						LoadInfo_upvr(v_4_upvr.Value)
 					end
 					any_new_result1_upvr:insert(Class_result1_7_upvr, tbl_10):andThen(function(arg1) -- Line 932
 						--[[ Upvalues[1]:
@@ -1068,7 +1068,7 @@ task.defer(function() -- Line 926
 			[1]: tbl_2_upvr (readonly)
 			[2]: any_GetList_result1_upvr (readonly)
 			[3]: module_upvr_5 (copied, readonly)
-			[4]: Load0o_upvr (copied, readonly)
+			[4]: LoadInfo_upvr (copied, readonly)
 		]]
 		-- KONSTANTERROR: [0] 1. Error Block 18 start (CF ANALYSIS FAILED)
 		local var227_upvr = tbl_2_upvr[arg1]
@@ -1094,10 +1094,10 @@ task.defer(function() -- Line 926
 		var227_upvr.Locked = false
 		function var227_upvr.Callback() -- Line 1020
 			--[[ Upvalues[2]:
-				[1]: Load0o_upvr (copied, readonly)
+				[1]: LoadInfo_upvr (copied, readonly)
 				[2]: var227_upvr (readonly)
 			]]
-			Load0o_upvr(var227_upvr.AuraName)
+			LoadInfo_upvr(var227_upvr.AuraName)
 		end
 		-- KONSTANTERROR: [53] 40. Error Block 10 end (CF ANALYSIS FAILED)
 	end)
@@ -1154,5 +1154,5 @@ for i_7, v_7 in tbl_5_upvr do
 		v_7:PivotTo(tbl_5_upvr.Default.CFrame)
 	end
 end
-Load0o_upvr("Common")
+LoadInfo_upvr("Common")
 return var182_upvw

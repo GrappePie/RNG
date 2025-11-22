@@ -227,12 +227,12 @@ else
 	end;
 	local function v91(v81, v82)
 		local v83 = l_PotionRecipesDB_0[v82];
-		local l_Potion0omationFrame_0 = v81.Potion0omationFrame;
-		local l_ViewportFrame_0 = l_Potion0omationFrame_0.ViewportHolder.ViewportFrame;
+		local l_PotionInfomationFrame_0 = v81.PotionInfomationFrame;
+		local l_ViewportFrame_0 = l_PotionInfomationFrame_0.ViewportHolder.ViewportFrame;
 		local v86 = l_ViewportFrame_0:FindFirstChild("Camera") or Instance.new("Camera", l_ViewportFrame_0);
 		l_ViewportFrame_0.CurrentCamera = v86;
-		local l_PotionDescription_0 = l_Potion0omationFrame_0.PotionDescription;
-		local l_PotionName_0 = l_Potion0omationFrame_0.PotionName;
+		local l_PotionDescription_0 = l_PotionInfomationFrame_0.PotionDescription;
+		local l_PotionName_0 = l_PotionInfomationFrame_0.PotionName;
 		l_PotionDescription_0.Text = v83[v27].description;
 		l_PotionName_0.Text = ("%* %*"):format(v27, (v37(v28)));
 		local v89 = v83[v27].potions[v28].viewportModel:Clone();

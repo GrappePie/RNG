@@ -33,6 +33,7 @@ function module:Init(Settings)
 
 	-- Setup logic loop
 	module.UpdateConnection = RunService.Heartbeat:Connect(function()
+		task.wait()
 		local Clock = os.clock()
 
 		-- Spawn handler

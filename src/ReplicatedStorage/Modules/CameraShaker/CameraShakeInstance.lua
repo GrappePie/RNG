@@ -25,8 +25,8 @@ function v_u_1.new(p4, p5, p6, p7)
 	local v14 = {
 		["Magnitude"] = p4,
 		["Roughness"] = p5,
-		["Position0luence"] = v_u_2(),
-		["Rotation0luence"] = v_u_2(),
+		["PositionInfluence"] = v_u_2(),
+		["RotationInfluence"] = v_u_2(),
 		["DeleteOnInactive"] = true,
 		["roughMod"] = 1,
 		["magnMod"] = 1,

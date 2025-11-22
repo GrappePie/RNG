@@ -1511,8 +1511,8 @@ v0_75_ = function(a1)
     v24_3_ = tonumber
     v24_3_ = v24_3_(v24_4_)
     if v24_3_ then
-        if v24_3_ ~= 0 then
-            if v24_3_ == 0(ind) then
+        if v24_3_ ~= inf then
+            if v24_3_ == -nan(ind) then
                 v24_5_ = v0_10_
                 v24_4_ = v24_5_.PlaySFX
                 v24_5_ = "Error"

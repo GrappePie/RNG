@@ -18,10 +18,10 @@ Message.Parent = game.Players.LocalPlayer.PlayerGui.MainInterface
 
 local TweenService = game:GetService("TweenService")
 local InOut = Enum.EasingDirection.InOut
-local Tween0o = Tween0o.new(7, Enum.EasingStyle.Sine, InOut, 0, false, 5)
+local TweenInfo = TweenInfo.new(7, Enum.EasingStyle.Sine, InOut, 0, false, 5)
 
 local tweenGoals = { TextTransparency = 1 }
-local tween = TweenService:Create(Message, Tween0o, tweenGoals)
+local tween = TweenService:Create(Message, TweenInfo, tweenGoals)
 tween:Play()
 
 local Debris = game:GetService("Debris")

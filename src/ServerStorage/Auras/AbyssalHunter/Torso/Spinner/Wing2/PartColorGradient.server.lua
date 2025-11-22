@@ -2,7 +2,7 @@
 local TweenService = game:GetService("TweenService") --Gets the TweenService
 local TweenPart = script.Parent --Part that you wan to tween
 
-local Tween0ormation = Tween0o.new(
+local TweenInformation = TweenInfo.new(
 
 	1, -- Time/length
 
@@ -28,7 +28,7 @@ local TweenGoals = {
 
 }
 
-local Twee0imation = TweenService:Create(TweenPart, Tween0ormation, TweenGoals)
+local TweenAnimation = TweenService:Create(TweenPart, TweenInformation, TweenGoals)
 
 
-Twee0imation:Play()
+TweenAnimation:Play()

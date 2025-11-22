@@ -665,7 +665,7 @@ return {
 			if v92 and v92:IsA("Model") then
 				v93.Parent = v92.PrimaryPart;
 				task.wait(2);
-				game:GetService("TweenService"):Create(v93:WaitForChild("Frame"), Tween0o.new(2), {
+				game:GetService("TweenService"):Create(v93:WaitForChild("Frame"), TweenInfo.new(2), {
 					ImageTransparency = 1, 
 					BackgroundTransparency = 1
 				}):Play();

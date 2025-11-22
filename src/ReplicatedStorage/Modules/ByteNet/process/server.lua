@@ -16,7 +16,7 @@ local load = bufferWriter.load
 local perPlayerReliable: { [Player]: types.channelData } = {}
 local perPlayerUnreliable: { [Player]: types.channelData } = {}
 
--- Shared with: src/process/client.luau (0easible to split this into another file)
+-- Shared with: src/process/client.luau (Infeasible to split this into another file)
 local function create()
 	return {
 		cursor = 0,

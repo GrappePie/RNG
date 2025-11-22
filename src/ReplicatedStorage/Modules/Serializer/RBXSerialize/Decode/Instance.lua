@@ -23,14 +23,14 @@ function ConversionMethod.Convert(RBXSerialize,Parsed,RootBase,ForceParent)
 		end
 		
 		for PropertyName,RawData in pairs(Parsed.Properties) do 
-			local Property0o = Properties[PropertyName]
-			if not Property0o then 
+			local PropertyInfo = Properties[PropertyName]
+			if not PropertyInfo then 
 				continue
 			end
 			
-			local ValueType = Property0o.ValueType.Name
+			local ValueType = PropertyInfo.ValueType.Name
 			local PropertySuperClassInstance = ValueType == "Instance" 
-			if Property0o.ValueType.Category == "Class"  then
+			if PropertyInfo.ValueType.Category == "Class"  then
 				local PropertyClass = RBXSerialize.API.Classes[ValueType]
 				if PropertyClass then 
 					PropertySuperClassInstance = true 
@@ -38,7 +38,7 @@ function ConversionMethod.Convert(RBXSerialize,Parsed,RootBase,ForceParent)
 			end
 			
 			
-			local Convert =	RBXSerialize.DoConversion(false,Property0o.ValueType.Name,RawData,Parsed)
+			local Convert =	RBXSerialize.DoConversion(false,PropertyInfo.ValueType.Name,RawData,Parsed)
 			if Convert ~= nil then 
 				NewInstance[PropertyName] = Convert
 			else
@@ -49,7 +49,7 @@ function ConversionMethod.Convert(RBXSerialize,Parsed,RootBase,ForceParent)
 						RBXSerialize.Warn("Cannot convert type 'Instance' when there are no additional references stored.")
 					end
 				else 
-					RBXSerialize.Warn(("No convertor or conversion failure for the type %s."):format(Property0o.ValueType.Name))
+					RBXSerialize.Warn(("No convertor or conversion failure for the type %s."):format(PropertyInfo.ValueType.Name))
 				end
 			end
 		end

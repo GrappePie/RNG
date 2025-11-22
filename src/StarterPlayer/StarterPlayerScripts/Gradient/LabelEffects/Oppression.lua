@@ -2,7 +2,7 @@
 
 local v_u_1 = game:GetService("TweenService")
 local v_u_2 = game:GetService("Debris")
-local v_u_3 = Tween0o.new(2, Enum.EasingStyle.Quart)
+local v_u_3 = TweenInfo.new(2, Enum.EasingStyle.Quart)
 local v_u_4 = {
 	["TextTransparency"] = 1,
 	["BackgroundTransparency"] = 1

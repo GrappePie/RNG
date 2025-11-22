@@ -22,29 +22,29 @@ local var12_upvr = module.Class("ImageLabel")({
 	ImageTransparency = 1;
 	ZIndex = -10;
 })
-local Tween0o_new_result1 = Tween0o.new(0.4, Enum.EasingStyle.Quint)
-local tbl_2_upvr = {TweenService:Create(Underwater_upvr, Tween0o_new_result1, {
+local TweenInfo_new_result1 = TweenInfo.new(0.4, Enum.EasingStyle.Quint)
+local tbl_2_upvr = {TweenService:Create(Underwater_upvr, TweenInfo_new_result1, {
 	Volume = 0.05;
-}), TweenService:Create(var12_upvr, Tween0o_new_result1, {
+}), TweenService:Create(var12_upvr, TweenInfo_new_result1, {
 		ImageTransparency = 0.2;
-	}), TweenService:Create(Blur, Tween0o_new_result1, {
+	}), TweenService:Create(Blur, TweenInfo_new_result1, {
 		Size = 8;
-	}), TweenService:Create(DepthOfField, Tween0o_new_result1, {
+	}), TweenService:Create(DepthOfField, TweenInfo_new_result1, {
 		FarIntensity = 1;
 		FocusDistance = 0;
-		0ocusRadius = 15;
+		InFocusRadius = 15;
 		NearIntensity = 1;
 	})}
-local tbl_upvr = {TweenService:Create(Underwater_upvr, Tween0o_new_result1, {
+local tbl_upvr = {TweenService:Create(Underwater_upvr, TweenInfo_new_result1, {
 	Volume = 0;
-}), TweenService:Create(var12_upvr, Tween0o_new_result1, {
+}), TweenService:Create(var12_upvr, TweenInfo_new_result1, {
 		ImageTransparency = 1;
-	}), TweenService:Create(Blur, Tween0o_new_result1, {
+	}), TweenService:Create(Blur, TweenInfo_new_result1, {
 		Size = 0;
-	}), TweenService:Create(DepthOfField, Tween0o_new_result1, {
+	}), TweenService:Create(DepthOfField, TweenInfo_new_result1, {
 		FarIntensity = 0.1;
 		FocusDistance = 0.05;
-		0ocusRadius = 30;
+		InFocusRadius = 30;
 		NearIntensity = 0.75;
 	})}
 OverlapParams_new_result1_upvr.FilterType = Enum.RaycastFilterType.Include

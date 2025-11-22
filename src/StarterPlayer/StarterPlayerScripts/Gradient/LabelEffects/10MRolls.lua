@@ -3,7 +3,7 @@
 game:GetService("RunService")
 local v_u_1 = game:GetService("Debris")
 local v_u_2 = game:GetService("TweenService")
-local v_u_3 = Tween0o.new(0.3, Enum.EasingStyle.Quart)
+local v_u_3 = TweenInfo.new(0.3, Enum.EasingStyle.Quart)
 local function v_u_8(p4, p5)
 	-- upvalues: (copy) v_u_2, (copy) v_u_3, (copy) v_u_1
 	local v6 = Instance.new("ImageLabel", p4)
@@ -37,7 +37,7 @@ return function(p_u_10)
 	p_u_10.Text = game.Players:GetPlayerByUserId(p_u_10:GetAttribute("UserId")).DisplayName
 	p_u_10.Rotation = 0
 	p_u_10.FontFace = Font.new("rbxassetid://12187365104")
-	v_u_2:Create(v_u_12, Tween0o.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out, -1, false, 0), {
+	v_u_2:Create(v_u_12, TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.Out, -1, false, 0), {
 		["Size"] = UDim2.fromScale(2, 2),
 		["ImageTransparency"] = 1
 	}):Play()

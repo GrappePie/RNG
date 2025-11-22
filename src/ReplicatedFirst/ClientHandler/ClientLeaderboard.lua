@@ -42,7 +42,7 @@ local function v_u_19(p5)
 		end
 		local v16 = nil  -- Initialize v16 here
 		repeat
-			local v15, v16_attempt = pcall(v_u_2.GetUser0osByUserIdsAsync, v_u_2, v7)
+			local v15, v16_attempt = pcall(v_u_2.GetUserInfosByUserIdsAsync, v_u_2, v7)
 			v16 = v16_attempt
 			if not v15 then
 				task.wait(1)

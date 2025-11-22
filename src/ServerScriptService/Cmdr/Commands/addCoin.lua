@@ -18,7 +18,7 @@ local v1 = {
 		{
 			["Type"] = "boolean",
 			["Name"] = "notice",
-			["Description"] = "0orms that the player\'s coin has disappeared(when the maximum coin holding limit is exceeded)"
+			["Description"] = "Informs that the player\'s coin has disappeared(when the maximum coin holding limit is exceeded)"
 		}
 	}
 }

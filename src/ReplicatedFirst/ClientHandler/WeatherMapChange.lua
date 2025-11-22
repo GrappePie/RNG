@@ -2,7 +2,7 @@
 local v_u_1 = game:GetService("Lighting")
 local v_u_2 = game:GetService("HttpService")
 local v_u_3 = game:GetService("TweenService")
-local v_u_4 = game:GetService("ReplicatedStorage"):WaitForChild("Server0o")
+local v_u_4 = game:GetService("ReplicatedStorage"):WaitForChild("ServerInfo")
 local v_u_5 = workspace:WaitForChild("Map")
 local v_u_6 = v_u_5:WaitForChild("Miscs"):WaitForChild("EffectModel"):WaitForChild("SkyParticles")
 local v_u_7 = v_u_5:WaitForChild("Miscs"):WaitForChild("EffectModel"):WaitForChild("FloorParticles")
@@ -21,7 +21,7 @@ local function v23()
 	local v14 = v_u_12(v_u_2:JSONDecode(v_u_4:GetAttribute("Structures")))
 	local v15 = v_u_12(v_u_2:JSONDecode(v_u_4:GetAttribute("Lighting")))
 	local v16 = v_u_12(v15.Atmosphere)
-	local v17 = Tween0o.new(v15.TweenTime, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+	local v17 = TweenInfo.new(v15.TweenTime, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 	v15.Atmosphere = nil
 	v15.TweenTime = nil
 	for v18, v19 in pairs(v14) do

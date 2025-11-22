@@ -36,7 +36,7 @@ return {
 			Rarity = 1/10,
 			Description = "Empty.", 
 			CreatorId = 347681747, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Shriek", 
 				Author = "D-Mode-D"
 			}
@@ -55,7 +55,7 @@ return {
 			CreatorId = 317330352, 
 			IsCommunityAura = true, 
 			Description = "A <font color=\"rgb(240, 230, 140)\">Full Moon</font> hung in the sky", 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Shiny night", 
 				Author = "Kandera"
 			}
@@ -65,7 +65,7 @@ return {
 			CreatorId = 317330352, 
 			IsCommunityAura = true, 
 			Description = "Empty.", 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Nightfall", 
 				Author = "Kori"
 			}
@@ -76,7 +76,7 @@ return {
 			Rarity = 1 / 10, 
 			CreatorId = 1390696522, 
 			Description = "The memories were becoming increasingly blurry.\nUnder the full moon that holds many dreams high above, I sincerely wish.\nI believe that I will meet him again someday.\nI once again reminisce about the memories I have with the person I will never meet again.\n\nHer side is empty again today.", 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Fleecy Light", 
 				Author = "Baptiste Charvet"
 			}
@@ -87,7 +87,7 @@ return {
 			Rarity = 1 / 10, 
 			CreatorId = 478424220, 
 			IsCommunityAura = true, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "White Knight", 
 				Author = "APM Music"
 			}
@@ -98,7 +98,7 @@ return {
 			Rarity = 1 / 10, 
 			CreatorId = 94067972, 
 			IsCommunityAura = true, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Crystal Drift (a)", 
 				Author = "APM Music"
 			}
@@ -109,7 +109,7 @@ return {
 			Rarity = 1 / 10, 
 			CreatorId = 419860256, 
 			Description = "When news spread that this being had awoken, people trembled in fear. \n\nHowever, something was odd; the creature had awoken but showed no signs of activity. \nYet, it was too early for assumptions. It could be just recovering its strength...", 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Brooding Dark (a)", 
 				Author = "APM Music"
 			}
@@ -119,7 +119,7 @@ return {
 		Hurricane = {
 			Rarity = 1 / 10, 
 			CreatorId = 1188520962, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Looking In a", 
 				Author = "APM Music"
 			}
@@ -142,7 +142,7 @@ return {
 		APEX = {
 			Rarity = 1 / 10, 
 			CreatorId = 419860256, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Panic Track", 
 				Author = "Remi Gallego"
 			}, 
@@ -154,7 +154,7 @@ return {
 			Rarity = 1 / 10, 
 			CreatorId = 419860256, 
 			Description = "Defining the beginning and end of the world.\n\n<b><font transparency=\".75\">WAKE\nUP\nFROM\nAWAY</font></b>", 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Something Different (Feat. Talurre) [Remastered]", 
 				Author = "Derpcat"
 			}
@@ -164,7 +164,7 @@ return {
 			Unobtainable = true, 
 			Description = "Inside of hollow and dark place.", 
 			CreatorId = 3536675145, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Cheatreal", 
 				Author = "t+pazolite"
 			}
@@ -172,7 +172,7 @@ return {
 		Kromat1k = {
 			Rarity = 0.4 / 10, 
 			CreatorId = 419860256, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "The Great Strategy", 
 				Author = "badliz"
 			}, 
@@ -199,7 +199,7 @@ return {
 			Rarity = 1 / 10, 
 			CreatorId = 1270194733, 
 			Description = "EMPTY", 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Slow Down", 
 				Author = "Creo"
 			}
@@ -259,7 +259,7 @@ return {
 	Sailor = {
 		["Flying Dutchman"] = {
 			Rarity = 6 / 10, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Voyage of Lost Souls", 
 				Author = "End0_114"
 			}, 
@@ -271,7 +271,7 @@ return {
 	Ruins = {
 		["Blossom"] = {
 			Rarity = 2 / 10, 
-			Audio0o = {
+			AudioInfo = {
 				Name = "Ruins : Piano", 
 				Author = "sutart_thecoolkid"
 			}, 

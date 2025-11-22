@@ -15,9 +15,9 @@ local function updateTime()
 	Lighting.ClockTime = newTime
 
 	if Lighting.ClockTime >= 6 and Lighting.ClockTime < 18 then
-		ReplicatedStorage.Server0o:SetAttribute("CurrentTime", "Day")
+		ReplicatedStorage.ServerInfo:SetAttribute("CurrentTime", "Day")
 	else
-		ReplicatedStorage.Server0o:SetAttribute("CurrentTime", "Night")
+		ReplicatedStorage.ServerInfo:SetAttribute("CurrentTime", "Night")
 	end
 end
 

@@ -2,11 +2,11 @@
 
 local v_u_1 = game:GetService("StarterGui")
 local v_u_2 = game:GetService("TweenService")
-local v_u_3 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_4 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_5 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_6 = Tween0o.new(2, Enum.EasingStyle.Quart)
-local v_u_7 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_3 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_4 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_5 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_6 = TweenInfo.new(2, Enum.EasingStyle.Quart)
+local v_u_7 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 local v8 = game:GetService("ReplicatedStorage")
 local v_u_9 = game:GetService("RunService")
 local v_u_10 = v8.Assets.SFXs
@@ -70,7 +70,7 @@ local function v_u_35(p26, p27)
 	local v33 = {
 		["Position"] = UDim2.new(v28, -v32, v29, v32)
 	}
-	local v34 = v_u_2:Create(p26, Tween0o.new(math.random(300, 500) / 100, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, -1), v33)
+	local v34 = v_u_2:Create(p26, TweenInfo.new(math.random(300, 500) / 100, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, -1), v33)
 	task.wait(math.random() * 5)
 	v34:Play()
 end
@@ -106,7 +106,7 @@ local function v_u_46(p42)
 	}
 	local v44 = math.random() * 3 / 100
 	v43.Size = UDim2.fromScale(v44, v44)
-	local v45 = v_u_2:Create(p42, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out, -1, true), v43)
+	local v45 = v_u_2:Create(p42, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out, -1, true), v43)
 	while p42 and p42.Parent do
 		task.wait(math.random() * 5)
 		v45:Play()
@@ -196,13 +196,13 @@ return function(_, p66, p67, p68, _)
 	local _ = p66.Break2
 	local v75 = p67:WaitForChild("ShakeAmount")
 	local v76 = p67:WaitForChild("StarSpinSpeed")
-	v_u_2:Create(v73, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_12)
-	v_u_2:Create(v73, Tween0o.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_13)
-	local v77 = v_u_2:Create(v70, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	v_u_2:Create(v73, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_12)
+	v_u_2:Create(v73, TweenInfo.new(1, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), v_u_13)
+	local v77 = v_u_2:Create(v70, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		["ImageTransparency"] = 0,
 		["BackgroundTransparency"] = 0.6
 	})
-	local v78 = v_u_2:Create(v70, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+	local v78 = v_u_2:Create(v70, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		["ImageTransparency"] = 1
 	})
 	local v79 = v_u_2:Create(v_u_69, v_u_3, v_u_14)
@@ -248,10 +248,10 @@ return function(_, p66, p67, p68, _)
 			v_u_25(v_u_69, Color3.new(0.7, 0.9, 1))
 		end
 	end)()
-	v_u_2:Create(v84, Tween0o.new(20, Enum.EasingStyle.Quint), {
+	v_u_2:Create(v84, TweenInfo.new(20, Enum.EasingStyle.Quint), {
 		["Rotation"] = 90
 	}):Play()
-	v_u_2:Create(v74, Tween0o.new(1), {
+	v_u_2:Create(v74, TweenInfo.new(1), {
 		["ImageColor3"] = Color3.new(0.7, 0.8, 1)
 	}):Play()
 	v_u_2:Create(v74, v_u_6, {

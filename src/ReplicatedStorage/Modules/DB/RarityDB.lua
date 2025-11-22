@@ -224,7 +224,7 @@ local v0 = {
 		Value = "Exotic", 
 		CreatorId = 1390696522, 
 		Rarity = 99999/10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Harvest", 
 			Author = "ImCold"
 		}, 
@@ -234,7 +234,7 @@ local v0 = {
 		Value = "Comet", 
 		Rarity = 12000/10, 
 		UnlockBy = "Starfall", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Galaxies", 
 			Author = "Bruton"
 		}, 
@@ -245,7 +245,7 @@ local v0 = {
 		Value = "Jade", 
 		CreatorId = 1390696522, 
 		Rarity = 125000/10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Stickerbrush Symphony", 
 			Author = "Donkey Kong County 2 OST"
 		}
@@ -255,7 +255,7 @@ local v0 = {
 		Rarity = 200000/10, 
 		SkinChance = 10, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Brooding Tension (b)", 
 			Author = "KPM Music"
 		}
@@ -267,7 +267,7 @@ local v0 = {
 		ConceptId = 83216827, 
 		IsCommunityAura = true, 
 		SkinChance = 5, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Cycle to the Stars (a 30)", 
 			Author = "KPM Music"
 		}
@@ -279,7 +279,7 @@ local v0 = {
 		SkinChance = 10, 
 		UnlockBy = "Night", 
 		HipHeight = 1, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "New Horizon", 
 			Author = "Protostar"
 		}
@@ -288,7 +288,7 @@ local v0 = {
 		Value = "Kyawthuite", 
 		CreatorId = 1390696522, 
 		Rarity = 850000/10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Forest Interlude", 
 			Author = "Donkey Kong County 2 OST"
 		}
@@ -298,7 +298,7 @@ local v0 = {
 		Rarity = 1000000/10, 
 		SkinChance = 10, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Catching a Killer", 
 			Author = "The Box"
 		}
@@ -321,7 +321,7 @@ local v0 = {
 		Rarity = 2000000/10, 
 		CreatorId = 1450080989, 
 		IsCommunityAura = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Gravity Rainbow (a 60)", 
 			Author = "KPM Music"
 		}
@@ -330,7 +330,7 @@ local v0 = {
 		Value = "Virtual", 
 		CreatorId = 47042358, 
 		Rarity = 2500000/10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Technological Trance", 
 			Author = "Endo_114"
 		}
@@ -341,7 +341,7 @@ local v0 = {
 		UnlockBy = "Rainy", 
 		CreatorId = 1631971926, 
 		IsCommunityAura = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Sea Bloom (a 30)", 
 			Author = "Roblox"
 		}
@@ -351,7 +351,7 @@ local v0 = {
 		Rarity = 4500000/10, 
 		CreatorId = 113356273, 
 		IsCommunityAura = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Silence before the storms", 
 			Author = "DM DOKURO"
 		}
@@ -362,7 +362,7 @@ local v0 = {
 		CreatorId = 26139676, 
 		Unobtainable = true, 
 		IsHidden = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Blood Code", 
 			Author = "Le Castle Vania"
 		}
@@ -372,7 +372,7 @@ local v0 = {
 		Rarity = 500000/10, 
 		UnlockBy = "Starfall", 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Andromeda Galaxy", 
 			Author = "Cezame"
 		}
@@ -383,7 +383,7 @@ local v0 = {
 		CreatorId = 1450080989, 
 		IsCommunityAura = true, 
 		UnlockBy = "Hell", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Hordes of Hades (No Choir Version)", 
 			Author = "Liquid Cinema"
 		}
@@ -393,7 +393,7 @@ local v0 = {
 		Rarity = 7500000/10, 
 		CreatorId = 361208413, 
 		HipHeight = 0.5, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Titan Dune (Archangel)", 
 			Author = "Two Steps From Hell"
 		}
@@ -405,7 +405,7 @@ local v0 = {
 		CreatorId = 561741827, 
 		IsCommunityAura = true, 
 		SkinChance = 10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Tech Anxiety", 
 			Author = "APM Music"
 		}
@@ -418,7 +418,7 @@ local v0 = {
 		IsCommunityAura = true, 
 		SkinChance = 15, 
 		HipHeight = 2.5, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Encounter the Storm", 
 			Author = "Kandera"
 		}
@@ -429,7 +429,7 @@ local v0 = {
 		SkinChance = 20.0000002, 
 		HipHeight = 1, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Panorama", 
 			Author = "Fishisuso"
 		}
@@ -439,7 +439,7 @@ local v0 = {
 		Rarity = 99999999/10, 
 		HipHeight = 1, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Alone Intelligence", 
 			Author = "Camellia"
 		}
@@ -448,7 +448,7 @@ local v0 = {
 		Value = "Ethereal", 
 		CreatorId = 1390696522, 
 		Rarity = 35000000/10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Singularity", 
 			Author = "Sergey Kolosov"
 		}
@@ -458,7 +458,7 @@ local v0 = {
 		CreatorId = 549228615, 
 		ConceptId = 1390696522, 
 		Rarity = 50000000/10, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Arcology On Permafrost", 
 			Author = "\227\129\139\227\130\129\227\130\138\227\129\130 (Camellia)"
 		}
@@ -469,7 +469,7 @@ local v0 = {
 		CreatorId = 419860256, 
 		ConceptId = 251922323, 
 		SkinChance = 50, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Floor of Religion Theme", 
 			Author = "Studio EIM"
 		}
@@ -478,7 +478,7 @@ local v0 = {
 		Value = "Symphony", 
 		Rarity = 175000000/10, 
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Wanderer: Ashes (Violin Cover)", 
 			Author = "Genshin Impact, Cover by Linden Violin"
 		}
@@ -487,7 +487,7 @@ local v0 = {
 		Value = "MatrixOverdrive", 
 		Rarity = 503_000_000/10, 
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "OVERDRIVE", 
 			Author = "Sol's Studio"
 		}
@@ -496,16 +496,16 @@ local v0 = {
 		Value = "Atlas", 
 		Rarity = 360_000_000/10, 
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Drama", 
-			Author = "0ection"
+			Author = "Infection"
 		}
 	},
 	{
 		Value = "Ruins", 
 		Rarity = 500000000/10, 
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Piano Music", 
 			Author = "Alan Hawkshaw"
 		}
@@ -516,7 +516,7 @@ local v0 = {
 		CreatorId = 419860256, 
 		SkinChance = 50, 
 		UnlockBy = "Corruption", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Threats of The Ocean Floor", 
 			Author = "DM DOKURO"
 		}
@@ -526,7 +526,7 @@ local v0 = {
 		Rarity = 250000000/10, 
 		CreatorId = 584488747, 
 		IsCommunityAura = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Vani, The Blood Cleric", 
 			Author = "Dutonic"
 		}
@@ -536,7 +536,7 @@ local v0 = {
 		CreatorId = 1390696522, 
 		Rarity = 50000000/10, 
 		UnlockBy = "Hell", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Dragonlord Keldar", 
 			Author = "Dutonic"
 		}
@@ -546,7 +546,7 @@ local v0 = {
 		Rarity = 100000000/10, 
 		CreatorId = 419860256, 
 		UnlockBy = "Rainy", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Treasures Within The Abomination", 
 			Author = "DM DOKURO"
 		}
@@ -557,7 +557,7 @@ local v0 = {
 		UnlockBy = "Starfall", 
 		CreatorId = 317330352, 
 		IsCommunityAura = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Seventh Galaxy", 
 			Author = "APM Music"
 		}
@@ -568,7 +568,7 @@ local v0 = {
 		CreatorId = 3461755503, 
 		IsCommunityAura = true, 
 		Unobtainable = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Piano Music", 
 			Author = "APM Music"
 		}
@@ -580,7 +580,7 @@ local v0 = {
 		IsCommunityAura = true, 
 		And = 950386430, 
 		HipHeight = 2.1, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Realitys False Perception", 
 			Author = "Endo_114"
 		}
@@ -592,7 +592,7 @@ local v0 = {
 		IsCommunityAura = true, 
 		And = 950386430, 
 		HipHeight = 2.1, -- -2.1 for invert 
-		Audio0o = {
+		AudioInfo = {
 			Name = "noitpecreP eslaF sytilaeR", 
 			Author = "411_odnE"
 		}
@@ -604,7 +604,7 @@ local v0 = {
 		SaveToFirst = true, 
 		CreatorId = 1448645016, 
 		IsCommunityAura = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "of Ambrosia", 
 			Author = "Frums"
 		}
@@ -613,7 +613,7 @@ local v0 = {
 		Value = "Innovator", 
 		Rarity = 30_000_000/10,
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "INVERSION", 
 			Author = "tn-shi"
 		}
@@ -622,7 +622,7 @@ local v0 = {
 		Value = "Sirius", 
 		Rarity = 14_000_000/10,
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Sphere", 
 			Author = "Creo"
 		}
@@ -631,7 +631,7 @@ local v0 = {
 		Value = "Aviator", 
 		Rarity = 24_000_000/10,
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Sky Sanctuary Zone (Modern/ACT 2)", 
 			Author = "Sonic Generations (OST)"
 		}
@@ -642,7 +642,7 @@ local v0 = {
 		SaveToFirst = true, 
 		IsCommunityAura = true, 
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Dance on the Mars", 
 			Author = "Camellia"
 		}
@@ -656,7 +656,7 @@ local v0 = {
 		Value = "Vital", 
 		Rarity = 6_000_000/10,
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Asymptomatic Contamination", 
 			Author = "Eric Volpatti @ APM Official"
 		}
@@ -665,7 +665,7 @@ local v0 = {
 		Value = "Moonflower", 
 		Rarity = 10_000_000/10,
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "In Bloom", 
 			Author = "Afro Musique"
 		}
@@ -674,7 +674,7 @@ local v0 = {
 		Value = "NIGHTMARE SKY", 
 		Rarity = 190_000_000/10,
 		CreatorId = 347681747, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Night of the Ghouls", 
 			Author = "APM Music"
 		}
@@ -686,7 +686,7 @@ local v0 = {
 		SaveToFirst = true, 
 		IsCommunityAura = true, 
 		UnlockBy = "Glitched", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Hypocrisy", 
 			Author = "Derpcat"
 		}
@@ -709,7 +709,7 @@ local v0 = {
 		ShowOnFilter = true, 
 		Unobtainable = true, 
 		RequirementOverride = "Oblivion Effect", 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Phrases", 
 			Author = "Derpcat"
 		}, 
@@ -721,7 +721,7 @@ local v0 = {
 		IsHidden = true, 
 		Unobtainable = true, 
 		CreatorId = 1913463034, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Inevitability", 
 			Author = "Tido Kang"
 		}
@@ -733,7 +733,7 @@ local v0 = {
 		Unobtainable = true, 
 		OwnerId = 419860256, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Artificial Snow", 
 			Author = "\227\129\139\227\130\129\227\130\138\227\129\130 (Camellia)"
 		}
@@ -746,7 +746,7 @@ local v0 = {
 		OwnerId = 361208413, 
 		CreatorId = 419860256, 
 		HipHeight = 2, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "HALL", 
 			Author = "Frums"
 		}
@@ -758,7 +758,7 @@ local v0 = {
 		Unobtainable = true, 
 		OwnerId = 660164736, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "\235\152\165", 
 			Author = "h17w8s"
 		}
@@ -769,7 +769,7 @@ local v0 = {
 		IsHidden = true, 
 		Unobtainable = true, 
 		OwnerId = 3929062638, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Afterworld ", 
 			Author = "Roblox"
 		}
@@ -782,7 +782,7 @@ local v0 = {
 		OwnerId = 361208413, 
 		CreatorId = 419860256, 
 		CanEquippedBy = 253, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Throwback", 
 			Author = "Derpcat"
 		}
@@ -803,7 +803,7 @@ local v0 = {
 		CameraOffset = Vector3.new(0, 6, 0, 0), 
 		OwnerId = 361208413, 
 		CreatorId = 419860256, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "LAYERS", 
 			Author = "KORAII"
 		}
@@ -815,7 +815,7 @@ local v0 = {
 		HipHeight = 0.2, 
 		IsHidden = true, 
 		Unobtainable = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "placeholder", 
 			Author = "its mine -sol"
 		}
@@ -826,7 +826,7 @@ local v0 = {
 		IsHidden = true, 
 		Unobtainable = true, 
 		OwnerId = 1343308718, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "idk", 
 			Author = "idk"
 		}
@@ -846,7 +846,7 @@ local v0 = {
 		Unobtainable = true, 
 		HipHeight = 6.5, 
 		CreatorId = 950386430, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Uri-Kan, The Last Great Wyrm", 
 			Author = "Dutonic"
 		}
@@ -858,7 +858,7 @@ local v0 = {
 		IsCommunityAura = true, 
 		Unobtainable = true, 
 		HipHeight = 2.1, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "Dion Timmer", 
 			Author = "Shiawase"
 		}
@@ -870,7 +870,7 @@ local v0 = {
 		IsCommunityAura = true, 
 		Unobtainable = true, 
 		HipHeight = 2.1, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "idk", 
 			Author = "unknown"
 		}
@@ -881,7 +881,7 @@ local v0 = {
 		CreatorId = 3461755503, 
 		IsCommunityAura = true, 
 		Unobtainable = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "idk", 
 			Author = "unknown"
 		}
@@ -892,7 +892,7 @@ local v0 = {
 		CreatorId = 317330352, 
 		IsCommunityAura = true, 
 		Unobtainable = true, 
-		Audio0o = {
+		AudioInfo = {
 			Name = "ATTACK FROM MANDRAKE", 
 			Author = "かめりあ (Camellia)"
 		}

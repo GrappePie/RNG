@@ -105,11 +105,11 @@ function module.Init() -- Line 68
 			end
 		end
 		SetEnabled_upvr(_1_upvr, Rune_of_Nothing_2)
-		local Reso0ce_of_Elements_3 = any_WaitForReplica_result1_upvr.Data.Buffs["Reso0ce of Elements"]
-		if Reso0ce_of_Elements_3 then
-			if 0 < Reso0ce_of_Elements_3[1] then
-				if Reso0ce_of_Elements_3[3] then
-					if table.find(Reso0ce_of_Elements_3[3].BiomeList, "Null") == nil then
+		local Resonance_of_Elements_3 = any_WaitForReplica_result1_upvr.Data.Buffs["Resonance of Elements"]
+		if Resonance_of_Elements_3 then
+			if 0 < Resonance_of_Elements_3[1] then
+				if Resonance_of_Elements_3[3] then
+					if table.find(Resonance_of_Elements_3[3].BiomeList, "Null") == nil then
 					else
 					end
 				end

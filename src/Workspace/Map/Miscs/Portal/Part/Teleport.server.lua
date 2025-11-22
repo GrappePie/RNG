@@ -21,7 +21,7 @@ PortalEntrance.Touched:Connect(function(touch)
 							local function animateFrame(frame, startPos, endPos, duration)
 								frame.Position = startPos
 
-								local tween0o = Tween0o.new(
+								local tweenInfo = TweenInfo.new(
 									duration,
 									Enum.EasingStyle.Quad,
 									Enum.EasingDirection.InOut,
@@ -33,7 +33,7 @@ PortalEntrance.Touched:Connect(function(touch)
 								local goal = {}
 								goal.Position = endPos
 
-								local tween = TweenService:Create(frame, tween0o, goal)
+								local tween = TweenService:Create(frame, tweenInfo, goal)
 								tween:Play()
 							end
 

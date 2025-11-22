@@ -3,7 +3,7 @@
 game:GetService("RunService")
 local v_u_1 = game:GetService("Debris")
 local v_u_2 = game:GetService("TweenService")
-local v_u_3 = Tween0o.new(0.3, Enum.EasingStyle.Quart)
+local v_u_3 = TweenInfo.new(0.3, Enum.EasingStyle.Quart)
 local function v_u_7(p4)
 	-- upvalues: (copy) v_u_2, (copy) v_u_3, (copy) v_u_1
 	local v5 = Instance.new("ImageLabel", p4)

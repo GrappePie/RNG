@@ -339,7 +339,7 @@ v0_42_ = function(a1, a2)
     v5_6_ = v5_6_(v5_7_)
     v5_8_ = function(a1, a2)
         if a2 ~= 0.000000 then
-            if a2 == 0 then
+            if a2 == inf then
                 local v6_2_ = ""
                 return v6_2_
             end
@@ -897,12 +897,12 @@ v0_42_ = function(a1, a2)
         v8_2_.Effect = v8_3_
         v8_3_ = v8_0_.IsCustomBuff
         if v8_3_ then
-            v8_1_ = v8_0_.0ormation
+            v8_1_ = v8_0_.Information
         else
-            v8_3_ = v8_0_.0ormation
+            v8_3_ = v8_0_.Information
             if v8_3_ then
                 v8_3_ = v8_1_
-                v8_4_ = v8_0_.0ormation
+                v8_4_ = v8_0_.Information
                 v8_5_ = "\n"
                 v8_1_ = v8_3_ .. v8_4_
             end

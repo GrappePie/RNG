@@ -35,8 +35,8 @@ productFunctions[6] = _add_100M_Buff -- GLOBAL
 productFunctions[7] = _add_1B_Buff -- LOCAL
 productFunctions[8] = _add_1B_Buff -- GLOBAL
 
-local function processReceipt(receipt0o)
-	local playerProductKey = receipt0o.PlayerId .. "_" .. receipt0o.PurchaseId
+local function processReceipt(receiptInfo)
+	local playerProductKey = receiptInfo.PlayerId .. "_" .. receiptInfo.PurchaseId
 	local purchased = false
 	local success, result, errorMessage
 
@@ -49,7 +49,7 @@ local function processReceipt(receipt0o)
 		error("Data store error:" .. errorMessage)
 	end
 
-	local playerProductKey = receipt0o.PlayerId .. "_" .. receipt0o.PurchaseId
+	local playerProductKey = receiptInfo.PlayerId .. "_" .. receiptInfo.PurchaseId
 
 	local success, isPurchaseRecorded = pcall(function()
 		return purchaseHistoryStore:UpdateAsync(playerProductKey, function(alreadyPurchased)
@@ -57,16 +57,16 @@ local function processReceipt(receipt0o)
 				return true
 			end
 
-			local player = Players:GetPlayerByUserId(receipt0o.PlayerId)
+			local player = Players:GetPlayerByUserId(receiptInfo.PlayerId)
 			if not player then
 				return nil
 			end
 
-			local handler = productFunctions[receipt0o.ProductId]
+			local handler = productFunctions[receiptInfo.ProductId]
 
-			local success, result = pcall(handler, receipt0o, player)
+			local success, result = pcall(handler, receiptInfo, player)
 			if not success or not result then
-				error("Failed to process a product purchase for ProductId: " .. tostring(receipt0o.ProductId) .. " Player: " .. tostring(player) .. " Error: " .. tostring(result))
+				error("Failed to process a product purchase for ProductId: " .. tostring(receiptInfo.ProductId) .. " Player: " .. tostring(player) .. " Error: " .. tostring(result))
 				return nil
 			end
 

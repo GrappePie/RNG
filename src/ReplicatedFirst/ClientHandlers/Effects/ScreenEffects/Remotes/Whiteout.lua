@@ -17,10 +17,10 @@ module.Mount(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):Wa
 		var5_upvw = arg1
 	end;
 }))
-local any_Create_result1_upvr_2 = TweenService:Create(var5_upvw, Tween0o.new(3), {
+local any_Create_result1_upvr_2 = TweenService:Create(var5_upvw, TweenInfo.new(3), {
 	BackgroundTransparency = 0;
 })
-local any_Create_result1_upvr = TweenService:Create(var5_upvw, Tween0o.new(1), {
+local any_Create_result1_upvr = TweenService:Create(var5_upvw, TweenInfo.new(1), {
 	BackgroundTransparency = 1;
 })
 local function Emit() -- Line 45

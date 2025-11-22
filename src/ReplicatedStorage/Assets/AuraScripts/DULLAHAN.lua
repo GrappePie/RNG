@@ -7,12 +7,12 @@
 -- Time taken: 0.002720 seconds
 
 local IdleAnim_upvr = script:WaitForChild("IdleAnim")
-local Ru0im_upvr = script:WaitForChild("Ru0im")
+local RunAnim_upvr = script:WaitForChild("RunAnim")
 local module_upvr = {}
 function module_upvr.setup(arg1) -- Line 9
 	--[[ Upvalues[3]:
 		[1]: module_upvr (readonly)
-		[2]: Ru0im_upvr (readonly)
+		[2]: RunAnim_upvr (readonly)
 		[3]: IdleAnim_upvr (readonly)
 	]]
 	module_upvr.humanoid = arg1:FindFirstChildOfClass("Humanoid")
@@ -26,7 +26,7 @@ function module_upvr.setup(arg1) -- Line 9
 		var4 = "Humanoid or HumanoidRootPart not found!"
 		warn(var4)
 	else
-		var4 = module_upvr.HumanoidRootPart.Horse.AnimationController:LoadAnimation(Ru0im_upvr)
+		var4 = module_upvr.HumanoidRootPart.Horse.AnimationController:LoadAnimation(RunAnim_upvr)
 		module_upvr.HorseFlyingAnimationTrack = var4
 		var4 = module_upvr
 		if not var4.HorseFlyingAnimationTrack then
@@ -65,7 +65,7 @@ end
 function module_upvr.loop(arg1) -- Line 44
 	--[[ Upvalues[3]:
 		[1]: module_upvr (readonly)
-		[2]: Ru0im_upvr (readonly)
+		[2]: RunAnim_upvr (readonly)
 		[3]: IdleAnim_upvr (readonly)
 	]]
 	if not module_upvr.humanoid then
@@ -81,7 +81,7 @@ function module_upvr.loop(arg1) -- Line 44
 		if not module_upvr.HorseFlyingLoaded then
 			if 1 < os.time() - module_upvr.HorseFlyingStartTime then
 				module_upvr.HorseFlyingStartTime = os.time()
-				local any_LoadAnimation_result1 = module_upvr.humanoid:LoadAnimation(Ru0im_upvr)
+				local any_LoadAnimation_result1 = module_upvr.humanoid:LoadAnimation(RunAnim_upvr)
 				if 0 < any_LoadAnimation_result1.Length then
 					module_upvr.HorseFlyingAnimationTrack = any_LoadAnimation_result1
 					module_upvr.HorseFlyingLoaded = true

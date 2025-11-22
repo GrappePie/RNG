@@ -32,7 +32,7 @@ v0_2_ = v0_2_:GetService(v0_4_)
 local Quad = Enum.EasingStyle.Quad
 local InOut = Enum.EasingDirection.InOut
 local v0_5_ = function()
-    local new = Tween0o.new
+    local new = TweenInfo.new
     local v1_1_ = 2
     local v1_2_ = Quad
     local v1_3_ = InOut
@@ -55,7 +55,7 @@ local v0_5_ = function()
     v1_2_:Play()
     v1_3_ = v1_2_.Completed
     v1_3_:Wait()
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v1_4_ = 2
     v1_5_ = Quad
     v1_6_ = InOut
@@ -80,7 +80,7 @@ local v0_5_ = function()
     v1_6_:Wait()
 end
 local v0_6_ = function()
-    local new = Tween0o.new
+    local new = TweenInfo.new
     local v2_1_ = 2.500000
     local v2_2_ = Quad
     local v2_3_ = InOut
@@ -103,7 +103,7 @@ local v0_6_ = function()
     v2_2_:Play()
     v2_3_ = v2_2_.Completed
     v2_3_:Wait()
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v2_4_ = 2.500000
     v2_5_ = Quad
     v2_6_ = InOut

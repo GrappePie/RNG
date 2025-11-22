@@ -23,17 +23,17 @@ local l_DialogChat_0 = l_ReplicatedStorage_0:WaitForChild("Assets"):WaitForChild
 local v22 = Instance.new("StringValue", script);
 local _ = require(l_Modules_0:WaitForChild("ConsoleIconHandler")).ButtonGuide;
 local v24 = {
-	l_TweenService_0:Create(l_Dialogue_0, Tween0o.new(0.5, Enum.EasingStyle.Quart), {
+	l_TweenService_0:Create(l_Dialogue_0, TweenInfo.new(0.5, Enum.EasingStyle.Quart), {
 		Position = UDim2.fromScale(0.5, 0.8)
 	})
 };
 local v25 = {
-	l_TweenService_0:Create(l_Dialogue_0, Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	l_TweenService_0:Create(l_Dialogue_0, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		Position = UDim2.fromScale(0.5, 1.5)
 	})
 };
 local v26 = {
-	l_TweenService_0:Create(l_Dialogue_0, Tween0o.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+	l_TweenService_0:Create(l_Dialogue_0, TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
 		Position = UDim2.fromScale(0.5, 0.92)
 	})
 };
@@ -222,7 +222,7 @@ v5.DisplayDialog = function(v61, v62, v63, v64, v65)
 					for _, v98 in ipairs(v24) do
 						v98:Cancel();
 					end;
-					local v99 = l_TweenService_0:Create(v96, Tween0o.new(0.5), {
+					local v99 = l_TweenService_0:Create(v96, TweenInfo.new(0.5), {
 						ImageTransparency = 0
 					});
 					for _, v101 in ipairs(v26) do

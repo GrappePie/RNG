@@ -11,15 +11,15 @@ local v_u_8 = {
 local v_u_9 = game:GetService("HttpService"):GenerateGUID(false)
 local v_u_10 = game:GetService("SoundService")
 local v_u_11 = game:GetService("TweenService")
-local v_u_12 = Tween0o.new(2, Enum.EasingStyle.Linear)
+local v_u_12 = TweenInfo.new(2, Enum.EasingStyle.Linear)
 local v_u_13 = nil
 local function v_u_22(p14)
 	-- upvalues: (copy) v_u_10, (copy) v_u_9, (copy) v_u_4, (copy) v_u_2, (copy) v_u_11, (copy) v_u_12, (copy) v_u_3, (ref) v_u_13
 	local v15 = v_u_10:FindFirstChild(v_u_9)
 	if not v15 then
 		local v16 = v_u_4
-		local v17 = v_u_2.Server0o:GetAttribute("CurrentTime")
-		local v18 = v_u_2.Server0o:GetAttribute("CurrentBiome") or v17
+		local v17 = v_u_2.ServerInfo:GetAttribute("CurrentTime")
+		local v18 = v_u_2.ServerInfo:GetAttribute("CurrentBiome") or v17
 		local v19 = "Is%*"
 		if v18 == "Normal" then
 			v18 = v17 or v18
@@ -94,8 +94,8 @@ game:GetService("RunService").Heartbeat:Connect(function()
 			v_u_6 = false
 			local v27 = v_u_22
 			local v28 = v_u_4
-			local v29 = v_u_2.Server0o:GetAttribute("CurrentTime")
-			local v30 = v_u_2.Server0o:GetAttribute("CurrentBiome") or v29
+			local v29 = v_u_2.ServerInfo:GetAttribute("CurrentTime")
+			local v30 = v_u_2.ServerInfo:GetAttribute("CurrentBiome") or v29
 			local v31 = "Is%*"
 			if v30 == "Normal" then
 				v30 = v29 or v30

@@ -1,5 +1,5 @@
 {
-  "name": "Sol's RNG",
+  "name": "RNG test",
   "tree": {
     "$className": "DataModel",
     "ReplicatedFirst": {

@@ -185,7 +185,7 @@ if v0_2_ then
             v2_3_ = v2_4_.Process
             v2_2_ = v2_3_.new
             v2_4_ = v0_2_
-            v2_3_ = v2_4_.GetProduct0o
+            v2_3_ = v2_4_.GetProductInfo
             v2_4_ = v0_2_
             if v2_1_ then
                 local v2_6_ = v0_9_
@@ -198,12 +198,12 @@ if v0_2_ then
             local v2_6_ = v0_9_
             local v2_5_ = v2_6_.PassId
             if v2_1_ then
-                local Product = Enum.0oType.Product
+                local Product = Enum.InfoType.Product
                 if not Product then
-                    local GamePass = Enum.0oType.GamePass
+                    local GamePass = Enum.InfoType.GamePass
                 end
             end
-            local GamePass = Enum.0oType.GamePass
+            local GamePass = Enum.InfoType.GamePass
             v2_2_ = v2_2_(v2_3_, v2_4_, v2_5_, GamePass)
             v2_2_ = v2_2_:execute()
             v2_2_ = v2_2_:await()

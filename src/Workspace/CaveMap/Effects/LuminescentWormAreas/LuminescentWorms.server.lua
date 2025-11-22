@@ -325,21 +325,38 @@ local v0_4_ = function(a1)
         delay(v7_5_, v7_6_)
     end
 end
-
-local function initializeWormArea(descendant)
-    if not descendant or not descendant:IsA("BasePart") then
-        return
-    end
-
-    if descendant.Name:sub(1, 8) == "WormArea" then
-        v0_4_(descendant)
+local v0_6_ = script
+local v0_5_ = v0_6_.Parent
+local v0_5_, v0_6_, v0_7_ = v0_5_:GetDescendants()
+local v0_12_ = "BasePart"
+local v0_10_ = nil:IsA(v0_12_)
+if v0_10_ then
+    v0_10_ = nil.Name
+    v0_12_ = 1
+    local v0_13_ = 8
+    v0_10_ = v0_10_:sub(v0_12_, v0_13_)
+    if v0_10_ == "WormArea" then
+        v0_10_ = v0_4_
+        local v0_11_ = nil
+        v0_10_(v0_11_)
     end
 end
-
-local parentFolder = script.Parent
-
-for _, descendant in ipairs(parentFolder:GetDescendants()) do
-    initializeWormArea(descendant)
+v0_7_ = script
+v0_6_ = v0_7_.Parent
+v0_5_ = v0_6_.DescendantAdded
+v0_7_ = function(a1)
+    local v9_3_ = "BasePart"
+    local v9_1_ = a1:IsA(v9_3_)
+    if v9_1_ then
+        v9_1_ = a1.Name
+        v9_3_ = 1
+        local v9_4_ = 8
+        v9_1_ = v9_1_:sub(v9_3_, v9_4_)
+        if v9_1_ == "WormArea" then
+            v9_1_ = v0_4_
+            local v9_2_ = a1
+            v9_1_(v9_2_)
+        end
+    end
 end
-
-parentFolder.DescendantAdded:Connect(initializeWormArea)
+v0_5_:Connect(v0_7_)

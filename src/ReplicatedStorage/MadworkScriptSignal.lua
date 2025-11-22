@@ -65,7 +65,7 @@ local function AcquireRunnerThreadAndCallEventHandler(fn, ...)
 	FreeRunnerThread = acquired_runner_thread
 end
 
-local function RunEventHandler0reeThread(...)
+local function RunEventHandlerInFreeThread(...)
 	AcquireRunnerThreadAndCallEventHandler(...)
 	while true do
 		AcquireRunnerThreadAndCallEventHandler(coroutine.yield())
@@ -97,7 +97,7 @@ function ArrayScriptConnection:Disconnect()
 	end
 	if self._disconnect_listener ~= nil then
 		if not FreeRunnerThread then
-			FreeRunnerThread = coroutine.create(RunEventHandler0reeThread)
+			FreeRunnerThread = coroutine.create(RunEventHandlerInFreeThread)
 		end
 		task.spawn(FreeRunnerThread, self._disconnect_listener, self._disconnect_param)
 		self._disconnect_listener = nil
@@ -152,7 +152,7 @@ function ScriptConnection:Disconnect()
 
 	if self._disconnect_listener ~= nil then
 		if not FreeRunnerThread then
-			FreeRunnerThread = coroutine.create(RunEventHandler0reeThread)
+			FreeRunnerThread = coroutine.create(RunEventHandlerInFreeThread)
 		end
 		task.spawn(FreeRunnerThread, self._disconnect_listener, self._disconnect_param)
 		self._disconnect_listener = nil
@@ -199,7 +199,7 @@ function ScriptSignal:Fire(...)
 	while item ~= nil do
 		if item._is_connected == true then
 			if not FreeRunnerThread then
-				FreeRunnerThread = coroutine.create(RunEventHandler0reeThread)
+				FreeRunnerThread = coroutine.create(RunEventHandlerInFreeThread)
 			end
 			task.spawn(FreeRunnerThread, item._listener, ...)
 		end

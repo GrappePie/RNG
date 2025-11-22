@@ -6,15 +6,15 @@
 local v0_0_ = game
 local v0_2_ = "TweenService"
 v0_0_ = v0_0_:GetService(v0_2_)
-local new = Tween0o.new
+local new = TweenInfo.new
 v0_2_ = 2
 local Quart = Enum.EasingStyle.Quart
 local v0_1_ = new(v0_2_, Quart)
-local new = Tween0o.new
+local new = TweenInfo.new
 local v0_3_ = 0.500000
 local Quart = Enum.EasingStyle.Quart
 v0_2_ = new(v0_3_, Quart)
-local new = Tween0o.new
+local new = TweenInfo.new
 local v0_4_ = 6
 local Quart = Enum.EasingStyle.Quart
 local In = Enum.EasingDirection.In
@@ -159,7 +159,7 @@ v0_4_ = function(a1, a2)
     v1_8_.BackgroundTransparency = v1_9_
     v1_8_ = a2.SetShake
     v1_9_ = 0.020000
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v1_11_ = 2
     local Quart = Enum.EasingStyle.Quart
     v1_8_(new(v1_11_, Quart))

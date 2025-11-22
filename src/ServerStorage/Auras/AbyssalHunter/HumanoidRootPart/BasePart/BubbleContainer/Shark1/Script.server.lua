@@ -3,8 +3,8 @@ local TweenService = game:GetService("TweenService")
 
 -- Function to smoothly change transparency
 local function smoothVisibility(part, startTransparency, endTransparency, duration)
-	local tween0o = Tween0o.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
-	local transparencyTween = TweenService:Create(part, tween0o, {
+	local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+	local transparencyTween = TweenService:Create(part, tweenInfo, {
 		Transparency = endTransparency
 	})
 	transparencyTween:Play()

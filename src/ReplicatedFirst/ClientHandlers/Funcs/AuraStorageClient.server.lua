@@ -21,7 +21,7 @@ local tbl_upvr = {}
 local var20_upvw = true
 local var21_upvw = true
 local var22_upvw = true
-local function LoadAura0o_upvr(arg1) -- Line 52, Named "LoadAura0o"
+local function LoadAuraInfo_upvr(arg1) -- Line 52, Named "LoadAuraInfo"
 	--[[ Upvalues[3]:
 		[1]: var20_upvw (read and write)
 		[2]: Store_upvr (readonly)
@@ -98,16 +98,16 @@ local function SortFunction_upvr(arg1, arg2) -- Line 83, Named "SortFunction"
 		[2]: module_upvr_2 (readonly)
 	]]
 	-- KONSTANTERROR: [0] 1. Error Block 1 start (CF ANALYSIS FAILED)
-	local _Aura0o = arg1._Aura0o
+	local _AuraInfo = arg1._AuraInfo
 	local var30
 	-- KONSTANTERROR: [0] 1. Error Block 1 end (CF ANALYSIS FAILED)
 	-- KONSTANTERROR: [10] 8. Error Block 60 start (CF ANALYSIS FAILED)
-	if _Aura0o.Requirement:find("Required") ~= nil then
+	if _AuraInfo.Requirement:find("Required") ~= nil then
 		var30 = "Challenged"
-	elseif _Aura0o.LimitedTimestamp then
+	elseif _AuraInfo.LimitedTimestamp then
 		var30 = "Event"
 	else
-		var30 = module_2_upvr.GetTierByRarity(_Aura0o.GeneralRarity)
+		var30 = module_2_upvr.GetTierByRarity(_AuraInfo.GeneralRarity)
 	end
 	-- KONSTANTERROR: [10] 8. Error Block 60 end (CF ANALYSIS FAILED)
 	-- KONSTANTERROR: [32] 24. Error Block 66 start (CF ANALYSIS FAILED)
@@ -115,27 +115,27 @@ local function SortFunction_upvr(arg1, arg2) -- Line 83, Named "SortFunction"
 	if not table_find_result1 then
 		table_find_result1 = #module_upvr_2.TierPriorities + 1
 	end
-	local _Aura0o_2 = arg2._Aura0o
-	var30 = _Aura0o_2.TierOverride
+	local _AuraInfo_2 = arg2._AuraInfo
+	var30 = _AuraInfo_2.TierOverride
 	if not var30 then
-		if _Aura0o_2.Unobtainable then
+		if _AuraInfo_2.Unobtainable then
 			var30 = "Unobtainable"
-		elseif _Aura0o_2.Requirement:find("Required") ~= nil then
+		elseif _AuraInfo_2.Requirement:find("Required") ~= nil then
 			var30 = "Challenged"
-		elseif _Aura0o_2.LimitedTimestamp then
+		elseif _AuraInfo_2.LimitedTimestamp then
 			var30 = "Event"
 		else
-			var30 = module_2_upvr.GetTierByRarity(_Aura0o_2.GeneralRarity)
+			var30 = module_2_upvr.GetTierByRarity(_AuraInfo_2.GeneralRarity)
 		end
 	end
 	local table_find_result1_3 = table.find(module_upvr_2.TierPriorities, var30)
 	if not table_find_result1_3 then
 		table_find_result1_3 = #module_upvr_2.TierPriorities + 1
 	end
-	local GeneralRarity = arg2._Aura0o.GeneralRarity
+	local GeneralRarity = arg2._AuraInfo.GeneralRarity
 	local var35 = GeneralRarity or math.huge
 	if table_find_result1 == table_find_result1_3 then
-		if (arg1._Aura0o.GeneralRarity or math.huge) == var35 then
+		if (arg1._AuraInfo.GeneralRarity or math.huge) == var35 then
 			if arg2.AuraIndex >= arg1.AuraIndex then
 				GeneralRarity = false
 			else
@@ -144,7 +144,7 @@ local function SortFunction_upvr(arg1, arg2) -- Line 83, Named "SortFunction"
 			return GeneralRarity
 		end
 		-- KONSTANTERROR: Expression was reused, decompilation is incorrect
-		if var35 >= (arg1._Aura0o.GeneralRarity or math.huge) then
+		if var35 >= (arg1._AuraInfo.GeneralRarity or math.huge) then
 			GeneralRarity = false
 		else
 			GeneralRarity = true
@@ -180,7 +180,7 @@ local function CreateSpecialSlot_upvr(arg1, arg2) -- Line 112, Named "CreateSpec
 		[1]: module_upvr_4 (readonly)
 		[2]: Item_upvr (readonly)
 		[3]: module_2_upvr (readonly)
-		[4]: LoadAura0o_upvr (readonly)
+		[4]: LoadAuraInfo_upvr (readonly)
 		[5]: any_WaitForReplica_result1_upvr (readonly)
 		[6]: tbl_upvr (readonly)
 		[7]: module_upvr_5 (readonly)
@@ -208,11 +208,11 @@ local function CreateSpecialSlot_upvr(arg1, arg2) -- Line 112, Named "CreateSpec
 		end
 		tbl.AuraTier = TierOverride_2
 		tbl.IsSpecial = true
-		tbl.Callback = LoadAura0o_upvr
+		tbl.Callback = LoadAuraInfo_upvr
 		tbl.Amount = arg1.Stack
 		local var14_result1_upvr = Item_upvr(tbl)
 		var14_result1_upvr._AuraData = arg1
-		var14_result1_upvr._Aura0o = any_GetValue_result1
+		var14_result1_upvr._AuraInfo = any_GetValue_result1
 		local any_ListenToChange_result1_upvr = any_WaitForReplica_result1_upvr:ListenToChange({"SpecialInvnetoryAuras", arg1.Name}, function(arg1_2) -- Line 127
 			--[[ Upvalues[2]:
 				[1]: arg1 (readonly)
@@ -241,7 +241,7 @@ local function CreateNormalSlot_upvr(arg1, arg2, arg3) -- Line 146, Named "Creat
 		[1]: module_upvr_4 (readonly)
 		[2]: Item_upvr (readonly)
 		[3]: module_2_upvr (readonly)
-		[4]: LoadAura0o_upvr (readonly)
+		[4]: LoadAuraInfo_upvr (readonly)
 		[5]: any_new_result1_2_upvr (readonly)
 		[6]: tbl_upvr (readonly)
 		[7]: any_WaitForReplica_result1_upvr (readonly)
@@ -273,10 +273,10 @@ local function CreateNormalSlot_upvr(arg1, arg2, arg3) -- Line 146, Named "Creat
 			end
 		end
 		tbl_4.AuraTier = module_2_upvr.GetTierByRarity(var56.GeneralRarity)
-		tbl_4.Callback = LoadAura0o_upvr
+		tbl_4.Callback = LoadAuraInfo_upvr
 		local Item_upvr_result1_upvr = Item_upvr(tbl_4)
 		Item_upvr_result1_upvr._AuraData = arg1
-		Item_upvr_result1_upvr._Aura0o = any_GetValue_result1_upvw
+		Item_upvr_result1_upvr._AuraInfo = any_GetValue_result1_upvw
 		local any_Connect_result1_upvr = any_new_result1_upvr:Connect(function(arg1_4) -- Line 184
 			--[[ Upvalues[2]:
 				[1]: arg2 (read and write)
@@ -300,7 +300,7 @@ local function CreateNormalSlot_upvr(arg1, arg2, arg3) -- Line 146, Named "Creat
 				[7]: any_WaitForReplica_result1_upvr (copied, readonly)
 				[8]: module_2_upvr (copied, readonly)
 				[9]: Store_upvr (copied, readonly)
-				[10]: LoadAura0o_upvr (copied, readonly)
+				[10]: LoadAuraInfo_upvr (copied, readonly)
 			]]
 			local var59
 			if arg1_3 == arg2 then
@@ -340,9 +340,9 @@ local function CreateNormalSlot_upvr(arg1, arg2, arg3) -- Line 146, Named "Creat
 				end
 				Item_upvr_result1_upvr.AuraTier = module_2_upvr.GetTierByRarity(var60.GeneralRarity)
 				Item_upvr_result1_upvr._AuraData = arg2_2
-				Item_upvr_result1_upvr._Aura0o = any_GetValue_result1_upvw
+				Item_upvr_result1_upvr._AuraInfo = any_GetValue_result1_upvw
 				if Store_upvr.SelectedIndex == arg2 then
-					LoadAura0o_upvr(Item_upvr_result1_upvr)
+					LoadAuraInfo_upvr(Item_upvr_result1_upvr)
 				end
 			end
 		end)
@@ -517,19 +517,19 @@ end)
 any_WaitForReplica_result1_upvr:ListenToChange("EquippedAuraIndex", function() -- Line 329
 	--[[ Upvalues[2]:
 		[1]: Store_upvr (readonly)
-		[2]: LoadAura0o_upvr (readonly)
+		[2]: LoadAuraInfo_upvr (readonly)
 	]]
 	if Store_upvr.CurrentItem then
-		LoadAura0o_upvr(Store_upvr.CurrentItem)
+		LoadAuraInfo_upvr(Store_upvr.CurrentItem)
 	end
 end)
 any_WaitForReplica_result1_upvr:ListenToChange("IsEquippingSpecial", function() -- Line 335
 	--[[ Upvalues[2]:
 		[1]: Store_upvr (readonly)
-		[2]: LoadAura0o_upvr (readonly)
+		[2]: LoadAuraInfo_upvr (readonly)
 	]]
 	if Store_upvr.CurrentItem then
-		LoadAura0o_upvr(Store_upvr.CurrentItem)
+		LoadAuraInfo_upvr(Store_upvr.CurrentItem)
 	end
 end)
 module_upvr.AddAura.listen(function(arg1) -- Line 341

@@ -1,5 +1,5 @@
 local ServerStorage = game:GetService("ServerStorage")
-local Server0o = game.ReplicatedStorage.Server0o
+local ServerInfo = game.ReplicatedStorage.ServerInfo
 local HttpService = game:GetService("HttpService")
 local BiomeSettings = ServerStorage.ModuleScripts.DB.BiomeSettings
 
@@ -23,11 +23,11 @@ local function applyBiome(biome)
 
 	local lightingJson = HttpService:JSONEncode(biome.Lighting)
 
-	Server0o:SetAttribute("CurrentBiome", biome.BiomeName)
-	Server0o:SetAttribute("BiomeColor", biome.Color)
-	Server0o:SetAttribute("Structures", biome.Structure)
-	Server0o:SetAttribute("Lighting", lightingJson)
-	Server0o:SetAttribute("LeaveIntensity", biome.LeavesShakeIntensity)
+	ServerInfo:SetAttribute("CurrentBiome", biome.BiomeName)
+	ServerInfo:SetAttribute("BiomeColor", biome.Color)
+	ServerInfo:SetAttribute("Structures", biome.Structure)
+	ServerInfo:SetAttribute("Lighting", lightingJson)
+	ServerInfo:SetAttribute("LeaveIntensity", biome.LeavesShakeIntensity)
 end
 
 return function (context, weather : string, duration : number)

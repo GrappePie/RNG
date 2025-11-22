@@ -109,7 +109,7 @@
 	Members [Profile]:
 	
 		Profile.Data              [table] -- Writable table that gets saved automatically and once the profile is released
-		Profile.MetaData          [table] (Read-only) -- 0ormation about this profile
+		Profile.MetaData          [table] (Read-only) -- Information about this profile
 		
 			Profile.MetaData.ProfileCreateTime   [number] (Read-only) -- os.time() timestamp of profile creation
 			Profile.MetaData.SessionLoadCount    [number] (Read-only) -- Amount of times the profile was loaded
@@ -129,8 +129,8 @@
 		Profile.RobloxMetaData    [table] -- Writable table that gets saved automatically and once the profile is released
 		Profile.UserIds           [table] -- (Read-only) -- {user_id [number], ...} -- User ids associated with this profile
 
-		Profile.Key0o           [DataStoreKey0o]
-		Profile.Key0oUpdated    [ScriptSignal] (key_0o [DataStoreKey0o])
+		Profile.KeyInfo           [DataStoreKeyInfo]
+		Profile.KeyInfoUpdated    [ScriptSignal] (key_info [DataStoreKeyInfo])
 		
 		Profile.GlobalUpdates     [GlobalUpdates]
 		
@@ -236,7 +236,7 @@ do
 		FreeRunnerThread = acquired_runner_thread
 	end
 	
-	local function RunEventHandler0reeThread(...)
+	local function RunEventHandlerInFreeThread(...)
 		AcquireRunnerThreadAndCallEventHandler(...)
 		while true do
 			AcquireRunnerThreadAndCallEventHandler(coroutine.yield())
@@ -281,7 +281,7 @@ do
 
 		if self._disconnect_listener ~= nil then
 			if not FreeRunnerThread then
-				FreeRunnerThread = coroutine.create(RunEventHandler0reeThread)
+				FreeRunnerThread = coroutine.create(RunEventHandlerInFreeThread)
 			end
 			task.spawn(FreeRunnerThread, self._disconnect_listener, self._disconnect_param)
 			self._disconnect_listener = nil
@@ -328,7 +328,7 @@ do
 		while item ~= nil do
 			if item._is_connected == true then
 				if not FreeRunnerThread then
-					FreeRunnerThread = coroutine.create(RunEventHandler0reeThread)
+					FreeRunnerThread = coroutine.create(RunEventHandlerInFreeThread)
 				end
 				task.spawn(FreeRunnerThread, item._listener, ...)
 			end
@@ -630,7 +630,7 @@ local function RegisterCorruption(store_name, store_scope, profile_key) -- Calle
 	ProfileService.CorruptionSignal:Fire(store_name, profile_key)
 end
 
-local function NewMockDataStoreKey0o(params)
+local function NewMockDataStoreKeyInfo(params)
 
 	local version_id_string = tostring(params.VersionId or 0)
 	local meta_data = params.MetaData or {}
@@ -654,7 +654,7 @@ local function NewMockDataStoreKey0o(params)
 
 end
 
-local function MockUpdateAsync(mock_data_store, profile_store_name, key, transform_function, is_get_call) --> loaded_data, key_0o
+local function MockUpdateAsync(mock_data_store, profile_store_name, key, transform_function, is_get_call) --> loaded_data, key_info
 
 	local profile_store = mock_data_store[profile_store_name]
 
@@ -682,9 +682,9 @@ local function MockUpdateAsync(mock_data_store, profile_store_name, key, transfo
 		end
 	end
 
-	local mock_key_0o = mock_entry_was_nil == false and NewMockDataStoreKey0o(mock_entry) or nil
+	local mock_key_info = mock_entry_was_nil == false and NewMockDataStoreKeyInfo(mock_entry) or nil
 
-	local transform, user_ids, roblox_meta_data = transform_function(mock_entry and mock_entry.Data, mock_key_0o)
+	local transform, user_ids, roblox_meta_data = transform_function(mock_entry and mock_entry.Data, mock_key_info)
 
 	if transform == nil then
 		return nil
@@ -697,7 +697,7 @@ local function MockUpdateAsync(mock_data_store, profile_store_name, key, transfo
 			mock_entry.UpdatedTime = epoch_time
 		end
 
-		return DeepCopyTable(transform), mock_entry ~= nil and NewMockDataStoreKey0o(mock_entry) or nil
+		return DeepCopyTable(transform), mock_entry ~= nil and NewMockDataStoreKeyInfo(mock_entry) or nil
 	end
 
 end
@@ -713,8 +713,8 @@ update_settings = {
 	EditProfile = function(lastest_data),
 }
 --]]
-local function StandardProfileUpdateAsyncDataStore(profile_store, profile_key, update_settings, is_user_mock, is_get_call, version) --> loaded_data, key_0o
-	local loaded_data, key_0o
+local function StandardProfileUpdateAsyncDataStore(profile_store, profile_key, update_settings, is_user_mock, is_get_call, version) --> loaded_data, key_info
+	local loaded_data, key_info
 	local success, error_message = pcall(function()
 		local transform_function = function(latest_data)
 
@@ -779,28 +779,28 @@ local function StandardProfileUpdateAsyncDataStore(profile_store, profile_key, u
 			return latest_data, latest_data.UserIds, latest_data.RobloxMetaData
 		end
 		if is_user_mock == true then -- Used when the profile is accessed through ProfileStore.Mock
-			loaded_data, key_0o = MockUpdateAsync(UserMockDataStore, profile_store._profile_store_lookup, profile_key, transform_function, is_get_call)
+			loaded_data, key_info = MockUpdateAsync(UserMockDataStore, profile_store._profile_store_lookup, profile_key, transform_function, is_get_call)
 			task.wait() -- Simulate API call yield
 		elseif UseMockDataStore == true then -- Used when API access is disabled
-			loaded_data, key_0o = MockUpdateAsync(MockDataStore, profile_store._profile_store_lookup, profile_key, transform_function, is_get_call)
+			loaded_data, key_info = MockUpdateAsync(MockDataStore, profile_store._profile_store_lookup, profile_key, transform_function, is_get_call)
 			task.wait() -- Simulate API call yield
 		else
-			loaded_data, key_0o = CustomWriteQueueAsync(
+			loaded_data, key_info = CustomWriteQueueAsync(
 				function() -- Callback
 					if is_get_call == true then
-						local get_data, get_key_0o
+						local get_data, get_key_info
 						if version ~= nil then
 							local success, error_message = pcall(function()
-								get_data, get_key_0o = profile_store._global_data_store:GetVersionAsync(profile_key, version)
+								get_data, get_key_info = profile_store._global_data_store:GetVersionAsync(profile_key, version)
 							end)
 							if success == false and type(error_message) == "string" and string.find(error_message, "not valid") ~= nil then
 								warn("[ProfileService]: Passed version argument is not valid; Traceback:\n" .. debug.traceback())
 							end
 						else
-							get_data, get_key_0o = profile_store._global_data_store:GetAsync(profile_key)
+							get_data, get_key_info = profile_store._global_data_store:GetAsync(profile_key)
 						end
 						get_data = transform_function(get_data)
-						return get_data, get_key_0o
+						return get_data, get_key_info
 					else
 						return profile_store._global_data_store:UpdateAsync(profile_key, transform_function)
 					end
@@ -820,7 +820,7 @@ local function StandardProfileUpdateAsyncDataStore(profile_store, profile_key, u
 			)
 		end
 		-- Return loaded_data:
-		return loaded_data, key_0o
+		return loaded_data, key_info
 	else
 		RegisterIssue(
 			(error_message ~= nil) and error_message or "Undefined error",
@@ -967,7 +967,7 @@ local function SaveProfileAsync(profile, release_from_session, is_overwriting)
 		if release_from_session ~= true then
 			repeat_save_flag = false
 		end
-		local loaded_data, key_0o = StandardProfileUpdateAsyncDataStore(
+		local loaded_data, key_info = StandardProfileUpdateAsyncDataStore(
 			profile._profile_store,
 			profile._profile_key,
 			{
@@ -1047,14 +1047,14 @@ local function SaveProfileAsync(profile, release_from_session, is_overwriting)
 			},
 			profile._is_user_mock
 		)
-		if loaded_data ~= nil and key_0o ~= nil then
+		if loaded_data ~= nil and key_info ~= nil then
 			if is_overwriting == true then
 				break
 			end
 			repeat_save_flag = false
 			-- 4) Set latest data in profile: --
-			-- Updating DataStoreKey0o:
-			profile.Key0o = key_0o
+			-- Updating DataStoreKeyInfo:
+			profile.KeyInfo = key_info
 			-- Setting global updates:
 			local global_updates_object = profile.GlobalUpdates -- [GlobalUpdates]
 			local old_global_updates_data = global_updates_object._updates_latest
@@ -1096,10 +1096,10 @@ local function SaveProfileAsync(profile, release_from_session, is_overwriting)
 			end
 			-- Signaling MetaTagsUpdated listeners after a possible external profile release was handled:
 			profile.MetaTagsUpdated:Fire(profile.MetaData.MetaTagsLatest)
-			-- Signaling Key0oUpdated listeners:
-			profile.Key0oUpdated:Fire(key_0o)
+			-- Signaling KeyInfoUpdated listeners:
+			profile.KeyInfoUpdated:Fire(key_info)
 		elseif repeat_save_flag == true then
-			task.wait() -- Prevent 0inite loop in case DataStore API does not yield
+			task.wait() -- Prevent infinite loop in case DataStore API does not yield
 		end
 	end
 	ActiveProfileSaveJobs = ActiveProfileSaveJobs - 1
@@ -1377,7 +1377,7 @@ local Profile = {
 		_load_timestamp = os.clock(),
 		
 		_is_user_mock = false, -- ProfileStore.Mock
-		_mock_key_0o = {},
+		_mock_key_info = {},
 	--]]
 }
 Profile.__index = Profile
@@ -1753,17 +1753,17 @@ function ProfileStore:LoadProfileAsync(profile_key, not_released_handler, _use_m
 		-- yoink the DataStore return for the new call. The older call will return nil. This would prevent very rare
 		-- game breaking errors where a player rejoins the server super fast.
 		local profile_load_jobs = is_user_mock == true and self._mock_profile_load_jobs or self._profile_load_jobs
-		local loaded_data, key_0o
+		local loaded_data, key_info
 		local load_id = LoadIndex + 1
 		LoadIndex = load_id
-		local profile_load_job = profile_load_jobs[profile_key] -- {load_id, {loaded_data, key_0o} or nil}
+		local profile_load_job = profile_load_jobs[profile_key] -- {load_id, {loaded_data, key_info} or nil}
 		if profile_load_job ~= nil then
 			profile_load_job[1] = load_id -- Yoink load job
 			while profile_load_job[2] == nil do -- Wait for job to finish
 				task.wait()
 			end
 			if profile_load_job[1] == load_id then -- Load job hasn't been double-yoinked
-				loaded_data, key_0o = table.unpack(profile_load_job[2])
+				loaded_data, key_info = table.unpack(profile_load_job[2])
 				profile_load_jobs[profile_key] = nil
 			else
 				ActiveProfileLoadJobs = ActiveProfileLoadJobs - 1
@@ -1835,7 +1835,7 @@ function ProfileStore:LoadProfileAsync(profile_key, not_released_handler, _use_m
 				is_user_mock
 			))
 			if profile_load_job[1] == load_id then -- Load job hasn't been yoinked
-				loaded_data, key_0o = table.unpack(profile_load_job[2])
+				loaded_data, key_info = table.unpack(profile_load_job[2])
 				profile_load_jobs[profile_key] = nil
 			else
 				ActiveProfileLoadJobs = ActiveProfileLoadJobs - 1
@@ -1843,7 +1843,7 @@ function ProfileStore:LoadProfileAsync(profile_key, not_released_handler, _use_m
 			end
 		end
 		-- Handle load_data:
-		if loaded_data ~= nil and key_0o ~= nil then
+		if loaded_data ~= nil and key_info ~= nil then
 			local active_session = loaded_data.MetaData.ActiveSession
 			if type(active_session) == "table" then
 				if IsThisSession(active_session) == true then
@@ -1869,8 +1869,8 @@ function ProfileStore:LoadProfileAsync(profile_key, not_released_handler, _use_m
 
 						RobloxMetaData = loaded_data.RobloxMetaData or {},
 						UserIds = loaded_data.UserIds or {},
-						Key0o = key_0o,
-						Key0oUpdated = Madwork.NewScriptSignal(),
+						KeyInfo = key_info,
+						KeyInfoUpdated = Madwork.NewScriptSignal(),
 
 						GlobalUpdates = global_updates_object,
 
@@ -2032,7 +2032,7 @@ function ProfileStore:ViewProfileAsync(profile_key, version, _use_mock) --> [Pro
 
 	while ProfileService.ServiceLocked == false do
 		-- Load profile:
-		local loaded_data, key_0o = StandardProfileUpdateAsyncDataStore(
+		local loaded_data, key_info = StandardProfileUpdateAsyncDataStore(
 			self,
 			profile_key,
 			{
@@ -2056,7 +2056,7 @@ function ProfileStore:ViewProfileAsync(profile_key, version, _use_mock) --> [Pro
 		CustomWriteQueueMarkForCleanup(self._profile_store_lookup, profile_key)
 		-- Handle load_data:
 		if loaded_data ~= nil then
-			if key_0o == nil then
+			if key_info == nil then
 				return nil -- Load was successful, but the key was empty - return no profile object
 			end
 			-- Create Profile object:
@@ -2072,8 +2072,8 @@ function ProfileStore:ViewProfileAsync(profile_key, version, _use_mock) --> [Pro
 
 				RobloxMetaData = loaded_data.RobloxMetaData or {},
 				UserIds = loaded_data.UserIds or {},
-				Key0o = key_0o,
-				Key0oUpdated = Madwork.NewScriptSignal(),
+				KeyInfo = key_info,
+				KeyInfoUpdated = Madwork.NewScriptSignal(),
 
 				GlobalUpdates = global_updates_object,
 

@@ -22,7 +22,7 @@ local module_upvr_7 = {}
 local tbl_9_upvr = {}
 local var22_upvw = 1
 local var23_upvw = false
-local function Display0o_upvr_upvr(arg1)
+local function DisplayInfo_upvr_upvr(arg1)
 	if var23_upvw then
 	else
 		var23_upvw = true
@@ -45,7 +45,7 @@ local function OnPurchaseResult_upvr_upvr(arg1)
 	end
 end
 local function CreateItem_upvr_upvr(arg1, arg2)
-	local any_AddItem_result1_upvr = module_upvr_3:AddItem(arg2, Display0o_upvr_upvr)
+	local any_AddItem_result1_upvr = module_upvr_3:AddItem(arg2, DisplayInfo_upvr_upvr)
 	tbl_9_upvr[arg1] = any_AddItem_result1_upvr
 	local tbl_8 = {}
 	tbl_8[1] = arg1

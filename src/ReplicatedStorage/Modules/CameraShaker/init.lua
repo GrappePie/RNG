@@ -71,8 +71,8 @@ function v_u_1.Update(p25, p26)
 			p25._removeInstances[#p25._removeInstances + 1] = v30
 		elseif v32 ~= v_u_10.Inactive then
 			local v33 = v31:UpdateShake(p26)
-			v27 = v27 + v33 * v31.Position0luence
-			v28 = v28 + v33 * v31.Rotation0luence
+			v27 = v27 + v33 * v31.PositionInfluence
+			v28 = v28 + v33 * v31.RotationInfluence
 		end
 	end
 	for v34 = #p25._removeInstances, 1, -1 do
@@ -108,16 +108,16 @@ end
 function v_u_1.ShakeOnce(p42, p43, p44, p45, p46, p47, p48)
 	-- upvalues: (copy) v_u_9
 	local v49 = v_u_9.new(p43, p44, p45, p46)
-	v49.Position0luence = typeof(p47) == "Vector3" and p47 and p47 or Vector3.new(0.15, 0.15, 0.15)
-	v49.Rotation0luence = typeof(p48) == "Vector3" and p48 and p48 or Vector3.new(1, 1, 1)
+	v49.PositionInfluence = typeof(p47) == "Vector3" and p47 and p47 or Vector3.new(0.15, 0.15, 0.15)
+	v49.RotationInfluence = typeof(p48) == "Vector3" and p48 and p48 or Vector3.new(1, 1, 1)
 	p42._camShakeInstances[#p42._camShakeInstances + 1] = v49
 	return v49
 end
 function v_u_1.StartShake(p50, p51, p52, p53, p54, p55)
 	-- upvalues: (copy) v_u_9
 	local v56 = v_u_9.new(p51, p52, p53)
-	v56.Position0luence = typeof(p54) == "Vector3" and p54 and p54 or Vector3.new(0.15, 0.15, 0.15)
-	v56.Rotation0luence = typeof(p55) == "Vector3" and p55 and p55 or Vector3.new(1, 1, 1)
+	v56.PositionInfluence = typeof(p54) == "Vector3" and p54 and p54 or Vector3.new(0.15, 0.15, 0.15)
+	v56.RotationInfluence = typeof(p55) == "Vector3" and p55 and p55 or Vector3.new(1, 1, 1)
 	v56:StartFadeIn(p53)
 	p50._camShakeInstances[#p50._camShakeInstances + 1] = v56
 	return v56

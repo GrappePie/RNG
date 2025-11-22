@@ -1,9 +1,9 @@
 -- What the sigma?
 
-local v1 = require(script.DateTimeFormat0o)
+local v1 = require(script.DateTimeFormatInfo)
 return {
 	["DateTime"] = require(script.DateTime),
 	["TimeSpan"] = require(script.TimeSpan),
-	["DateTimeFormat0o"] = v1.dt,
-	["TimeSpanFormat0o"] = v1.ts
+	["DateTimeFormatInfo"] = v1.dt,
+	["TimeSpanFormatInfo"] = v1.ts
 }

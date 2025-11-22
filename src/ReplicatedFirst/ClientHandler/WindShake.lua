@@ -7,7 +7,7 @@ local v1 = game:GetService("RunService")
 local v2 = game:GetService("ReplicatedStorage")
 local v_u_3 = {}
 local v_u_4 = 0
-local v_u_5 = v2:WaitForChild("Server0o")
+local v_u_5 = v2:WaitForChild("ServerInfo")
 local function v22(_)
 	-- upvalues: (copy) v_u_5, (ref) v_u_4, (copy) v_u_3
 	if 0 < v_u_5:GetAttribute("LeaveIntensity") then

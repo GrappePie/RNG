@@ -5,7 +5,7 @@ local v_u_2 = game:GetService("TweenService")
 local v3 = game:GetService("ReplicatedStorage")
 local v_u_4 = v1.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("MainInterface")
 local v_u_5 = v_u_4:WaitForChild("Teleport")
-local v_u_6 = Tween0o.new(1.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local v_u_6 = TweenInfo.new(1.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local v_u_7 = {
 	["Position"] = UDim2.fromScale(-2, 2)
 }

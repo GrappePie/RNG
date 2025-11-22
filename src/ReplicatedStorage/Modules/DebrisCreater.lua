@@ -71,7 +71,7 @@ return {
 					else
 						v31 = v14.CFrame.Rotation * p8
 					end
-					game:GetService("TweenService"):Create(v14, Tween0o.new(p5, Enum.EasingStyle.Quart), {
+					game:GetService("TweenService"):Create(v14, TweenInfo.new(p5, Enum.EasingStyle.Quart), {
 						["CFrame"] = CFrame.new(v28) * v31
 					}):Play()
 					table.insert(v9, v14)

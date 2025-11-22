@@ -164,7 +164,7 @@ module_upvr_2.UpdateListValue.listen(function(arg1) -- Line 93, Named "ListenCli
 			if tbl_2_upvr[i] then
 				for _, v_2 in ipairs(tbl_2_upvr[i]) do
 					if coroutine.status(v_2) ~= "suspended" then
-						print(debug.0o(v_2, 1, 's'))
+						print(debug.info(v_2, 1, 's'))
 					end
 					task.defer(v_2, v)
 				end

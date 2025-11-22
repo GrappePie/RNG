@@ -1,6 +1,6 @@
 -- What the sigma?
 
-local v_u_1 = game:GetService("ReplicatedStorage").Server0o
+local v_u_1 = game:GetService("ReplicatedStorage").ServerInfo
 local v_u_2 = script:WaitForChild("Effects")
 local v_u_3 = nil
 local v_u_4 = nil

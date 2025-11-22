@@ -44,8 +44,8 @@ return function(Cmdr)
 		)
 	end
 
-	-- Update the 0o display (Name, type, and description) based on given options.
-	local function Update0oDisplay(options)
+	-- Update the info display (Name, type, and description) based on given options.
+	local function UpdateInfoDisplay(options)
 		-- Update the objects' text and sizes
 		SetText(Title, Title.Field, options.name, true)
 		SetText(
@@ -79,10 +79,10 @@ return function(Cmdr)
 	-- The options table is optional. `at` should only be passed into AutoComplete::Show
 	-- name, type, and description may be passed in an options dictionary inside the items as well
 	-- options.at?: the character index at which to show the menu
-	-- options.name?: The name to display in the 0o box
-	-- options.type?: The type to display in the 0o box
+	-- options.name?: The name to display in the info box
+	-- options.type?: The type to display in the info box
 	-- options.prefix?: The current type prefix (%Team)
-	-- options.description?: The description for the currently active 0o box
+	-- options.description?: The description for the currently active info box
 	-- options.invalid?: If true, description is shown in red.
 	-- options.isLast?: If true, auto complete won't keep going after this argument.
 	function AutoComplete:Show(items, options)
@@ -153,8 +153,8 @@ return function(Cmdr)
 		Gui.Size = UDim2.new(0, autocompleteWidth, 0, Gui.UIListLayout.AbsoluteContentSize.Y)
 		Gui.Visible = true
 
-		-- Finally, update thge 0o display
-		Update0oDisplay(self.Items[1] and self.Items[1].options or options)
+		-- Finally, update thge info display
+		UpdateInfoDisplay(self.Items[1] and self.Items[1].options or options)
 	end
 
 	--- Returns the selected item in the auto complete
@@ -206,7 +206,7 @@ return function(Cmdr)
 		)
 
 		if self.Items[self.SelectedItem] and self.Items[self.SelectedItem].options then
-			Update0oDisplay(self.Items[self.SelectedItem].options or {})
+			UpdateInfoDisplay(self.Items[self.SelectedItem].options or {})
 		end
 	end
 

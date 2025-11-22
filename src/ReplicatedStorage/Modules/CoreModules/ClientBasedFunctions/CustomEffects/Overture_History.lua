@@ -6,8 +6,8 @@
 local TweenService_upvr = game:GetService("TweenService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService_upvr = game:GetService("RunService")
-local Tween0o_new_result1_upvr_2 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local Tween0o_new_result1_upvr_6 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local TweenInfo_new_result1_upvr_2 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_6 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 ;({}).BackgroundTransparency = 0.6
 ;({}).BackgroundTransparency = 1
 ;({}).BackgroundTransparency = 0
@@ -70,11 +70,11 @@ local function customDebris_upvr(arg1, arg2) -- Line 49, Named "customDebris"
 		var12_upvw = false
 	end
 end
-local Tween0o_new_result1_upvr = Tween0o.new(0.3, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr = TweenInfo.new(0.3, Enum.EasingStyle.Quart)
 local function CreateParticle_upvr(arg1, arg2, arg3, arg4) -- Line 65, Named "CreateParticle"
 	--[[ Upvalues[6]:
 		[1]: TweenService_upvr (readonly)
-		[2]: Tween0o_new_result1_upvr (readonly)
+		[2]: TweenInfo_new_result1_upvr (readonly)
 		[3]: customDebris_upvr (readonly)
 		[4]: tbl_upvr (readonly)
 		[5]: ShakeSize_upvr (readonly)
@@ -89,7 +89,7 @@ local function CreateParticle_upvr(arg1, arg2, arg3, arg4) -- Line 65, Named "Cr
 	local var27 = math.random(2, 6) / 10
 	ImageLabel_upvr.AnchorPoint = Vector2.new(0.5, 0.5)
 	ImageLabel_upvr.Size = UDim2.fromScale(var27, var27)
-	TweenService_upvr:Create(ImageLabel_upvr, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(ImageLabel_upvr, TweenInfo_new_result1_upvr, {
 		Size = UDim2.fromScale();
 	}):Play()
 	table.insert(tbl_upvr, ImageLabel_upvr)
@@ -108,9 +108,9 @@ end
 local function CreateFog_upvr(arg1, arg2, arg3) -- Line 90, Named "CreateFog"
 	--[[ Upvalues[7]:
 		[1]: TweenService_upvr (readonly)
-		[2]: Tween0o_new_result1_upvr_2 (readonly)
+		[2]: TweenInfo_new_result1_upvr_2 (readonly)
 		[3]: tbl_upvr (readonly)
-		[4]: Tween0o_new_result1_upvr_6 (readonly)
+		[4]: TweenInfo_new_result1_upvr_6 (readonly)
 		[5]: customDebris_upvr (readonly)
 		[6]: ShakeSize_upvr (readonly)
 		[7]: RunService_upvr (readonly)
@@ -124,7 +124,7 @@ local function CreateFog_upvr(arg1, arg2, arg3) -- Line 90, Named "CreateFog"
 	ImageLabel_upvr_2.ImageTransparency = 1
 	ImageLabel_upvr_2.Rotation = math.random(-3, 3)
 	ImageLabel_upvr_2.AnchorPoint = Vector2.new(0.5, 0.5)
-	TweenService_upvr:Create(ImageLabel_upvr_2, Tween0o_new_result1_upvr_2, {
+	TweenService_upvr:Create(ImageLabel_upvr_2, TweenInfo_new_result1_upvr_2, {
 		ImageTransparency = 0.9;
 	}):Play()
 	local randint_2 = math.random(2, 5)
@@ -143,7 +143,7 @@ local function CreateFog_upvr(arg1, arg2, arg3) -- Line 90, Named "CreateFog"
 	var33_upvw = tbl_upvr
 	table.insert(var33_upvw, ImageLabel_upvr_2)
 	var33_upvw = nil
-	local any_Create_result1_upvr = TweenService_upvr:Create(ImageLabel_upvr_2, Tween0o_new_result1_upvr_6, {
+	local any_Create_result1_upvr = TweenService_upvr:Create(ImageLabel_upvr_2, TweenInfo_new_result1_upvr_6, {
 		ImageTransparency = 1;
 	})
 	local var37_upvw = nil
@@ -197,7 +197,7 @@ local function CreateDebris_upvr(arg1, arg2) -- Line 141, Named "CreateDebris"
 	ImageLabel_upvr_3.ImageColor3 = Color3.fromRGB(147, 255, 154)
 	ImageLabel_upvr_3.Image = "rbxassetid://17391818367"
 	ImageLabel_upvr_3.AnchorPoint = Vector2.new(0.5, 0.5)
-	TweenService_upvr:Create(ImageLabel_upvr_3, Tween0o.new(arg2, Enum.EasingStyle.Quart), {
+	TweenService_upvr:Create(ImageLabel_upvr_3, TweenInfo.new(arg2, Enum.EasingStyle.Quart), {
 		Size = UDim2.fromScale(0, 0);
 	}):Play()
 	local time_result1_upvr = time()
@@ -231,9 +231,9 @@ end
 local function CreateSideFog_upvr(arg1, arg2, arg3) -- Line 176, Named "CreateSideFog"
 	--[[ Upvalues[7]:
 		[1]: TweenService_upvr (readonly)
-		[2]: Tween0o_new_result1_upvr_2 (readonly)
+		[2]: TweenInfo_new_result1_upvr_2 (readonly)
 		[3]: tbl_upvr (readonly)
-		[4]: Tween0o_new_result1_upvr_6 (readonly)
+		[4]: TweenInfo_new_result1_upvr_6 (readonly)
 		[5]: customDebris_upvr (readonly)
 		[6]: ShakeSize_upvr (readonly)
 		[7]: RunService_upvr (readonly)
@@ -248,7 +248,7 @@ local function CreateSideFog_upvr(arg1, arg2, arg3) -- Line 176, Named "CreateSi
 	ImageLabel_upvr_4.ImageTransparency = 1
 	ImageLabel_upvr_4.Rotation = math.random(-3, 3)
 	ImageLabel_upvr_4.AnchorPoint = Vector2.new(0.5, 0.5)
-	TweenService_upvr:Create(ImageLabel_upvr_4, Tween0o_new_result1_upvr_2, {
+	TweenService_upvr:Create(ImageLabel_upvr_4, TweenInfo_new_result1_upvr_2, {
 		ImageTransparency = 0.7;
 	}):Play()
 	local randint = math.random(0, 100)
@@ -274,7 +274,7 @@ local function CreateSideFog_upvr(arg1, arg2, arg3) -- Line 176, Named "CreateSi
 	var58_upvw = tbl_upvr
 	table.insert(var58_upvw, ImageLabel_upvr_4)
 	var58_upvw = nil
-	local any_Create_result1_upvr_2 = TweenService_upvr:Create(ImageLabel_upvr_4, Tween0o_new_result1_upvr_6, {
+	local any_Create_result1_upvr_2 = TweenService_upvr:Create(ImageLabel_upvr_4, TweenInfo_new_result1_upvr_6, {
 		ImageTransparency = 1;
 	})
 	local var62_upvw
@@ -347,31 +347,31 @@ local function _CreateIcon(arg1, arg2) -- Line 226, Named "CreateIcon"
 	})
 end
 local StarterGui_upvr = game:GetService("StarterGui")
-local Tween0o_new_result1_upvr_7 = Tween0o.new(2, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_7 = TweenInfo.new(2, Enum.EasingStyle.Quart)
 local Overture_upvr = ReplicatedStorage:WaitForChild("Assets"):WaitForChild("TiersUI"):WaitForChild("Overture")
-local Tween0o_new_result1_upvr_4 = Tween0o.new(3, Enum.EasingStyle.Quart)
-local Tween0o_new_result1_upvr_3 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local TweenInfo_new_result1_upvr_4 = TweenInfo.new(3, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_3 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 local Debris_upvr = game:GetService("Debris")
-local Tween0o_new_result1_upvr_5 = Tween0o.new(1, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_5 = TweenInfo.new(1, Enum.EasingStyle.Quart)
 return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	--[[ Upvalues[17]:
 		[1]: tbl_upvr (readonly)
 		[2]: module_upvr (readonly)
 		[3]: StarterGui_upvr (readonly)
 		[4]: TweenService_upvr (readonly)
-		[5]: Tween0o_new_result1_upvr_7 (readonly)
+		[5]: TweenInfo_new_result1_upvr_7 (readonly)
 		[6]: Overture_upvr (readonly)
-		[7]: Tween0o_new_result1_upvr_4 (readonly)
+		[7]: TweenInfo_new_result1_upvr_4 (readonly)
 		[8]: CreateParticle_upvr (readonly)
 		[9]: CreateSideFog_upvr (readonly)
 		[10]: CreateFog_upvr (readonly)
 		[11]: RunService_upvr (readonly)
-		[12]: Tween0o_new_result1_upvr_3 (readonly)
-		[13]: Tween0o_new_result1_upvr_2 (readonly)
+		[12]: TweenInfo_new_result1_upvr_3 (readonly)
+		[13]: TweenInfo_new_result1_upvr_2 (readonly)
 		[14]: Debris_upvr (readonly)
 		[15]: CreateDebris_upvr (readonly)
 		[16]: ShakeSize_upvr (readonly)
-		[17]: Tween0o_new_result1_upvr_5 (readonly)
+		[17]: TweenInfo_new_result1_upvr_5 (readonly)
 	]]
 	-- KONSTANTWARNING: Variable analysis failed. Output will have some incorrect variable assignments
 	table.clear(tbl_upvr)
@@ -397,10 +397,10 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	Star2_upvr.Image = "rbxassetid://17068400400"
 	Star2_upvr.Visible = true
 	StarSpinSpeed_upvr.Value = 5
-	TweenService_upvr:Create(Star2_upvr, Tween0o_new_result1_upvr_7, {
+	TweenService_upvr:Create(Star2_upvr, TweenInfo_new_result1_upvr_7, {
 		Size = UDim2.fromScale(0.6, 0.6);
 	}):Play()
-	TweenService_upvr:Create(StarSpinSpeed_upvr, Tween0o_new_result1_upvr_7, {
+	TweenService_upvr:Create(StarSpinSpeed_upvr, TweenInfo_new_result1_upvr_7, {
 		Value = 1;
 	}):Play()
 	module_upvr.ApplyLabelColor(Star2_upvr, Overture_upvr)
@@ -409,7 +409,7 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	local clone = script:WaitForChild("ClockHands"):Clone()
 	clone.Parent = BlackBoard_upvr.Parent
 	for _, v in clone:GetChildren() do
-		TweenService_upvr:Create(v, Tween0o_new_result1_upvr_4, {
+		TweenService_upvr:Create(v, TweenInfo_new_result1_upvr_4, {
 			Rotation = 180;
 		}):Play()
 	end
@@ -454,14 +454,14 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 		end
 	end)
 	task.wait(1)
-	TweenService_upvr:Create(clone_upvr, Tween0o_new_result1_upvr_4, {
+	TweenService_upvr:Create(clone_upvr, TweenInfo_new_result1_upvr_4, {
 		Size = UDim2.fromScale(1.1, 1.1);
 		ImageTransparency = 0.8;
 	}):Play()
-	TweenService_upvr:Create(Hours_upvr, Tween0o_new_result1_upvr_4, {
+	TweenService_upvr:Create(Hours_upvr, TweenInfo_new_result1_upvr_4, {
 		ImageTransparency = 0.8;
 	}):Play()
-	TweenService_upvr:Create(Minutes_upvr, Tween0o_new_result1_upvr_4, {
+	TweenService_upvr:Create(Minutes_upvr, TweenInfo_new_result1_upvr_4, {
 		ImageTransparency = 0.8;
 	}):Play()
 	local var137_upvw
@@ -485,10 +485,10 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 		end
 	end)
 	task.wait(2.23)
-	TweenService_upvr:Create(StarSpinSpeed_upvr, Tween0o_new_result1_upvr_3, {
+	TweenService_upvr:Create(StarSpinSpeed_upvr, TweenInfo_new_result1_upvr_3, {
 		Value = 4;
 	}):Play()
-	TweenService_upvr:Create(Star2_upvr, Tween0o_new_result1_upvr_3, {
+	TweenService_upvr:Create(Star2_upvr, TweenInfo_new_result1_upvr_3, {
 		Size = UDim2.fromScale(1.5, 1.5);
 	}):Play()
 	task.wait(4)
@@ -497,7 +497,7 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 		Volume = 0.7;
 	})
 	clone_upvr.ImageTransparency = 0
-	TweenService_upvr:Create(clone_upvr, Tween0o_new_result1_upvr_2, {
+	TweenService_upvr:Create(clone_upvr, TweenInfo_new_result1_upvr_2, {
 		ImageTransparency = 0.8;
 	}):Play()
 	task.wait(1)
@@ -505,33 +505,33 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 		Volume = 1;
 	})
 	clone_upvr.ImageTransparency = 0
-	TweenService_upvr:Create(clone_upvr, Tween0o_new_result1_upvr_2, {
+	TweenService_upvr:Create(clone_upvr, TweenInfo_new_result1_upvr_2, {
 		ImageTransparency = 0.8;
 	}):Play()
 	task.wait(1)
 	StarSpinSpeed_upvr.Value = -1
-	TweenService_upvr:Create(StarSpinSpeed_upvr, Tween0o.new(4, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	TweenService_upvr:Create(StarSpinSpeed_upvr, TweenInfo.new(4, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		Value = -15;
 	}):Play()
-	TweenService_upvr:Create(clone_upvr, Tween0o.new(4, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	TweenService_upvr:Create(clone_upvr, TweenInfo.new(4, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		Size = UDim2.fromScale(1.5, 1.5);
 	}):Play()
 	local Frame = Instance.new("Frame", BlackBoard_upvr.Parent)
 	Frame.BackgroundColor3 = Color3.new(1, 1, 1)
 	Frame.Size = UDim2.fromScale(1, 1)
 	Frame.ZIndex = 100000
-	TweenService_upvr:Create(Frame, Tween0o.new(0.5), {
+	TweenService_upvr:Create(Frame, TweenInfo.new(0.5), {
 		BackgroundTransparency = 1;
 	}):Play()
 	Debris_upvr:AddItem(Frame, 0.5)
-	TweenService_upvr:Create(Colorboard_upvr, Tween0o.new(0.5), {
+	TweenService_upvr:Create(Colorboard_upvr, TweenInfo.new(0.5), {
 		ImageTransparency = 1;
 	}):Play()
 	module_upvr.PlaySFX(script:WaitForChild("Start")).Pitch = 0.9
 	clone_upvr.ImageColor3 = Color3.new(0.337255, 1, 0.290196)
 	clone_upvr.Hours.ImageColor3 = Color3.new(0.337255, 1, 0.290196)
 	clone_upvr.Minutes.ImageColor3 = Color3.new(0.337255, 1, 0.290196)
-	TweenService_upvr:Create(Star2_upvr, Tween0o_new_result1_upvr_7, {
+	TweenService_upvr:Create(Star2_upvr, TweenInfo_new_result1_upvr_7, {
 		Size = UDim2.fromScale(0.6, 0.6);
 	}):Play()
 	for _ = 1, 20 do
@@ -545,10 +545,10 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 			[4]: module_upvr (copied, readonly)
 		]]
 		task.wait(2)
-		TweenService_upvr:Create(Colorboard_upvr, Tween0o.new(2), {
+		TweenService_upvr:Create(Colorboard_upvr, TweenInfo.new(2), {
 			ImageTransparency = 0;
 		}):Play()
-		TweenService_upvr:Create(Star2_upvr, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+		TweenService_upvr:Create(Star2_upvr, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 			Size = UDim2.fromScale(1.5, 1.5);
 		}):Play()
 		task.wait(0.3)
@@ -599,7 +599,7 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	Frame_2.BackgroundColor3 = Color3.new(1, 1, 1)
 	Frame_2.Size = UDim2.fromScale(1, 1)
 	Frame_2.ZIndex = 100000
-	TweenService_upvr:Create(Frame_2, Tween0o.new(1), {
+	TweenService_upvr:Create(Frame_2, TweenInfo.new(1), {
 		BackgroundTransparency = 1;
 	}):Play()
 	Debris_upvr:AddItem(Frame_2, 1)
@@ -620,12 +620,12 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	module_upvr.BlackBoardTransitionize(BlackBoard_upvr, 1, true)
 	Star2_upvr.Visible = false
 	arg4.Visible = true
-	module_upvr.SetShake(0.02, Tween0o_new_result1_upvr_7)
+	module_upvr.SetShake(0.02, TweenInfo_new_result1_upvr_7)
 	var137_upvw:Disconnect()
 	clone_upvr:Destroy()
 	arg4.Position = UDim2.fromScale(0.5, 0.5)
 	arg4.Size = UDim2.fromScale(0.6, 0.2)
-	TweenService_upvr:Create(arg4, Tween0o_new_result1_upvr_5, {
+	TweenService_upvr:Create(arg4, TweenInfo_new_result1_upvr_5, {
 		Size = UDim2.fromScale(0.4, 0.1);
 	}):Play()
 end

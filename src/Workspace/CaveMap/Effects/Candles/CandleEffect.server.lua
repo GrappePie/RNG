@@ -14,7 +14,7 @@ v0_3_ = function(a1)
     local new = Instance.new
     local v1_2_ = "PointLight"
     local v1_1_ = new(v1_2_)
-    local v1_3_ = a1.Ma0ireEffectArea
+    local v1_3_ = a1.MainFireEffectArea
     v1_2_ = v1_3_.Color
     local v1_2_, v1_3_, v1_4_ = v1_2_:ToHSV()
     local fromHSV = Color3.fromHSV
@@ -28,22 +28,74 @@ v0_3_ = function(a1)
     v1_1_.Range = v1_5_
     v1_5_ = 0
     v1_1_.Brightness = v1_5_
-    v1_5_ = a1.Ma0ireEffectArea
+    v1_5_ = a1.MainFireEffectArea
     v1_1_.Parent = v1_5_
 end
-local parentFolder = script.Parent
-
-local function initializeCandle(descendant)
-    if not descendant or not descendant:IsA("Model") then
-        return
-    end
-
-    if descendant:HasTag("Candle") then
-        v0_3_(descendant)
+local v0_5_ = script
+local v0_4_ = v0_5_.Parent
+local v0_4_, v0_5_, v0_6_ = v0_4_:GetDescendants()
+local v0_11_ = "Model"
+local v0_9_ = nil:IsA(v0_11_)
+if v0_9_ then
+    v0_11_ = "Candle"
+    v0_9_ = nil:HasTag(v0_11_)
+    if v0_9_ then
+        local new = Instance.new
+        local v0_10_ = "PointLight"
+        v0_9_ = new(v0_10_)
+        v0_11_ = nil.MainFireEffectArea
+        v0_10_ = v0_11_.Color
+        local v0_10_, v0_11_, v0_12_ = v0_10_:ToHSV()
+        local fromHSV = Color3.fromHSV
+        local v0_14_ = v0_10_
+        local v0_16_ = v0_11_ * 0.250000
+        local v0_15_ = v0_16_ + 0.750000
+        v0_16_ = 1
+        local v0_13_ = fromHSV(v0_14_, v0_15_, v0_16_)
+        v0_9_.Color = v0_13_
+        v0_13_ = 0
+        v0_9_.Range = v0_13_
+        v0_13_ = 0
+        v0_9_.Brightness = v0_13_
+        v0_13_ = nil.MainFireEffectArea
+        v0_9_.Parent = v0_13_
     end
 end
+v0_6_ = script
+v0_5_ = v0_6_.Parent
+v0_4_ = v0_5_.DescendantAdded
+v0_6_ = function(a1)
+    local v2_3_ = "Model"
+    local v2_1_ = a1:IsA(v2_3_)
+    if v2_1_ then
+        v2_3_ = "Candle"
+        v2_1_ = a1:HasTag(v2_3_)
+        if v2_1_ then
+            local new = Instance.new
+            local v2_2_ = "PointLight"
+            v2_1_ = new(v2_2_)
+            v2_3_ = a1.MainFireEffectArea
+            v2_2_ = v2_3_.Color
+            local v2_2_, v2_3_, v2_4_ = v2_2_:ToHSV()
+            local fromHSV = Color3.fromHSV
+            local v2_6_ = v2_2_
+            local v2_8_ = v2_3_ * 0.250000
+            local v2_7_ = v2_8_ + 0.750000
+            v2_8_ = 1
+            local v2_5_ = fromHSV(v2_6_, v2_7_, v2_8_)
+            v2_1_.Color = v2_5_
+            v2_5_ = 0
+            v2_1_.Range = v2_5_
+            v2_5_ = 0
+            v2_1_.Brightness = v2_5_
+            v2_5_ = a1.MainFireEffectArea
+            v2_1_.Parent = v2_5_
+        end
+    end
+end
+v0_4_:Connect(v0_6_)
 v0_4_ = function(a1)
-    local v3_1_ = a1.Ma0ireEffectArea
+    local v3_1_ = a1.MainFireEffectArea
     local new = Instance.new
     local v3_3_ = "Part"
     local v3_2_ = new(v3_3_)
@@ -79,7 +131,7 @@ v0_4_ = function(a1)
     local v3_7_ = v3_1_:WaitForChild(v3_9_)
     local v3_8_ = v0_1_
     local v3_10_ = v3_7_
-    local new = Tween0o.new
+    local new = TweenInfo.new
     local v3_12_ = 1.200000
     local Cubic = Enum.EasingStyle.Cubic
     local v3_11_ = new(v3_12_, Cubic)
@@ -93,7 +145,7 @@ v0_4_ = function(a1)
     v3_8_ = v3_8_:Create(v3_10_, v3_11_, v3_12_)
     v3_9_ = v0_1_
     v3_11_ = v3_7_
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v3_13_ = 1.200000
     local Cubic = Enum.EasingStyle.Cubic
     v3_12_ = new(v3_13_, Cubic)
@@ -170,23 +222,34 @@ v0_4_ = function(a1)
     end
     v3_10_:Connect(v3_12_)
 end
-local function initializeCandleWitch(descendant)
-    if not descendant or not descendant:IsA("Model") then
-        return
+v0_6_ = script
+v0_5_ = v0_6_.Parent
+local v0_5_, v0_6_, v0_7_ = v0_5_:GetDescendants()
+local v0_12_ = "Model"
+local v0_10_ = v0_9_:IsA(v0_12_)
+if v0_10_ then
+    v0_12_ = "Candle/Witch"
+    v0_10_ = v0_9_:HasTag(v0_12_)
+    if v0_10_ then
+        v0_10_ = v0_4_
+        v0_11_ = v0_9_
+        v0_10_(v0_11_)
     end
-
-    if descendant:HasTag("Candle/Witch") then
-        v0_4_(descendant)
+end
+v0_7_ = script
+v0_6_ = v0_7_.Parent
+v0_5_ = v0_6_.DescendantAdded
+v0_7_ = function(a1)
+    local v5_3_ = "Model"
+    local v5_1_ = a1:IsA(v5_3_)
+    if v5_1_ then
+        v5_3_ = "Candle/Witch"
+        v5_1_ = a1:HasTag(v5_3_)
+        if v5_1_ then
+            v5_1_ = v0_4_
+            local v5_2_ = a1
+            v5_1_(v5_2_)
+        end
     end
 end
-
-local function onDescendantAdded(descendant)
-    initializeCandle(descendant)
-    initializeCandleWitch(descendant)
-end
-
-for _, descendant in ipairs(parentFolder:GetDescendants()) do
-    onDescendantAdded(descendant)
-end
-
-parentFolder.DescendantAdded:Connect(onDescendantAdded)
+v0_5_:Connect(v0_7_)

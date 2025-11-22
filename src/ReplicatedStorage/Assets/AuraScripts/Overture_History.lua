@@ -15,7 +15,7 @@ function addSpinObject(arg1, arg2, arg3) -- Line 14
 	local tbl = {}
 	tbl.object = arg1
 	tbl.continuousSpinSpeed = arg2
-	tbl.pulseRotatio0gle = arg3
+	tbl.pulseRotationAngle = arg3
 	tbl.currentPulseRotation = 0
 	tbl.targetPulseRotation = 0
 	tbl.accumulatedTime = 0
@@ -46,7 +46,7 @@ function module.loop(arg1) -- Line 47
 		if 0 <= tick() - 0 then
 			v.accumulatedTime += arg1
 			if 0.46153846153846156 <= v.accumulatedTime then
-				v.targetPulseRotation = (v.currentPulseRotation + v.pulseRotatio0gle) % 360
+				v.targetPulseRotation = (v.currentPulseRotation + v.pulseRotationAngle) % 360
 				v.accumulatedTime -= 0.46153846153846156
 				tweenRotation_upvr(v, v.targetPulseRotation, 0.13333333333333333)
 			end

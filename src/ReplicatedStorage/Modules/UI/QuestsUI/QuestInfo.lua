@@ -100,7 +100,7 @@ end
 v0_32_.Init = v0_33_
 v0_33_ = function(a1, a2)
     local v2_2_ = v0_18_
-    local v2_3_ = "Quest0o\n_"
+    local v2_3_ = "QuestInfo\n_"
     v2_2_ = v2_2_(v2_3_)
     v2_3_ = table.create(5)
     local new = UDim2.new

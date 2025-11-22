@@ -18,11 +18,11 @@ local var8_upvr = module.Class("TextLabel")({
 	TextStrokeTransparency = 0.6;
 })
 local var9_upvw
-local tbl_upvr_2 = {TweenService:Create(var8_upvr, Tween0o.new(0.5, Enum.EasingStyle.Linear), {
+local tbl_upvr_2 = {TweenService:Create(var8_upvr, TweenInfo.new(0.5, Enum.EasingStyle.Linear), {
 	TextTransparency = 0.3;
 	TextStrokeTransparency = 0.6;
 })}
-local tbl_upvr = {TweenService:Create(var8_upvr, Tween0o.new(0.5, Enum.EasingStyle.Linear), {
+local tbl_upvr = {TweenService:Create(var8_upvr, TweenInfo.new(0.5, Enum.EasingStyle.Linear), {
 	TextTransparency = 1;
 	TextStrokeTransparency = 1;
 })}

@@ -111,7 +111,7 @@ for _, v50 in script:GetChildren() do
         v48[tonumber(v50.Name)] = require(v50.ModuleScript);
     end;
 end;
-local _ = Tween0o.new(0.4, Enum.EasingStyle.Quad);
+local _ = TweenInfo.new(0.4, Enum.EasingStyle.Quad);
 v36.show = function(v52, v53, v54, v55, v56, v57) --[[ Line: 156 ]] --[[ Name: show ]]
     -- upvalues: l_Outcome_0 (copy), v38 (copy), v36 (copy), v33 (copy), v23 (copy), l_TextStyles_0 (copy), v48 (copy)
     for _, v59 in l_Outcome_0:GetChildren() do
@@ -161,7 +161,7 @@ v36.hide = function() --[[ Line: 217 ]] --[[ Name: hide ]]
     -- upvalues: l_TweenService_0 (copy), l_Background_0 (copy), v38 (copy)
     coroutine.wrap(function() --[[ Line: 218 ]]
         -- upvalues: l_TweenService_0 (ref), l_Background_0 (ref), v38 (ref)
-        l_TweenService_0:Create(l_Background_0, Tween0o.new(0.5), {
+        l_TweenService_0:Create(l_Background_0, TweenInfo.new(0.5), {
             BackgroundTransparency = 1
         }):Play();
         l_Background_0.Interactable = false;

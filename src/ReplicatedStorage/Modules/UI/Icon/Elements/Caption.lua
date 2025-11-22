@@ -454,12 +454,12 @@ local v0_0_ = function(a1)
     v1_25_ = v1_22_
     v1_23_:Connect(v1_25_)
     local Quad = Enum.EasingStyle.Quad
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v1_25_ = 0.200000
     local v1_26_ = Quad
     local In = Enum.EasingDirection.In
     local v1_24_ = new(v1_25_, v1_26_, In)
-    local new = Tween0o.new
+    local new = TweenInfo.new
     v1_26_ = 0.200000
     local v1_27_ = Quad
     local Out = Enum.EasingDirection.Out

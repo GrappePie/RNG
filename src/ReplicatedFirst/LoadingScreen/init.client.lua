@@ -33,9 +33,9 @@ local v25 = require(v8:WaitForChild("Modules"):WaitForChild("ConsoleIconHandler"
 local v_u_26 = false --game:GetService("RunService"):IsStudio()
 local v_u_27 = game:GetService("TweenService")
 local v_u_28 = game:GetService("Debris")
-local v_u_29 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_30 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local v_u_31 = Tween0o.new(2, Enum.EasingStyle.Back)
+local v_u_29 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_30 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_31 = TweenInfo.new(2, Enum.EasingStyle.Back)
 local function v_u_48(p32, p33, p34, p35, p36)
 	-- upvalues: (copy) v_u_27, (copy) v_u_29, (copy) v_u_30, (copy) v_u_28, (copy) v_u_5
 	local v_u_37 = Instance.new("ImageLabel", p32)
@@ -132,11 +132,11 @@ task.spawn(function()
 		end
 	end
 end)
-local v_u_57 = Tween0o.new(0.2, Enum.EasingStyle.Quart)
-local v_u_58 = Tween0o.new(2, Enum.EasingStyle.Quad)
-local v_u_59 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local v_u_60 = Tween0o.new(1, Enum.EasingStyle.Quart)
-local v_u_61 = Tween0o.new(3, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local v_u_57 = TweenInfo.new(0.2, Enum.EasingStyle.Quart)
+local v_u_58 = TweenInfo.new(2, Enum.EasingStyle.Quad)
+local v_u_59 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local v_u_60 = TweenInfo.new(1, Enum.EasingStyle.Quart)
+local v_u_61 = TweenInfo.new(3, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 local v_u_62 = v1:WaitForChild("Assets"):WaitForChild("SFXs")
 local v_u_63 = game.Workspace.CurrentCamera
 
@@ -145,7 +145,7 @@ local v_u_65 = workspace:WaitForChild("BGMS")
 workspace:WaitForChild("GlobalSounds")
 local v_u_66 = Instance.new("BlurEffect", game.Lighting)
 require(v8:WaitForChild("Modules").DB.WeatherDB2)
-local v_u_67 = v8:WaitForChild("Server0o")
+local v_u_67 = v8:WaitForChild("ServerInfo")
 local v_u_68 = false
 local v_u_69 = false
 local v_u_70 = false
@@ -560,14 +560,14 @@ local function v131()
 	v_u_11.ERATitle.Visible = true
 	v_u_11.BGM.Visible = true
 	v_u_11.LoadingFrame.UpdateLogs.Visible = true
-	v_u_4:Create(v_u_13, Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+	v_u_4:Create(v_u_13, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
 		Position = UDim2.new(.1,0,.1,0)
 	}):Play()
 	task.delay(1, function()
-		v_u_4:Create(v_u_11.LoadingFrame.Start, Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+		v_u_4:Create(v_u_11.LoadingFrame.Start, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
 			Position = UDim2.new(.5,0,.8,0)
 		}):Play()
-		v_u_4:Create(v_u_11.LoadingFrame.UpdateLog, Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+		v_u_4:Create(v_u_11.LoadingFrame.UpdateLog, TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
 			Position = UDim2.new(.5,0,.89,0)
 		}):Play()	
 	end)
@@ -592,13 +592,13 @@ local function v131()
 						NumberSequenceKeypoint.new(1, 0.7, 0)
 					}
 				)
-				v_u_4:Create(Borders:WaitForChild("T"), Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+				v_u_4:Create(Borders:WaitForChild("T"), TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
 					Position = UDim2.fromScale(0, 0)
 				}):Play()
-				v_u_4:Create(Borders:WaitForChild("B"), Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+				v_u_4:Create(Borders:WaitForChild("B"), TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
 					Position = UDim2.fromScale(0, 1)
 				}):Play()
-				v0.new(BrightGradient:WaitForChild("UIGradient"), Tween0o.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
+				v0.new(BrightGradient:WaitForChild("UIGradient"), TweenInfo.new(1, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut), {
 					Transparency = EndSequence
 				}):Play()
 			end
@@ -668,9 +668,9 @@ local loadingFrame = v_u_12
 local updateLogButton = loadingFrame:WaitForChild("UpdateLog")
 local baseFrame = loadingFrame:WaitForChild("BaseFrame")
 local darkFrame = v_u_18
-local buttonEnterTween0o = Tween0o.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-local buttonLeaveTween0o = Tween0o.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-local transparencyTween0o = Tween0o.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local buttonEnterTweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local buttonLeaveTweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local transparencyTweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local isUpdateLogVisible = false
 local function toggleUpdateLog()
 	local XS = 1.125
@@ -680,7 +680,7 @@ local function toggleUpdateLog()
 		XS = 0.85
 	end
 	local Open = function(): (Tween)
-		local Tween = v_u_4:Create(v_u_20, Tween0o.new(0.2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
+		local Tween = v_u_4:Create(v_u_20, TweenInfo.new(0.2, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {
 			Position = UDim2.fromScale(XS, 0.5)
 		})
 		return Tween :: Tween
@@ -689,12 +689,12 @@ local function toggleUpdateLog()
 	isUpdateLogVisible = not isUpdateLogVisible
 end
 updateLogButton.MouseEnter:Connect(function()
-	local hoverTween = TweenService:Create(updateLogButton:FindFirstChild("Frame"), buttonEnterTween0o, { BackgroundTransparency = 0.4 })
+	local hoverTween = TweenService:Create(updateLogButton:FindFirstChild("Frame"), buttonEnterTweenInfo, { BackgroundTransparency = 0.4 })
 	hoverTween:Play()
 	v_u_62.MouseHover:Play()
 end)
 updateLogButton.MouseLeave:Connect(function()
-	local resetHoverTween = TweenService:Create(updateLogButton:FindFirstChild("Frame"), buttonLeaveTween0o, { BackgroundTransparency = 0.8 })
+	local resetHoverTween = TweenService:Create(updateLogButton:FindFirstChild("Frame"), buttonLeaveTweenInfo, { BackgroundTransparency = 0.8 })
 	resetHoverTween:Play()
 end)
 updateLogButton.MouseButton1Click:Connect(toggleUpdateLog)
@@ -720,7 +720,7 @@ while not v_u_70 do
 	local v133 = script:WaitForChild("Checker"):Clone()
 	v133.Parent = v_u_12:WaitForChild("BaseFrame")
 	v133.ImageTransparency = 0.98 + v_u_21.BackgroundTransparency * 0.02
-	v_u_27:Create(v133, Tween0o.new(6, Enum.EasingStyle.Linear), {
+	v_u_27:Create(v133, TweenInfo.new(6, Enum.EasingStyle.Linear), {
 		["Position"] = UDim2.fromScale(0, -1)
 	}):Play()
 	game:GetService("Debris"):AddItem(v133, 6)

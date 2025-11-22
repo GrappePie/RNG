@@ -23,10 +23,10 @@ module.Mount(game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):Wa
 		end;
 	})
 }))
-local any_Create_result1_upvr = TweenService:Create(var5_upvw, Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+local any_Create_result1_upvr = TweenService:Create(var5_upvw, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 	Offset = Vector2.new();
 })
-local any_Create_result1_upvr_2 = TweenService:Create(var5_upvw, Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+local any_Create_result1_upvr_2 = TweenService:Create(var5_upvw, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 	Offset = Vector2.new(-3, 0);
 })
 function module_2.Enter() -- Line 55

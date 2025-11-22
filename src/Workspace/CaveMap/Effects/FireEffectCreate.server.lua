@@ -96,20 +96,36 @@ v0_6_ = function(a1)
     v2_5_ = v2_2_
     v2_3_:Connect(v2_5_)
 end
-local fireAreaContainer = script.Parent.Parent
-
-local function initializeFireEffect(descendant)
-    if not descendant or not descendant:IsA("BasePart") then
-        return
-    end
-
-    if descendant:HasTag("FireEffectArea") then
-        v0_6_(descendant)
+local v0_9_ = script
+local v0_8_ = v0_9_.Parent
+local v0_7_ = v0_8_.Parent
+v0_7_, v0_8_, v0_9_ = v0_7_:GetDescendants()
+local v0_14_ = "BasePart"
+local v0_12_ = nil:IsA(v0_14_)
+if v0_12_ then
+    v0_14_ = "FireEffectArea"
+    v0_12_ = nil:HasTag(v0_14_)
+    if v0_12_ then
+        v0_12_ = v0_6_
+        local v0_13_ = nil
+        v0_12_(v0_13_)
     end
 end
-
-for _, descendant in ipairs(fireAreaContainer:GetDescendants()) do
-    initializeFireEffect(descendant)
+local v0_10_ = script
+v0_9_ = v0_10_.Parent
+v0_8_ = v0_9_.Parent
+v0_7_ = v0_8_.DescendantAdded
+v0_9_ = function(a1)
+    local v4_3_ = "BasePart"
+    local v4_1_ = a1:IsA(v4_3_)
+    if v4_1_ then
+        v4_3_ = "FireEffectArea"
+        v4_1_ = a1:HasTag(v4_3_)
+        if v4_1_ then
+            v4_1_ = v0_6_
+            local v4_2_ = a1
+            v4_1_(v4_2_)
+        end
+    end
 end
-
-fireAreaContainer.DescendantAdded:Connect(initializeFireEffect)
+v0_7_:Connect(v0_9_)

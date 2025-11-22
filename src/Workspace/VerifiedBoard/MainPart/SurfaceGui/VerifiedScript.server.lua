@@ -3,17 +3,17 @@ local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 
 local VerifiedGui = script.Parent
-local Ma0rame = VerifiedGui.Frame
+local MainFrame = VerifiedGui.Frame
 
-local ProfileLinkBox = Ma0rame.TextBox
+local ProfileLinkBox = MainFrame.TextBox
 
-local HelpLabel = Ma0rame.HelpLabel
-local NameLabel = Ma0rame.NameLabel
-local UpdateLabel = Ma0rame.UpdateLabel
-local ImageLabel = Ma0rame.ImageLabel
-local FollowersLabel = Ma0rame.FollowersLabel
+local HelpLabel = MainFrame.HelpLabel
+local NameLabel = MainFrame.NameLabel
+local UpdateLabel = MainFrame.UpdateLabel
+local ImageLabel = MainFrame.ImageLabel
+local FollowersLabel = MainFrame.FollowersLabel
 
-local FollowersBar = Ma0rame.FollowersBar.InnerBar
+local FollowersBar = MainFrame.FollowersBar.InnerBar
 
 local Users = {
 	nil;

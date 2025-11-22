@@ -3,7 +3,7 @@ local datastore = require(game:GetService("ServerStorage").ModuleScripts.DataSto
 local msgpack = require(game.ReplicatedStorage.Modules.msgpack)
 local Inventory = require(game.ReplicatedStorage.Modules.Inventory)
 game.ReplicatedStorage.Modules.RemoteFunction.BlackmarketClient.OnServerEvent:Connect(function(plr, thing, thin1, thin2)
-	local entirething = game.ReplicatedStorage.Server0o:GetAttribute("Blackmarket")
+	local entirething = game.ReplicatedStorage.ServerInfo:GetAttribute("Blackmarket")
 	local entirethingdecoded = msgpack.decode(entirething)
 	local decoded = msgpack.decode(thing)
 	local getstore = datastore.GetStore(plr, true)
@@ -71,7 +71,7 @@ game.ReplicatedStorage.Modules.RemoteFunction.BlackmarketClient.OnServerEvent:Co
 			entirethingdecoded.Products[i].QuantityLeft = QuantityLeft
 			
 			local entirethingencoded = msgpack.encode(entirethingdecoded)
-			game.ReplicatedStorage.Server0o:SetAttribute("Blackmarket", entirethingencoded)
+			game.ReplicatedStorage.ServerInfo:SetAttribute("Blackmarket", entirethingencoded)
 			
 			local resultencoded = msgpack.encode(result)
 			game.ReplicatedStorage.Modules.RemoteFunction.BlackmarketClient:FireClient(plr, resultencoded)

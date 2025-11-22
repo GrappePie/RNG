@@ -8,7 +8,7 @@ Title.Rotation = -7
 
 local Tween = TweenService:Create(
 	Title,
-	Tween0o.new(
+	TweenInfo.new(
 		1,
 		Enum.EasingStyle.Quad,
 		Enum.EasingDirection.InOut,

@@ -9,7 +9,7 @@ local Lighting_upvr = game:GetService("Lighting")
 local any_Class_result1_upvr = module_upvr.Class("Frame")
 local Mount_upvr = module_upvr.Mount
 local TweenService_upvr = game:GetService("TweenService")
-local Tween0o_new_result1_upvr = Tween0o.new(1, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr = TweenInfo.new(1, Enum.EasingStyle.Quart)
 local CurrentCamera_upvr = workspace.CurrentCamera
 function module.Emit() -- Line 22
 	--[[ Upvalues[7]:
@@ -18,7 +18,7 @@ function module.Emit() -- Line 22
 		[3]: Mount_upvr (readonly)
 		[4]: module_upvr (readonly)
 		[5]: TweenService_upvr (readonly)
-		[6]: Tween0o_new_result1_upvr (readonly)
+		[6]: TweenInfo_new_result1_upvr (readonly)
 		[7]: CurrentCamera_upvr (readonly)
 	]]
 	local ColorCorrectionEffect = Instance.new("ColorCorrectionEffect", Lighting_upvr)
@@ -45,16 +45,16 @@ function module.Emit() -- Line 22
 	Mount_upvr(any_Class_result1_upvr_result1_2, any_Class_result1_upvr_result1_3)
 	Mount_upvr(any_Class_result1_upvr_result1_2, var4_result1)
 	Mount_upvr(module_upvr.MainInterface, any_Class_result1_upvr_result1_2)
-	TweenService_upvr:Create(var4_result1, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(var4_result1, TweenInfo_new_result1_upvr, {
 		Position = UDim2.new();
 	}):Play()
-	TweenService_upvr:Create(any_Class_result1_upvr_result1_3, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(any_Class_result1_upvr_result1_3, TweenInfo_new_result1_upvr, {
 		Position = UDim2.fromScale(0, 0.9);
 	}):Play()
-	TweenService_upvr:Create(CurrentCamera_upvr, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(CurrentCamera_upvr, TweenInfo_new_result1_upvr, {
 		FieldOfView = 50;
 	}):Play()
-	TweenService_upvr:Create(ColorCorrectionEffect, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(ColorCorrectionEffect, TweenInfo_new_result1_upvr, {
 		Saturation = 0.2;
 		Contrast = 0.2;
 	}):Play()
@@ -64,7 +64,7 @@ function module.Emit() -- Line 22
 	var4_result1:Destroy()
 	any_Class_result1_upvr_result1_3:Destroy()
 	any_Class_result1_upvr_result1.BackgroundTransparency = 0
-	TweenService_upvr:Create(any_Class_result1_upvr_result1, Tween0o.new(3), {
+	TweenService_upvr:Create(any_Class_result1_upvr_result1, TweenInfo.new(3), {
 		BackgroundTransparency = 1;
 	}):Play()
 end

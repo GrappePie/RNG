@@ -6,11 +6,11 @@
 local v0_0_ = game
 local v0_2_ = "TweenService"
 v0_0_ = v0_0_:GetService(v0_2_)
-local new = Tween0o.new
+local new = TweenInfo.new
 v0_2_ = 2
 local Quart = Enum.EasingStyle.Quart
 local v0_1_ = new(v0_2_, Quart)
-local new = Tween0o.new
+local new = TweenInfo.new
 local v0_3_ = 6
 local Quart = Enum.EasingStyle.Quart
 local In = Enum.EasingDirection.In

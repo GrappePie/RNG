@@ -9,7 +9,7 @@ local function ChangeText_upvr(arg1) -- Line 29, Named "ChangeText"
 	--[[ Upvalues[1]:
 		[1]: tbl_upvr (readonly)
 	]]
-	arg1.SurfaceGui.Light0luence = 0
+	arg1.SurfaceGui.LightInfluence = 0
 	arg1.SurfaceGui.Brightness = 100
 	arg1.SurfaceGui.TextLabel.AutoLocalize = false
 	arg1.SurfaceGui.TextLabel.TextColor3 = Color3.fromRGB(13, 5, 255)
@@ -27,7 +27,7 @@ local function ChangeText_upvr(arg1) -- Line 29, Named "ChangeText"
 	arg1.SurfaceGui.TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
 	arg1.SurfaceGui.TextLabel.Text = tbl_upvr[math.random(1, #tbl_upvr)]
 	arg1.SurfaceGui.TextLabel.AutoLocalize = true
-	arg1.SurfaceGui.Light0luence = 1
+	arg1.SurfaceGui.LightInfluence = 1
 	arg1.SurfaceGui.Brightness = 1
 end
 local function ChangeLogo_upvr(arg1) -- Line 52, Named "ChangeLogo"
@@ -36,11 +36,11 @@ local function ChangeLogo_upvr(arg1) -- Line 52, Named "ChangeLogo"
 	]]
 	arg1.SurfaceGui.ImageLabel.ImageTransparency = 1
 	arg1.SurfaceGui.LOGO.ImageTransparency = 0
-	TweenService_upvr:Create(arg1.SurfaceGui, Tween0o.new(0.3, Enum.EasingStyle.Linear), {
-		Light0luence = 0;
+	TweenService_upvr:Create(arg1.SurfaceGui, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {
+		LightInfluence = 0;
 		Brightness = 100;
 	}):Play()
-	TweenService_upvr:Create(arg1.SurfaceGui.LOGO, Tween0o.new(0.3, Enum.EasingStyle.Linear), {
+	TweenService_upvr:Create(arg1.SurfaceGui.LOGO, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {
 		ImageColor3 = Color3.fromRGB(255, 15, 39);
 	}):Play()
 end
@@ -64,20 +64,20 @@ function module.Emit() -- Line 59
 		[11]: TheIcon_upvw (read and write)
 	]]
 	var12_upvw = tick()
-	TweenService_upvr:Create(SurfaceGui_upvr, Tween0o.new(2, Enum.EasingStyle.Quart), {
-		Light0luence = 0;
+	TweenService_upvr:Create(SurfaceGui_upvr, TweenInfo.new(2, Enum.EasingStyle.Quart), {
+		LightInfluence = 0;
 		Brightness = 100;
 	}):Play()
-	TweenService_upvr:Create(CanvasGroup_upvr, Tween0o.new(2, Enum.EasingStyle.Quart), {
+	TweenService_upvr:Create(CanvasGroup_upvr, TweenInfo.new(2, Enum.EasingStyle.Quart), {
 		GroupTransparency = 0;
 		GroupColor3 = Color3.fromRGB(13, 5, 255);
 	}):Play()
 	Hitbox_upvr.Hitbox.Magic:Play()
-	TweenService_upvr:Create(Hitbox_upvr.Hitbox.Magic, Tween0o.new(1, Enum.EasingStyle.Quart), {
+	TweenService_upvr:Create(Hitbox_upvr.Hitbox.Magic, TweenInfo.new(1, Enum.EasingStyle.Quart), {
 		Volume = 0.3;
 	}):Play()
 	script.Whispers:Play()
-	TweenService_upvr:Create(script.Whispers, Tween0o.new(0.5, Enum.EasingStyle.Quart), {
+	TweenService_upvr:Create(script.Whispers, TweenInfo.new(0.5, Enum.EasingStyle.Quart), {
 		Volume = 0.5;
 	}):Play()
 	script.Changed1:Play()
@@ -106,7 +106,7 @@ function module.Emit() -- Line 59
 			end))
 		end
 	end
-	TweenService_upvr:Create(Color3Value_upvr, Tween0o.new(3), {
+	TweenService_upvr:Create(Color3Value_upvr, TweenInfo.new(3), {
 		Value = Color3.fromRGB(67, 20, 255);
 	}):Play()
 	task.wait(2)
@@ -133,7 +133,7 @@ function module.Emit() -- Line 59
 	task.wait(10)
 	TheIcon_upvw.Parent = workspace
 	task.wait(5)
-	TweenService_upvr:Create(TheIcon_upvw.TheIcon.SurfaceGui.ImageLabel, Tween0o.new(3, Enum.EasingStyle.Linear), {
+	TweenService_upvr:Create(TheIcon_upvw.TheIcon.SurfaceGui.ImageLabel, TweenInfo.new(3, Enum.EasingStyle.Linear), {
 		ImageTransparency = 1;
 	}):Play()
 	task.wait(3)

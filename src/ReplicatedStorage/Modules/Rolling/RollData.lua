@@ -168,10 +168,10 @@ function module_upvr.GetCooldown(arg1) -- Line 138
 	end
 	pairs_result1_2 = nil
 	local var57 = pairs_result1_2
-	if 0 < module_2_upvr.GetBuffStack(var49.Buffs["Reso0ce of Elements"]) then
-		if var49.Buffs["Reso0ce of Elements"][3] then
+	if 0 < module_2_upvr.GetBuffStack(var49.Buffs["Resonance of Elements"]) then
+		if var49.Buffs["Resonance of Elements"][3] then
 			local v_4 = var49.Buffs -- Setting global
-			local i_4 = v_4["Reso0ce of Elements"] -- Setting global
+			local i_4 = v_4["Resonance of Elements"] -- Setting global
 			var57 += i_4[3].Speed or 0
 		end
 	end

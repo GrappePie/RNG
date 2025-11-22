@@ -8,7 +8,7 @@ local v12 = {
 		{
 			["Type"] = "command",
 			["Name"] = "Command",
-			["Description"] = "The command to view 0ormation on",
+			["Description"] = "The command to view information on",
 			["Optional"] = true
 		}
 	},

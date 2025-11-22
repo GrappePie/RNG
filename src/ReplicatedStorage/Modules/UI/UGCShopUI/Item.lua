@@ -20,7 +20,7 @@ v0_4_ = v0_4_(v0_2_:WaitForChild(v0_7_))
 v0_6_ = v0_4_.RateQueue
 local v0_5_ = v0_6_.new
 v0_6_ = 100
-v0_7_ = "MarketGet0o"
+v0_7_ = "MarketGetInfo"
 v0_5_ = v0_5_(v0_6_, v0_7_)
 v0_7_ = v0_4_.Process
 v0_6_ = v0_7_.new
@@ -92,10 +92,10 @@ v0_27_ = function(a1)
     local v1_1_ = nil
     local v1_2_ = v0_5_
     local v1_5_ = v0_1_
-    local v1_4_ = v1_5_.GetProduct0o
+    local v1_4_ = v1_5_.GetProductInfo
     v1_5_ = v0_1_
     local v1_6_ = a1
-    local Asset = Enum.0oType.Asset
+    local Asset = Enum.InfoType.Asset
     v1_2_ = v1_2_:insert(v1_4_, v1_5_, v1_6_, Asset)
     v1_1_ = v1_2_
     v1_1_:await()
@@ -241,5 +241,5 @@ v0_28_ = function(a1)
     v8_1_ = a1._ProductData
     return v8_1_
 end
-v0_26_.Get0o = v0_28_
+v0_26_.GetInfo = v0_28_
 return v0_26_

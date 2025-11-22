@@ -109,7 +109,7 @@ function module_upvr.GetServerReplica() -- Line 125
 	--[[ Upvalues[1]:
 		[1]: module_upvr (readonly)
 	]]
-	return module_upvr.WaitForReplicaByClass("Server0o")
+	return module_upvr.WaitForReplicaByClass("ServerInfo")
 end
 function module_upvr.GetMerchantReplica() -- Line 131
 	--[[ Upvalues[1]:

@@ -38,7 +38,7 @@ local v0_1_ = function(a1, a2)
     v1_3_.BackgroundTransparency = v1_4_
     v1_3_ = a2.SetShake
     v1_4_ = 0.020000
-    local new = Tween0o.new
+    local new = TweenInfo.new
     local v1_6_ = 2
     local Quart = Enum.EasingStyle.Quart
     v1_3_(new(v1_6_, Quart))

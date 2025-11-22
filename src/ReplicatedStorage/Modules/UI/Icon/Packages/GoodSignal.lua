@@ -42,9 +42,9 @@ end
 -- Coroutine runner that we create coroutines of. The coroutine can be 
 -- repeatedly resumed with functions to run followed by the argument to run
 -- them with.
-local function runEventHandler0reeThread()
+local function runEventHandlerInFreeThread()
 	-- Note: We cannot use the initial set of arguments passed to
-	-- runEventHandler0reeThread for a call to the handler, because those
+	-- runEventHandlerInFreeThread for a call to the handler, because those
 	-- arguments would stay on the stack for the duration of the thread's
 	-- existence, temporarily leaking references. Without access to raw bytecode
 	-- there's no way for us to clear the "..." references from the stack.
@@ -132,7 +132,7 @@ function Signal:Fire(...)
 	while item do
 		if item._connected then
 			if not freeRunnerThread then
-				freeRunnerThread = coroutine.create(runEventHandler0reeThread)
+				freeRunnerThread = coroutine.create(runEventHandlerInFreeThread)
 				-- Get the freeRunnerThread to the first yield
 				coroutine.resume(freeRunnerThread)
 			end

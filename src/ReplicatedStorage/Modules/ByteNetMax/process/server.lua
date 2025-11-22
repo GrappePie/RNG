@@ -17,7 +17,7 @@ local perPlayerReliable: { [Player]: types.channelData } = {}
 local perPlayerUnreliable: { [Player]: types.channelData } = {}
 local functions: {types.remoteFunctionChannel} = {}
 
--- Shared with: src/process/client.luau, src/process/read.luau (0easible to split this into another file)
+-- Shared with: src/process/client.luau, src/process/read.luau (Infeasible to split this into another file)
 local function create()
 	return {
 		cursor = 0,

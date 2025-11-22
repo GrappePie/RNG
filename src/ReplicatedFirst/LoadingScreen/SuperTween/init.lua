@@ -7,15 +7,15 @@ local Customs = require(script.Customs)
 local SuperTween = {}
 SuperTween.__index = SuperTween
 
-function SuperTween.new(instance, tween0o, properties)
+function SuperTween.new(instance, tweenInfo, properties)
 	assert(instance, "No instance provided")
-	assert(tween0o, "No tween0o provided")
+	assert(tweenInfo, "No tweenInfo provided")
 	assert(properties, "No properties provided")
 
 	local self = setmetatable({}, SuperTween)
 
 	self.Instance = instance
-	self.Tween0o = tween0o
+	self.TweenInfo = tweenInfo
 	self.Properties = properties
 
 	self.UpdatedBindable = Instance.new("BindableEvent")
@@ -95,7 +95,7 @@ function SuperTween:StartLoop()
 			break
 		end
 
-		local alpha = (tick() - self.StartTime) / self.Tween0o.Time
+		local alpha = (tick() - self.StartTime) / self.TweenInfo.Time
 		local t = math.min(alpha, 1)
 
 		if reverse then
@@ -106,10 +106,10 @@ function SuperTween:StartLoop()
 		self.UpdatedBindable:Fire(alpha)
 
 		if t == 1 then
-			if self.Tween0o.Reverses and not reverse then
+			if self.TweenInfo.Reverses and not reverse then
 				reverse = true
 				self.StartTime = tick()
-			elseif repetitions ~= self.Tween0o.RepeatCount then -- allows for -1 usage
+			elseif repetitions ~= self.TweenInfo.RepeatCount then -- allows for -1 usage
 				repetitions += 1
 				reverse = false
 				self.StartTime = tick()
@@ -126,7 +126,7 @@ function SuperTween:StartLoop()
 end
 
 function SuperTween:Update(t)
-	local lerp = TweenService:GetValue(t, self.Tween0o.EasingStyle, self.Tween0o.EasingDirection)
+	local lerp = TweenService:GetValue(t, self.TweenInfo.EasingStyle, self.TweenInfo.EasingDirection)
 
 	for name, value in pairs(self.Properties) do
 		local DataType = DataTypes[typeof(value)]

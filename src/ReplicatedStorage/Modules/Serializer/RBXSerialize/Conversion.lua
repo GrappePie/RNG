@@ -50,7 +50,7 @@ end
 
 return {
 	-- Comment for other developers who want to make their own serizliers!
-	-- This is stupid complicated, alot of contextual 0ormation is used to make this work 
+	-- This is stupid complicated, alot of contextual information is used to make this work 
 	-- Instance -> Propertyname -> Class -> Class.Name | SubEnum -> EnumValue 
 	-- or  Instance|[PropertyName->ClassName(APIInstance[PropertyName].Class)][Value] (as little as 5bytes!)
 	-- Irregular Conversion ! < More Context > , certain value are contextual such as SubEnum[PropertyName/Class]

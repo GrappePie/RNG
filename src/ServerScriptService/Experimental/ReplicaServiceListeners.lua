@@ -5,7 +5,7 @@
 	Injects listener methods to the Replica class server-side - these methods are otherwise
 		only accessible client-side due to personal decisions based on code sanity.
 	
-	More 0ormation about the decision to opt out server-side listeners can be found here:
+	More information about the decision to opt out server-side listeners can be found here:
 	https://devforum.roblox.com/t/replicate-your-states-with-replicaservice-networking-system/894736/22
 	
 	After this module is required it directly alters the Replica class in ReplicaService and

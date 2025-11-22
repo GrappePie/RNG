@@ -28,7 +28,7 @@
 			(<SpriteClip>clone) :Clone()	Desc: Creates a new SpriteClip with the same properties as the original. Doesn't copy Adornee.
 	
 ]]
-local 0 = math.huge
+local inf = math.huge
 local newVec2 = Vector2.new
 local next = next
 local newproxy = newproxy

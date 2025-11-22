@@ -226,16 +226,16 @@ local module = {
 	Interface = ScreenGui_upvr;
 	BlackBoard = Frame;
 	StarSpinSpeed = 1;
-	BaseQuart0o1 = Tween0o.new(0.5, Enum.EasingStyle.Quart);
-	BaseQuart0o2 = Tween0o.new(1, Enum.EasingStyle.Quart);
-	BaseQuart0o3 = Tween0o.new(2, Enum.EasingStyle.Quart);
-	ReverseQuart0o1 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In);
-	ReverseQuart0o2 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In);
-	ReverseQuart0o3 = Tween0o.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.In);
-	ColorboardAppear = TweenService_upvr:Create(CreateImageLabel_result1, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	BaseQuartInfo1 = TweenInfo.new(0.5, Enum.EasingStyle.Quart);
+	BaseQuartInfo2 = TweenInfo.new(1, Enum.EasingStyle.Quart);
+	BaseQuartInfo3 = TweenInfo.new(2, Enum.EasingStyle.Quart);
+	ReverseQuartInfo1 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In);
+	ReverseQuartInfo2 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In);
+	ReverseQuartInfo3 = TweenInfo.new(0.3, Enum.EasingStyle.Quart, Enum.EasingDirection.In);
+	ColorboardAppear = TweenService_upvr:Create(CreateImageLabel_result1, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		ImageTransparency = 0;
 	});
-	ColorboardDisappear = TweenService_upvr:Create(CreateImageLabel_result1, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+	ColorboardDisappear = TweenService_upvr:Create(CreateImageLabel_result1, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		ImageTransparency = 1;
 	});
 	BlackBoardTransitionize = function(Blackboard: Frame, Transparency: number, Instant: boolean): ()
@@ -243,7 +243,7 @@ local module = {
 		if Instant then
 			Blackboard.BackgroundTransparency = Transparency;
 		else
-			TweenService_upvr:Create(Blackboard, Tween0o.new(0.5, Enum.EasingStyle.Quart), {
+			TweenService_upvr:Create(Blackboard, TweenInfo.new(0.5, Enum.EasingStyle.Quart), {
 				BackgroundTransparency = Transparency;
 			}):Play();
 		end;
@@ -288,12 +288,12 @@ function module.SetShake(arg1, arg2, arg3) -- Line 280
 	]]
 	--module_2_upvr:SetShake(arg1, arg2, arg3)
 end
-local Tween0o_new_result1_upvr = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local TweenInfo_new_result1_upvr = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 function module.CreateParticleEmit(arg1, arg2, arg3, arg4, arg5) -- Line 286
 	--[[ Upvalues[4]:
 		[1]: ApplyLabelColor_upvr_upvr (readonly)
 		[2]: TweenService_upvr (readonly)
-		[3]: Tween0o_new_result1_upvr (readonly)
+		[3]: TweenInfo_new_result1_upvr (readonly)
 		[4]: RunService_upvr (readonly)
 	]]
 	local ImageLabel_upvr = Instance.new("ImageLabel", arg1)
@@ -307,7 +307,7 @@ function module.CreateParticleEmit(arg1, arg2, arg3, arg4, arg5) -- Line 286
 	if arg5 then
 		ApplyLabelColor_upvr_upvr(ImageLabel_upvr, arg5)
 	end
-	TweenService_upvr:Create(ImageLabel_upvr, Tween0o.new(0.5, Enum.EasingStyle.Quart), {
+	TweenService_upvr:Create(ImageLabel_upvr, TweenInfo.new(0.5, Enum.EasingStyle.Quart), {
 		Size = UDim2.fromScale(arg4, arg4);
 	}):Play()
 	local var79 = 50
@@ -323,7 +323,7 @@ function module.CreateParticleEmit(arg1, arg2, arg3, arg4, arg5) -- Line 286
 		--[[ Upvalues[7]:
 			[1]: ImageLabel_upvr (readonly)
 			[2]: TweenService_upvr (copied, readonly)
-			[3]: Tween0o_new_result1_upvr (copied, readonly)
+			[3]: TweenInfo_new_result1_upvr (copied, readonly)
 			[4]: udim2_upvr (readonly)
 			[5]: var82_upvr (readonly)
 			[6]: var83_upvr (readonly)
@@ -333,7 +333,7 @@ function module.CreateParticleEmit(arg1, arg2, arg3, arg4, arg5) -- Line 286
 		while ImageLabel_upvr and ImageLabel_upvr.Parent do
 			if time_result1 + math.random(15, 20) / 10 - 0.5 <= time() and not ImageLabel_upvr:GetAttribute("Removing") then
 				ImageLabel_upvr:SetAttribute("Removing", true)
-				TweenService_upvr:Create(ImageLabel_upvr, Tween0o_new_result1_upvr, {
+				TweenService_upvr:Create(ImageLabel_upvr, TweenInfo_new_result1_upvr, {
 					Size = UDim2.fromScale(0, 0);
 				}):Play()
 				game:GetService("Debris"):AddItem(ImageLabel_upvr, 0.5)

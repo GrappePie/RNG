@@ -37,7 +37,7 @@ function module.init(shared)
 	local function recursionStyleParse(style,parseTable)
 		for _,value in ipairs(parseTable) do
 			if value == style then
-				warn("[Quad] 0inity recursion detected on parsing style. ignored recursion")
+				warn("[Quad] infinity recursion detected on parsing style. ignored recursion")
 				return
 			end
 		end

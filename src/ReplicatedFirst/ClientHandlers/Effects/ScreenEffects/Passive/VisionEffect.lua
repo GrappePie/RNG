@@ -7,19 +7,19 @@ local module = {}
 local Part_upvr = workspace:WaitForChild("Map"):WaitForChild("Miscs"):WaitForChild("EyeWall"):WaitForChild("Part")
 local Eyeball = Part_upvr:WaitForChild("SurfaceGui"):WaitForChild("Eyeball")
 local Eyeball2 = Part_upvr:WaitForChild("SurfaceGui"):WaitForChild("Eyeball2")
-local Tween0o_new_result1 = Tween0o.new(0.5, Enum.EasingStyle.Linear)
-local tbl_upvr_2 = {TweenService:Create(Part_upvr, Tween0o_new_result1, {
+local TweenInfo_new_result1 = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+local tbl_upvr_2 = {TweenService:Create(Part_upvr, TweenInfo_new_result1, {
 	Transparency = 0.8;
-}), TweenService:Create(Eyeball, Tween0o_new_result1, {
+}), TweenService:Create(Eyeball, TweenInfo_new_result1, {
 		ImageTransparency = 1;
-	}), TweenService:Create(Eyeball2, Tween0o_new_result1, {
+	}), TweenService:Create(Eyeball2, TweenInfo_new_result1, {
 		ImageTransparency = 0;
 	})}
-local tbl_upvr = {TweenService:Create(Part_upvr, Tween0o_new_result1, {
+local tbl_upvr = {TweenService:Create(Part_upvr, TweenInfo_new_result1, {
 	Transparency = 0;
-}), TweenService:Create(Eyeball, Tween0o_new_result1, {
+}), TweenService:Create(Eyeball, TweenInfo_new_result1, {
 		ImageTransparency = 0;
-	}), TweenService:Create(Eyeball2, Tween0o_new_result1, {
+	}), TweenService:Create(Eyeball2, TweenInfo_new_result1, {
 		ImageTransparency = 1;
 	})}
 local function Open_upvr() -- Line 38, Named "Open"

@@ -5,8 +5,8 @@ local function animateFrame(frame, startPos, endPos, duration)
 	-- Set the initial position
 	frame.Position = startPos
 
-	-- Create the tween 0o
-	local tween0o = Tween0o.new(
+	-- Create the tween info
+	local tweenInfo = TweenInfo.new(
 		duration, -- Duration
 		Enum.EasingStyle.Quad, -- Easing style
 		Enum.EasingDirection.InOut, -- Easing direction
@@ -20,7 +20,7 @@ local function animateFrame(frame, startPos, endPos, duration)
 	goal.Position = endPos
 
 	-- Create and play the tween
-	local tween = TweenService:Create(frame, tween0o, goal)
+	local tween = TweenService:Create(frame, tweenInfo, goal)
 	tween:Play()
 
 	-- Wait for the tween to complete

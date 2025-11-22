@@ -7,7 +7,7 @@ v_u_2:SetDirection(script.Direction.Value)
 v_u_2:SetTransparency(script.Transparency.Value)
 v_u_2:SetSpeedRatio(script.SpeedRatio.Value)
 v_u_2:SetIntensityRatio(script.IntensityRatio.Value)
-v_u_2:SetLight0luence(script.Light0luence.Value)
+v_u_2:SetLightInfluence(script.LightInfluence.Value)
 v_u_2:SetLightEmission(script.LightEmission.Value)
 v_u_2:SetVolume(script.Volume.Value)
 v_u_2:SetSoundId(script.SoundId.Value)
@@ -38,11 +38,11 @@ elseif script.CanCollideConstraint.Value then
 end
 local function v8()
 	-- upvalues: (copy) v_u_1, (copy) v_u_2
-	if v_u_1.Server0o:GetAttribute("CurrentBiome") == "Rainy" then
-		v_u_2:Enable(Tween0o.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out))
+	if v_u_1.ServerInfo:GetAttribute("CurrentBiome") == "Rainy" then
+		v_u_2:Enable(TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out))
 	else
-		v_u_2:Disable(Tween0o.new(2, Enum.EasingStyle.Linear))
+		v_u_2:Disable(TweenInfo.new(2, Enum.EasingStyle.Linear))
 	end
 end
 v8()
-v_u_1.Server0o:GetAttributeChangedSignal("CurrentBiome"):Connect(v8)
+v_u_1.ServerInfo:GetAttributeChangedSignal("CurrentBiome"):Connect(v8)

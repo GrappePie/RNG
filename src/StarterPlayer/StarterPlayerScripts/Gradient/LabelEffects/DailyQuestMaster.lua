@@ -11,7 +11,7 @@ local function v_u_6(p2, p3)
 end
 local v_u_7 = game:GetService("TweenService")
 local v_u_8 = game:GetService("Debris")
-local v_u_9 = Tween0o.new(0.4, Enum.EasingStyle.Quart)
+local v_u_9 = TweenInfo.new(0.4, Enum.EasingStyle.Quart)
 local v_u_10 = {
 	["Size"] = UDim2.fromScale(1.2, 1.3),
 	["TextTransparency"] = 1

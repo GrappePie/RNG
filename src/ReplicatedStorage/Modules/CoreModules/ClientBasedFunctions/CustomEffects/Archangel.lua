@@ -14,9 +14,9 @@ local module_upvr_2 = require(Modules_2:WaitForChild("UI"):WaitForChild("SceneUI
 ;({}).BackgroundTransparency = 0.6
 ;({}).BackgroundTransparency = 1
 ;({}).BackgroundTransparency = 0
-local BaseQuart0o1_upvr_2 = module_upvr_2.BaseQuart0o1
-local BaseQuart0o3_upvr = module_upvr_2.BaseQuart0o3
-local ReverseQuart0o1_upvr = module_upvr_2.ReverseQuart0o1
+local BaseQuartInfo1_upvr_2 = module_upvr_2.BaseQuartInfo1
+local BaseQuartInfo3_upvr = module_upvr_2.BaseQuartInfo3
+local ReverseQuartInfo1_upvr = module_upvr_2.ReverseQuartInfo1
 local random_state_upvr = Random.new()
 local clock_upvr = os.clock
 local function _() -- Line 33, Named "mul"
@@ -30,10 +30,10 @@ end
 		[1]: module_upvr (readonly)
 		[2]: random_state_upvr (readonly)
 		[3]: TweenService_upvr (readonly)
-		[4]: BaseQuart0o1_upvr_2 (readonly)
+		[4]: BaseQuartInfo1_upvr_2 (readonly)
 		[5]: clock_upvr (readonly)
 		[6]: RunService_upvr_2 (readonly)
-		[7]: ReverseQuart0o1_upvr (readonly)
+		[7]: ReverseQuartInfo1_upvr (readonly)
 		[8]: Debris_upvr_2 (readonly)
 	
 	-- KONSTANTWARNING: Variable analysis failed. Output will have some incorrect variable assignments
@@ -54,7 +54,7 @@ end
 		var173_upvr = 1
 	end
 	any_new_result1_upvr.Rotation = any_NextNumber_result1_12_upvr
-	TweenService_upvr:Create(any_new_result1_upvr, BaseQuart0o1_upvr_2, {
+	TweenService_upvr:Create(any_new_result1_upvr, BaseQuartInfo1_upvr_2, {
 		Size = UDim2.fromScale(any_NextNumber_result1_10, any_NextNumber_result1_10);
 	}):Play()
 	var173_upvr = random_state_upvr:NextNumber()
@@ -73,7 +73,7 @@ end
 			[2]: var177_upvr (readonly)
 			[3]: any_new_result1_upvr (readonly)
 			[4]: TweenService_upvr (copied, readonly)
-			[5]: ReverseQuart0o1_upvr (copied, readonly)
+			[5]: ReverseQuartInfo1_upvr (copied, readonly)
 			[6]: Debris_upvr_2 (copied, readonly)
 			[7]: clock_upvr_result1_upvr (readonly)
 			[8]: udim2_upvr_5 (readonly)
@@ -84,7 +84,7 @@ end
 		
 		if var177_upvr - 0.5 <= clock_upvr() and not any_new_result1_upvr:GetAttribute("Removing") then
 			any_new_result1_upvr:SetAttribute("Removing", true)
-			TweenService_upvr:Create(any_new_result1_upvr, ReverseQuart0o1_upvr, {
+			TweenService_upvr:Create(any_new_result1_upvr, ReverseQuartInfo1_upvr, {
 				Size = UDim2.new();
 			}):Play()
 			Debris_upvr_2:AddItem(any_new_result1_upvr, 0.5)
@@ -114,7 +114,7 @@ local function CreateFeather_upvr(p15, p16)
 	local v_u_20 = math.random(5, 10) * (math.random(1, 2) == 1 and -1 or 1)
 	v_u_17.Rotation = v_u_19
 	v_u_17.AnchorPoint = Vector2.new(0.5, 0.5)
-	TweenService_upvr:Create(v_u_17, BaseQuart0o1_upvr_2, {
+	TweenService_upvr:Create(v_u_17, BaseQuartInfo1_upvr_2, {
 		["Size"] = UDim2.fromScale(v18, v18)
 	}):Play()
 	local v_u_21 = UDim2.fromScale(math.random(0, 100) / 100, 0)
@@ -127,7 +127,7 @@ local function CreateFeather_upvr(p15, p16)
 		while v_u_17 and v_u_17.Parent do
 			if time() >= v25 - 0.5 and not v_u_17:GetAttribute("Removing") then
 				v_u_17:SetAttribute("Removing", true)
-				TweenService_upvr:Create(v_u_17, ReverseQuart0o1_upvr, {
+				TweenService_upvr:Create(v_u_17, ReverseQuartInfo1_upvr, {
 					["Size"] = UDim2.fromScale(0, 0)
 				}):Play()
 				Debris_upvr_2:AddItem(v_u_17, 0.5)
@@ -152,10 +152,10 @@ end
 		[1]: module_upvr (readonly)
 		[2]: random_state_upvr (readonly)
 		[3]: TweenService_upvr (readonly)
-		[4]: BaseQuart0o1_upvr_2 (readonly)
+		[4]: BaseQuartInfo1_upvr_2 (readonly)
 		[5]: clock_upvr (readonly)
 		[6]: RunService_upvr_2 (readonly)
-		[7]: ReverseQuart0o1_upvr (readonly)
+		[7]: ReverseQuartInfo1_upvr (readonly)
 		[8]: Debris_upvr_2 (readonly)
 	
 	local any_new_result1_12_upvr = Instance.new("ImageLabel", arg1)
@@ -169,7 +169,7 @@ end
 	any_new_result1_12_upvr.AnchorPoint = Vector2.one * 0.5
 	any_new_result1_12_upvr:AddTag("CutsceneAsset")
 	any_new_result1_12_upvr.Parent = arg1
-	TweenService_upvr:Create(any_new_result1_12_upvr, BaseQuart0o1_upvr_2, {
+	TweenService_upvr:Create(any_new_result1_12_upvr, BaseQuartInfo1_upvr_2, {
 		ImageTransparency = 0.7;
 	}):Play()
 	any_new_result1_12_upvr.Parent = arg1
@@ -197,7 +197,7 @@ end
 			[2]: var188_upvr (readonly)
 			[3]: any_new_result1_12_upvr (readonly)
 			[4]: TweenService_upvr (copied, readonly)
-			[5]: ReverseQuart0o1_upvr (copied, readonly)
+			[5]: ReverseQuartInfo1_upvr (copied, readonly)
 			[6]: Debris_upvr_2 (copied, readonly)
 			[7]: clock_upvr_result1_upvr_2 (readonly)
 			[8]: udim2_upvr_2 (readonly)
@@ -206,7 +206,7 @@ end
 		
 		if var188_upvr - 0.5 <= clock_upvr() and not any_new_result1_12_upvr:GetAttribute("Removing") then
 			any_new_result1_12_upvr:SetAttribute("Removing", true)
-			TweenService_upvr:Create(any_new_result1_12_upvr, ReverseQuart0o1_upvr, {
+			TweenService_upvr:Create(any_new_result1_12_upvr, ReverseQuartInfo1_upvr, {
 				ImageTransparency = 1;
 			}):Play()
 			Debris_upvr_2:AddItem(any_new_result1_12_upvr, 0.5)
@@ -235,7 +235,7 @@ local function CreateFog_upvr(arg1, arg2)
 	ImageLabel_4_upvr.ZIndex = 1
 	ImageLabel_4_upvr.Parent = arg1
 	ImageLabel_4_upvr:AddTag("CutsceneAsset")
-	TweenService_upvr:Create(ImageLabel_4_upvr, BaseQuart0o1_upvr_2, {
+	TweenService_upvr:Create(ImageLabel_4_upvr, BaseQuartInfo1_upvr_2, {
 		["ImageTransparency"] = 0.7
 	}):Play()
 	local v_u_33 = UDim2.fromScale(math.random(0, 100) / 100, math.random(0, 100) / 100)
@@ -248,7 +248,7 @@ local function CreateFog_upvr(arg1, arg2)
 		while ImageLabel_4_upvr and ImageLabel_4_upvr.Parent do
 			if time() >= v37 - 0.5 and not ImageLabel_4_upvr:GetAttribute("Removing") then
 				ImageLabel_4_upvr:SetAttribute("Removing", true)
-				TweenService_upvr:Create(ImageLabel_4_upvr, ReverseQuart0o1_upvr, {
+				TweenService_upvr:Create(ImageLabel_4_upvr, ReverseQuartInfo1_upvr, {
 					["ImageTransparency"] = 1
 				}):Play()
 				Debris_upvr_2:AddItem(ImageLabel_4_upvr, 0.5)
@@ -292,7 +292,7 @@ local function CreateSlashFeather_upvr(arg1, arg2, arg3) -- Line 112, Named "Cre
 	end
 	var200 = {}
 	var200.Position = UDim2.fromScale(any_new_result1_9.Position.X.Scale, 1 + any_new_result1_9.Size.Y.Scale)
-	TweenService_upvr:Create(any_new_result1_9, Tween0o.new(random_state_upvr:NextNumber(0.6, 2), Enum.EasingStyle.Quart, Enum.EasingDirection.In), var200):Play()
+	TweenService_upvr:Create(any_new_result1_9, TweenInfo.new(random_state_upvr:NextNumber(0.6, 2), Enum.EasingStyle.Quart, Enum.EasingDirection.In), var200):Play()
 	return any_new_result1_9
 end
 local function CreateRain_upvr(arg1, arg2) -- Line 135, Named "CreateRain"
@@ -313,7 +313,7 @@ local function CreateRain_upvr(arg1, arg2) -- Line 135, Named "CreateRain"
 	any_new_result1.Position = UDim2.fromScale(random_state_upvr:NextNumber(), 0)
 	any_new_result1.Parent = arg1
 	local any_NextNumber_result1_9 = random_state_upvr:NextNumber(0.5, 1)
-	TweenService_upvr:Create(any_new_result1, Tween0o.new(any_NextNumber_result1_9, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	TweenService_upvr:Create(any_new_result1, TweenInfo.new(any_NextNumber_result1_9, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		Position = UDim2.fromScale(any_new_result1.Position.X.Scale, 1 + any_new_result1.Size.Y.Scale);
 	}):Play()
 	Debris_upvr_2:AddItem(any_new_result1, any_NextNumber_result1_9)
@@ -324,10 +324,10 @@ end
 		[1]: module_upvr (readonly)
 		[2]: random_state_upvr (readonly)
 		[3]: TweenService_upvr (readonly)
-		[4]: BaseQuart0o1_upvr_2 (readonly)
+		[4]: BaseQuartInfo1_upvr_2 (readonly)
 		[5]: clock_upvr (readonly)
 		[6]: RunService_upvr_2 (readonly)
-		[7]: ReverseQuart0o1_upvr (readonly)
+		[7]: ReverseQuartInfo1_upvr (readonly)
 		[8]: Debris_upvr_2 (readonly)
 	
 	local any_new_result1_3_upvr = Instance.new("ImageLabel", arg1)
@@ -341,7 +341,7 @@ end
 	any_new_result1_3_upvr.AnchorPoint = Vector2.one * 0.5
 	any_new_result1_3_upvr:AddTag("CutsceneAsset")
 	any_new_result1_3_upvr.Parent = arg1
-	TweenService_upvr:Create(any_new_result1_3_upvr, BaseQuart0o1_upvr_2, {
+	TweenService_upvr:Create(any_new_result1_3_upvr, BaseQuartInfo1_upvr_2, {
 		ImageTransparency = 0.7;
 	}):Play()
 	any_new_result1_3_upvr.Parent = arg1
@@ -369,7 +369,7 @@ end
 			[2]: var208_upvr (readonly)
 			[3]: any_new_result1_3_upvr (readonly)
 			[4]: TweenService_upvr (copied, readonly)
-			[5]: ReverseQuart0o1_upvr (copied, readonly)
+			[5]: ReverseQuartInfo1_upvr (copied, readonly)
 			[6]: Debris_upvr_2 (copied, readonly)
 			[7]: clock_upvr_result1_upvr_3 (readonly)
 			[8]: udim2_upvr (readonly)
@@ -378,7 +378,7 @@ end
 		
 		if var208_upvr - 0.5 <= clock_upvr() and not any_new_result1_3_upvr:GetAttribute("Removing") then
 			any_new_result1_3_upvr:SetAttribute("Removing", true)
-			TweenService_upvr:Create(any_new_result1_3_upvr, ReverseQuart0o1_upvr, {
+			TweenService_upvr:Create(any_new_result1_3_upvr, ReverseQuartInfo1_upvr, {
 				ImageTransparency = 1;
 			}):Play()
 			Debris_upvr_2:AddItem(any_new_result1_3_upvr, 0.5)
@@ -407,7 +407,7 @@ local function CreateSideFog_upvr(arg1, arg2)
 	ImageLabel_4_upvr.ZIndex = 2
 	ImageLabel_4_upvr.Parent = arg1
 	ImageLabel_4_upvr:AddTag("CutsceneAsset")
-	TweenService_upvr:Create(ImageLabel_4_upvr, BaseQuart0o1_upvr_2, {
+	TweenService_upvr:Create(ImageLabel_4_upvr, BaseQuartInfo1_upvr_2, {
 		["ImageTransparency"] = 0.7
 	}):Play()
 	local v_u_33 = UDim2.fromScale(math.random(0, 100) / 100, math.random(0, 100) / 100)
@@ -420,7 +420,7 @@ local function CreateSideFog_upvr(arg1, arg2)
 		while ImageLabel_4_upvr and ImageLabel_4_upvr.Parent do
 			if time() >= v37 - 0.5 and not ImageLabel_4_upvr:GetAttribute("Removing") then
 				ImageLabel_4_upvr:SetAttribute("Removing", true)
-				TweenService_upvr:Create(ImageLabel_4_upvr, ReverseQuart0o1_upvr, {
+				TweenService_upvr:Create(ImageLabel_4_upvr, ReverseQuartInfo1_upvr, {
 					["ImageTransparency"] = 1
 				}):Play()
 				Debris_upvr_2:AddItem(ImageLabel_4_upvr, 0.5)
@@ -436,7 +436,7 @@ local function CreateIcon_upvr(arg1, arg2, arg3, arg4) -- Line 187, Named "Creat
 		[1]: module_upvr_2 (readonly)
 		[2]: module_upvr (readonly)
 		[3]: TweenService_upvr (readonly)
-		[4]: BaseQuart0o3_upvr (readonly)
+		[4]: BaseQuartInfo3_upvr (readonly)
 		[5]: Debris_upvr_2 (readonly)
 	]]
 	module_upvr_2.PlaySFX("Whoosh", {
@@ -453,7 +453,7 @@ local function CreateIcon_upvr(arg1, arg2, arg3, arg4) -- Line 187, Named "Creat
 	any_new_result1_11.Position = UDim2.fromScale(0.5, 0.5)
 	any_new_result1_11:AddTag("CutsceneAsset")
 	any_new_result1_11.Parent = arg1
-	TweenService_upvr:Create(any_new_result1_11, BaseQuart0o3_upvr, {
+	TweenService_upvr:Create(any_new_result1_11, BaseQuartInfo3_upvr, {
 		Size = UDim2.fromScale(0.7, 0.7);
 		ImageTransparency = 1;
 	}):Play()
@@ -477,26 +477,26 @@ any_new_result1_13:insert(module_2.Process.new(module_upvr.new, 1195495135):exec
 	end
 end]]
 --any_new_result1_13:executeAll():await():destroy()
-local BaseQuart0o2_upvr = module_upvr_2.BaseQuart0o2
-local Tween0o_new_result1_upvr_2 = Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local ReverseQuart0o2_upvr_2 = module_upvr_2.ReverseQuart0o2
+local BaseQuartInfo2_upvr = module_upvr_2.BaseQuartInfo2
+local TweenInfo_new_result1_upvr_2 = TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local ReverseQuartInfo2_upvr_2 = module_upvr_2.ReverseQuartInfo2
 return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	--[[ Upvalues[15]:
 		[1]: module_upvr_2 (readonly)
 		[2]: TweenService_upvr (readonly)
-		[3]: BaseQuart0o3_upvr (readonly)
-		[4]: BaseQuart0o2_upvr (readonly)
-		[5]: Tween0o_new_result1_upvr_2 (readonly)
+		[3]: BaseQuartInfo3_upvr (readonly)
+		[4]: BaseQuartInfo2_upvr (readonly)
+		[5]: TweenInfo_new_result1_upvr_2 (readonly)
 		[6]: Debris_upvr_2 (readonly)
 		[7]: CreateRain_upvr (readonly)
 		[8]: CreateFeather_upvr (readonly)
 		[9]: CreateSideFog_upvr (readonly)
 		[10]: CreateFog_upvr (readonly)
-		[11]: ReverseQuart0o2_upvr_2 (readonly)
+		[11]: ReverseQuartInfo2_upvr_2 (readonly)
 		[12]: CreateIcon_upvr (readonly)
-		[13]: ReverseQuart0o1_upvr (readonly)
+		[13]: ReverseQuartInfo1_upvr (readonly)
 		[14]: CreateSlashFeather_upvr (readonly)
-		[15]: BaseQuart0o1_upvr_2 (readonly)
+		[15]: BaseQuartInfo1_upvr_2 (readonly)
 	]]
 	-- KONSTANTWARNING: Variable analysis failed. Output will have some incorrect variable assignments
 	local Star2_2 = arg2.Star
@@ -517,10 +517,10 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	Star2_2.Size = UDim2.fromScale(1.5, 1.5)
 	Star2_2.Visible = true
 	StarSpinSpeed.Value = 5
-	TweenService_upvr:Create(StarSpinSpeed, BaseQuart0o3_upvr, {
+	TweenService_upvr:Create(StarSpinSpeed, BaseQuartInfo3_upvr, {
 		Value = 1;
 	}):Play()
-	TweenService_upvr:Create(Star2_2, BaseQuart0o3_upvr, {
+	TweenService_upvr:Create(Star2_2, BaseQuartInfo3_upvr, {
 		Size = UDim2.fromScale(0.6, 0.6);
 	}):Play()
 	local function _(arg1_3) -- Line 259, Named "IsActive"
@@ -542,8 +542,8 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 			[1]: current_thread_upvr (readonly)
 			[2]: Colorboard_upvr (readonly)
 			[3]: TweenService_upvr (copied, readonly)
-			[4]: BaseQuart0o2_upvr (copied, readonly)
-			[5]: Tween0o_new_result1_upvr_2 (copied, readonly)
+			[4]: BaseQuartInfo2_upvr (copied, readonly)
+			[5]: TweenInfo_new_result1_upvr_2 (copied, readonly)
 			[6]: Debris_upvr_2 (copied, readonly)
 		]]
 		local task_wait_result1_6 = task.wait(0.2)
@@ -559,7 +559,7 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 			local clone_5 = script.Dialogue:Clone()
 			clone_5:AddTag("CutsceneAsset")
 			clone_5.Parent = Colorboard_upvr
-			TweenService_upvr:Create(clone_5, BaseQuart0o2_upvr, {
+			TweenService_upvr:Create(clone_5, BaseQuartInfo2_upvr, {
 				Position = UDim2.fromScale(0.5, 0.83);
 				TextTransparency = 0;
 			}):Play()
@@ -572,7 +572,7 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 				end
 			end
 			if not task_wait_result1_8 then return end
-			TweenService_upvr:Create(clone_5, Tween0o_new_result1_upvr_2, {
+			TweenService_upvr:Create(clone_5, TweenInfo_new_result1_upvr_2, {
 				Position = UDim2.fromScale(0.5, 0.86);
 				TextTransparency = 1;
 			}):Play()
@@ -611,10 +611,10 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 		end
 	end)
 	task.wait(3.23)
-	TweenService_upvr:Create(StarSpinSpeed, ReverseQuart0o2_upvr_2, {
+	TweenService_upvr:Create(StarSpinSpeed, ReverseQuartInfo2_upvr_2, {
 		Value = 4;
 	}):Play()
-	TweenService_upvr:Create(Star2_2, ReverseQuart0o2_upvr_2, {
+	TweenService_upvr:Create(Star2_2, ReverseQuartInfo2_upvr_2, {
 		Size = UDim2.fromScale(1.5, 1.5);
 	}):Play()
 	task.wait(4)
@@ -647,13 +647,13 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 	Frame_2.AnchorPoint = Vector2.new(0.5, 0.5)
 	Frame_2.Size = UDim2.fromScale(1, 0.05)
 	Frame_2.Position = UDim2.fromScale(0.5, 0.5)
-	TweenService_upvr:Create(Frame_2, ReverseQuart0o1_upvr, {
+	TweenService_upvr:Create(Frame_2, ReverseQuartInfo1_upvr, {
 		Size = UDim2.fromScale(1, 0);
 	}):Play()
 	Debris_upvr_2:AddItem(Frame_2, 0.25)
 	local clone_7 = script:WaitForChild("ImpactStar"):Clone()
 	clone_7.Parent = Colorboard_upvr
-	TweenService_upvr:Create(clone_7, ReverseQuart0o1_upvr, {
+	TweenService_upvr:Create(clone_7, ReverseQuartInfo1_upvr, {
 		Size = UDim2.fromScale(1.5, 1.5);
 	}):Play()
 	Debris_upvr_2:AddItem(clone_7, 0.25)
@@ -705,8 +705,8 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 			--[[ Upvalues[5]:
 				[1]: Colorboard_upvr (readonly)
 				[2]: TweenService_upvr (copied, readonly)
-				[3]: BaseQuart0o2_upvr (copied, readonly)
-				[4]: Tween0o_new_result1_upvr_2 (copied, readonly)
+				[3]: BaseQuartInfo2_upvr (copied, readonly)
+				[4]: TweenInfo_new_result1_upvr_2 (copied, readonly)
 				[5]: Debris_upvr_2 (copied, readonly)
 			]]
 			local clone_4 = script.Dialogue:Clone()
@@ -714,12 +714,12 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 			clone_4.Position = UDim2.fromScale(0.5, 0.65)
 			clone_4.Text = "\"Until your sins are washed away...\""
 			clone_4.Parent = Colorboard_upvr
-			TweenService_upvr:Create(clone_4, BaseQuart0o2_upvr, {
+			TweenService_upvr:Create(clone_4, BaseQuartInfo2_upvr, {
 				Position = UDim2.fromScale(0.5, 0.68);
 				TextTransparency = 0;
 			}):Play()
 			task.wait(1)
-			TweenService_upvr:Create(clone_4, Tween0o_new_result1_upvr_2, {
+			TweenService_upvr:Create(clone_4, TweenInfo_new_result1_upvr_2, {
 				Position = UDim2.fromScale(0.5, 0.71);
 				TextTransparency = 1;
 			}):Play()
@@ -730,24 +730,24 @@ return function(arg1, arg2, arg3, arg4, arg5) -- Line 232
 		--game.Players.LocalPlayer.PlayerGui:WaitForChild("ScreenGui"):Destroy()
 		local clone_3 = script.StarShatter:Clone()
 		clone_3.Parent = Colorboard_upvr
-		TweenService_upvr:Create(clone_3, BaseQuart0o3_upvr, {
+		TweenService_upvr:Create(clone_3, BaseQuartInfo3_upvr, {
 			Size = UDim2.fromScale(1.2, 1.2);
 		}):Play()
 		Debris_upvr_2:AddItem(clone_3, 2)
-		TweenService_upvr:Create(clone_3.Upper, BaseQuart0o2_upvr, {
+		TweenService_upvr:Create(clone_3.Upper, BaseQuartInfo2_upvr, {
 			Position = UDim2.fromScale(0.5, 0);
 		}):Play()
-		TweenService_upvr:Create(clone_3.Lower, BaseQuart0o2_upvr, {
+		TweenService_upvr:Create(clone_3.Lower, BaseQuartInfo2_upvr, {
 			Position = UDim2.fromScale(-0.5, 0.5);
 		}):Play()
 		task.wait(0.4)
-		TweenService_upvr:Create(clone_3.Upper.ImageLabel, BaseQuart0o1_upvr_2, {
+		TweenService_upvr:Create(clone_3.Upper.ImageLabel, BaseQuartInfo1_upvr_2, {
 			ImageTransparency = 1;
 		}):Play()
-		TweenService_upvr:Create(clone_3.Lower.ImageLabel, BaseQuart0o1_upvr_2, {
+		TweenService_upvr:Create(clone_3.Lower.ImageLabel, BaseQuartInfo1_upvr_2, {
 			ImageTransparency = 1;
 		}):Play()
-		module_upvr_2.SetShake(0.02, BaseQuart0o3_upvr)
+		module_upvr_2.SetShake(0.02, BaseQuartInfo3_upvr)
 		RF = false
 		SF = false
 		game.Players.LocalPlayer.PlayerGui:WaitForChild("ScreenGui"):Destroy()

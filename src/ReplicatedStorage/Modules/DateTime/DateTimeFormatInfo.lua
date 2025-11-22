@@ -21,7 +21,7 @@ function v_u_3.__index(p5, p6)
 	if v_u_1[p6] and p6 ~= "new" then
 		return v_u_1[p6]
 	end
-	error(p6 .. " is not a valid member of DateTimeFormat0o")
+	error(p6 .. " is not a valid member of DateTimeFormatInfo")
 end
 function v_u_3.__newindex(p7, p8)
 	if p7.ReadOnly or not p7[p8] or p8 == "ReadOnly" then
@@ -957,7 +957,7 @@ function v_u_4.__index(p18, p19)
 	if v_u_1[p19] and p19 ~= "new" then
 		return v_u_1[p19]
 	end
-	error(p19 .. " is not a valid member of TimeSpan0o")
+	error(p19 .. " is not a valid member of TimeSpanInfo")
 end
 function v_u_4.__newindex(p20, p21)
 	if p20.ReadOnly or not p20[p21] or p21 == "ReadOnly" then

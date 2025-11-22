@@ -105,7 +105,7 @@ v_u_38.Archivable = false
 local v39 = Instance.new("ParticleEmitter")
 v39.Name = "RainStraight"
 v39.LightEmission = 0.05
-v39.Light0luence = 0.9
+v39.LightInfluence = 0.9
 v39.Size = v2
 v39.Texture = "rbxassetid://1822883048"
 v39.LockedToPart = true
@@ -119,7 +119,7 @@ v39.Orientation = Enum.ParticleOrientation.FacingCameraWorldUp
 local v40 = Instance.new("ParticleEmitter")
 v40.Name = "RainTopDown"
 v40.LightEmission = 0.05
-v40.Light0luence = 0.9
+v40.LightInfluence = 0.9
 v40.Size = v4
 v40.Texture = "rbxassetid://1822856633"
 v40.LockedToPart = true
@@ -137,7 +137,7 @@ for _ = 1, 20 do
 	v43.Name = "__RainSplashAttachment"
 	local v44 = Instance.new("ParticleEmitter")
 	v44.LightEmission = 0.05
-	v44.Light0luence = 0.9
+	v44.LightInfluence = 0.9
 	v44.Size = v7
 	v44.Texture = "rbxassetid://1822856633"
 	v44.Rotation = v9
@@ -237,7 +237,7 @@ local function v_u_117()
 		else
 			if v_u_27 < 1 and not v_u_17 then
 				v_u_27 = 1
-				v_u_13:Create(v_u_37, Tween0o.new(0.5), {
+				v_u_13:Create(v_u_37, TweenInfo.new(0.5), {
 					["Volume"] = 1
 				}):Play()
 			end
@@ -309,7 +309,7 @@ local function v_u_117()
 						local v99 = {
 							["Volume"] = v_u_27
 						}
-						v_u_13:Create(v_u_37, Tween0o.new(1), v99):Play()
+						v_u_13:Create(v_u_37, TweenInfo.new(1), v99):Play()
 					end
 				end
 			else
@@ -467,14 +467,14 @@ v_u_148.Changed:connect(v147)
 v147(v_u_148.Value)
 local function v152(p149)
 	-- upvalues: (ref) v_u_38, (ref) v_u_42, (ref) v_u_41
-	v_u_38.RainStraight.Light0luence = p149
-	v_u_38.RainTopDown.Light0luence = p149
+	v_u_38.RainStraight.LightInfluence = p149
+	v_u_38.RainTopDown.LightInfluence = p149
 	for _, v150 in pairs(v_u_42) do
-		v150.RainStraight.Light0luence = p149
-		v150.RainTopDown.Light0luence = p149
+		v150.RainStraight.LightInfluence = p149
+		v150.RainTopDown.LightInfluence = p149
 	end
 	for _, v151 in pairs(v_u_41) do
-		v151.RainSplash.Light0luence = p149
+		v151.RainSplash.LightInfluence = p149
 	end
 end
 local v_u_153 = Instance.new("NumberValue")
@@ -495,8 +495,8 @@ local v164 = {
 	["CollisionMode"] = v_u_11,
 	["Enable"] = function(_, p157)
 		-- upvalues: (copy) v_u_119, (ref) v_u_38, (ref) v_u_41, (ref) v_u_42, (copy) v_u_14, (copy) v_u_36, (copy) v_u_117, (copy) v_u_13, (copy) v_u_15, (copy) v_u_37, (ref) v_u_17
-		if p157 ~= nil and typeof(p157) ~= "Tween0o" then
-			error("bad argument #1 to \'Enable\' (Tween0o expected, got " .. typeof(p157) .. ")", 2)
+		if p157 ~= nil and typeof(p157) ~= "TweenInfo" then
+			error("bad argument #1 to \'Enable\' (TweenInfo expected, got " .. typeof(p157) .. ")", 2)
 		end
 		v_u_119()
 		v_u_38.RainStraight.Enabled = true
@@ -525,8 +525,8 @@ local v164 = {
 	end,
 	["Disable"] = function(_, p159)
 		-- upvalues: (copy) v_u_13, (copy) v_u_15, (copy) v_u_119, (ref) v_u_38, (ref) v_u_17, (copy) v_u_123
-		if p159 ~= nil and typeof(p159) ~= "Tween0o" then
-			error("bad argument #1 to \'Disable\' (Tween0o expected, got " .. typeof(p159) .. ")", 2)
+		if p159 ~= nil and typeof(p159) ~= "TweenInfo" then
+			error("bad argument #1 to \'Disable\' (TweenInfo expected, got " .. typeof(p159) .. ")", 2)
 		end
 		if p159 then
 			local v_u_160 = v_u_13:Create(v_u_15, p159, {
@@ -540,7 +540,7 @@ local v164 = {
 					v_u_38.RainTopDown.Enabled = false
 					v_u_38.Size = Vector3.new(0.05, 0.05, 0.05)
 					if not v_u_17 then
-						v_u_123(Tween0o.new(1))
+						v_u_123(TweenInfo.new(1))
 					end
 				end
 				v_u_160:Destroy()
@@ -554,7 +554,7 @@ local v164 = {
 			v_u_38.RainTopDown.Enabled = false
 			v_u_38.Size = Vector3.new(0.05, 0.05, 0.05)
 			if not v_u_17 then
-				v_u_123(Tween0o.new(1))
+				v_u_123(TweenInfo.new(1))
 			end
 		end
 		v_u_17 = true
@@ -562,8 +562,8 @@ local v164 = {
 	["SetColor"] = function(_, p162, p163)
 		-- upvalues: (copy) v_u_13, (copy) v_u_129
 		if typeof(p162) == "Color3" then
-			if p163 ~= nil and typeof(p163) ~= "Tween0o" then
-				error("bad argument #2 to \'SetColor\' (Tween0o expected, got " .. typeof(p163) .. ")", 2)
+			if p163 ~= nil and typeof(p163) ~= "TweenInfo" then
+				error("bad argument #2 to \'SetColor\' (TweenInfo expected, got " .. typeof(p163) .. ")", 2)
 			end
 		else
 			error("bad argument #1 to \'SetColor\' (Color3 expected, got " .. typeof(p162) .. ")", 2)
@@ -581,11 +581,11 @@ local v_u_165 = "SetTransparency"
 function v164.SetTransparency(_, p166, p167)
 	-- upvalues: (copy) v_u_165, (copy) v_u_13, (copy) v_u_136
 	if typeof(p166) == "number" then
-		if p167 ~= nil and typeof(p167) ~= "Tween0o" then
+		if p167 ~= nil and typeof(p167) ~= "TweenInfo" then
 			local v168 = error
 			local v169 = v_u_165
 			local v170 = typeof(p167)
-			v168("bad argument #2 to \'" .. v169 .. "\' (Tween0o expected, got " .. v170 .. ")", 2)
+			v168("bad argument #2 to \'" .. v169 .. "\' (TweenInfo expected, got " .. v170 .. ")", 2)
 		end
 	else
 		local v171 = error
@@ -606,11 +606,11 @@ local v_u_175 = "SetSpeedRatio"
 function v164.SetSpeedRatio(_, p176, p177)
 	-- upvalues: (copy) v_u_175, (copy) v_u_13, (copy) v_u_139
 	if typeof(p176) == "number" then
-		if p177 ~= nil and typeof(p177) ~= "Tween0o" then
+		if p177 ~= nil and typeof(p177) ~= "TweenInfo" then
 			local v178 = error
 			local v179 = v_u_175
 			local v180 = typeof(p177)
-			v178("bad argument #2 to \'" .. v179 .. "\' (Tween0o expected, got " .. v180 .. ")", 2)
+			v178("bad argument #2 to \'" .. v179 .. "\' (TweenInfo expected, got " .. v180 .. ")", 2)
 		end
 	else
 		local v181 = error
@@ -631,11 +631,11 @@ local v_u_185 = "SetIntensityRatio"
 function v164.SetIntensityRatio(_, p186, p187)
 	-- upvalues: (copy) v_u_185, (copy) v_u_13, (copy) v_u_143
 	if typeof(p186) == "number" then
-		if p187 ~= nil and typeof(p187) ~= "Tween0o" then
+		if p187 ~= nil and typeof(p187) ~= "TweenInfo" then
 			local v188 = error
 			local v189 = v_u_185
 			local v190 = typeof(p187)
-			v188("bad argument #2 to \'" .. v189 .. "\' (Tween0o expected, got " .. v190 .. ")", 2)
+			v188("bad argument #2 to \'" .. v189 .. "\' (TweenInfo expected, got " .. v190 .. ")", 2)
 		end
 	else
 		local v191 = error
@@ -656,11 +656,11 @@ local v_u_195 = "SetLightEmission"
 function v164.SetLightEmission(_, p196, p197)
 	-- upvalues: (copy) v_u_195, (copy) v_u_13, (copy) v_u_148
 	if typeof(p196) == "number" then
-		if p197 ~= nil and typeof(p197) ~= "Tween0o" then
+		if p197 ~= nil and typeof(p197) ~= "TweenInfo" then
 			local v198 = error
 			local v199 = v_u_195
 			local v200 = typeof(p197)
-			v198("bad argument #2 to \'" .. v199 .. "\' (Tween0o expected, got " .. v200 .. ")", 2)
+			v198("bad argument #2 to \'" .. v199 .. "\' (TweenInfo expected, got " .. v200 .. ")", 2)
 		end
 	else
 		local v201 = error
@@ -677,15 +677,15 @@ function v164.SetLightEmission(_, p196, p197)
 		v_u_148.Value = v204
 	end
 end
-local v_u_205 = "SetLight0luence"
-function v164.SetLight0luence(_, p206, p207)
+local v_u_205 = "SetLightInfluence"
+function v164.SetLightInfluence(_, p206, p207)
 	-- upvalues: (copy) v_u_205, (copy) v_u_13, (copy) v_u_153
 	if typeof(p206) == "number" then
-		if p207 ~= nil and typeof(p207) ~= "Tween0o" then
+		if p207 ~= nil and typeof(p207) ~= "TweenInfo" then
 			local v208 = error
 			local v209 = v_u_205
 			local v210 = typeof(p207)
-			v208("bad argument #2 to \'" .. v209 .. "\' (Tween0o expected, got " .. v210 .. ")", 2)
+			v208("bad argument #2 to \'" .. v209 .. "\' (TweenInfo expected, got " .. v210 .. ")", 2)
 		end
 	else
 		local v211 = error
@@ -705,8 +705,8 @@ end
 function v164.SetVolume(_, p215, p216)
 	-- upvalues: (copy) v_u_13, (copy) v_u_36
 	if typeof(p215) == "number" then
-		if p216 ~= nil and typeof(p216) ~= "Tween0o" then
-			error("bad argument #2 to \'SetVolume\' (Tween0o expected, got " .. typeof(p216) .. ")", 2)
+		if p216 ~= nil and typeof(p216) ~= "TweenInfo" then
+			error("bad argument #2 to \'SetVolume\' (TweenInfo expected, got " .. typeof(p216) .. ")", 2)
 		end
 	else
 		error("bad argument #1 to \'SetVolume\' (number expected, got " .. typeof(p215) .. ")", 2)
@@ -722,8 +722,8 @@ end
 function v164.SetDirection(_, p217, p218)
 	-- upvalues: (copy) v_u_13, (copy) v_u_156
 	if typeof(p217) == "Vector3" then
-		if p218 ~= nil and typeof(p218) ~= "Tween0o" then
-			error("bad argument #2 to \'SetDirection\' (Tween0o expected, got " .. typeof(p218) .. ")", 2)
+		if p218 ~= nil and typeof(p218) ~= "TweenInfo" then
+			error("bad argument #2 to \'SetDirection\' (TweenInfo expected, got " .. typeof(p218) .. ")", 2)
 		end
 	else
 		error("bad argument #1 to \'SetDirection\' (Vector3 expected, got " .. typeof(p217) .. ")", 2)

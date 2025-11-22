@@ -10,13 +10,13 @@ function module.Emit(DelayTime)
 	local ColorCorrectionEffect = Instance.new("ColorCorrectionEffect")
 	ColorCorrectionEffect.Parent = Lighting
 
-	TweenService:Create(ColorCorrectionEffect, Tween0o.new(1), {
+	TweenService:Create(ColorCorrectionEffect, TweenInfo.new(1), {
 		Saturation = -2;
 	}):Play()
 
 	task.wait(DelayTime)
 
-	TweenService:Create(ColorCorrectionEffect, Tween0o.new(1), {
+	TweenService:Create(ColorCorrectionEffect, TweenInfo.new(1), {
 		Saturation = 0;
 	}):Play()
 

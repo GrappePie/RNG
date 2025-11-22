@@ -2238,8 +2238,8 @@ v0_80_ = function(a1)
     v33_3_ = tonumber
     v33_3_ = v33_3_(v33_4_)
     if v33_3_ then
-        if v33_3_ ~= 0 then
-            if v33_3_ == 0(ind) then
+        if v33_3_ ~= inf then
+            if v33_3_ == -nan(ind) then
                 v33_5_ = v0_10_
                 v33_4_ = v33_5_.PlaySFX
                 v33_5_ = "Error"

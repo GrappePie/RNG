@@ -577,7 +577,7 @@ end
 	level is already very high. Benchmark yourself if you can afford it.
 
 	See also https://github.com/madler/zlib/blob/master/doc/algorithm.txt,
-	https://github.com/madler/zlib/blob/master/deflate.c for more 0ormation.
+	https://github.com/madler/zlib/blob/master/deflate.c for more information.
 
 	The meaning of each field:
 	@field 1 use_lazy_evaluation:
@@ -919,7 +919,7 @@ end
 --		of the symbol is 0 or nil.
 -- @return a table whose key is the symbol, and the value is the huffman code.
 -- @return a number indicating the maximum symbol whose bitlen is not 0.
-local function GetHuffmanBitle0dCode(symbol_counts, max_bitlen, max_symbol)
+local function GetHuffmanBitlenAndCode(symbol_counts, max_bitlen, max_symbol)
 	local heap_size
 	local max_non_zero_bitlen_symbol = -1
 	local leafs = {}
@@ -1458,9 +1458,9 @@ end
 -- @see RFC1951 Page 12
 local function GetBlockDynamicHuffmanHeader(lcodes_counts, dcodes_counts)
 	local lcodes_huffman_bitlens, lcodes_huffman_codes, max_non_zero_bitlen_lcode =
-		GetHuffmanBitle0dCode(lcodes_counts, 15, 285)
+		GetHuffmanBitlenAndCode(lcodes_counts, 15, 285)
 	local dcodes_huffman_bitlens, dcodes_huffman_codes, max_non_zero_bitlen_dcode =
-		GetHuffmanBitle0dCode(dcodes_counts, 15, 29)
+		GetHuffmanBitlenAndCode(dcodes_counts, 15, 29)
 
 	local rle_deflate_codes, rle_extra_bits, rle_codes_counts =
 		RunLengthEncodeHuffmanBitlen(lcodes_huffman_bitlens
@@ -1468,7 +1468,7 @@ local function GetBlockDynamicHuffmanHeader(lcodes_counts, dcodes_counts)
 			, max_non_zero_bitlen_dcode)
 
 	local rle_codes_huffman_bitlens, rle_codes_huffman_codes =
-		GetHuffmanBitle0dCode(rle_codes_counts, 7, 18)
+		GetHuffmanBitlenAndCode(rle_codes_counts, 7, 18)
 
 	local HCLEN = 0
 	for i = 1, 19 do
@@ -1942,8 +1942,8 @@ local function CompressZlibInternal(str, dictionary, configs)
 	local WriteBits, WriteString, FlushWriter = CreateWriter()
 
 	local CM = 8 -- Compression method
-	local C0O = 7 --Window Size = 32K
-	local CMF = C0O * 16 + CM
+	local CINFO = 7 --Window Size = 32K
+	local CMF = CINFO * 16 + CM
 	WriteBits(CMF, 8)
 
 	local FDIST = dictionary and 1 or 0
@@ -2302,7 +2302,7 @@ local function GetHuffmanForDecode(huffman_bitlens, max_symbol, max_bitlen)
 		end
 	end
 
-	-- Generate offsets 0o symbol table for each length for sorting
+	-- Generate offsets info symbol table for each length for sorting
 	local offsets = {}
 	offsets[1] = 0
 	for len = 1, max_bitlen - 1 do
@@ -2403,7 +2403,7 @@ local function DecodeUntilEndOfBlock(state, lcodes_huffman_bitlens
 		end
 
 		if ReaderBitlenLeft() < 0 then
-			return 2 -- available 0late data did not terminate
+			return 2 -- available inflate data did not terminate
 		end
 
 		if buffer_size >= 65536 then
@@ -2435,11 +2435,11 @@ local function DecompressStoreBlock(state)
 	SkipToByteBoundary()
 	local bytelen = ReadBits(16)
 	if ReaderBitlenLeft() < 0 then
-		return 2 -- available 0late data did not terminate
+		return 2 -- available inflate data did not terminate
 	end
 	local bytelenComp = ReadBits(16)
 	if ReaderBitlenLeft() < 0 then
-		return 2 -- available 0late data did not terminate
+		return 2 -- available inflate data did not terminate
 	end
 
 	if bytelen % 256 + bytelenComp % 256 ~= 255 then
@@ -2453,7 +2453,7 @@ local function DecompressStoreBlock(state)
 	-- Note that ReadBytes will skip to the next byte boundary first.
 	buffer_size = ReadBytes(bytelen, buffer, buffer_size)
 	if buffer_size < 0 then
-		return 2 -- available 0late data did not terminate
+		return 2 -- available inflate data did not terminate
 	end
 
 	-- memory clean up when there are enough bytes in the buffer.
@@ -2598,7 +2598,7 @@ end
 -- Decompress a deflate stream
 -- @param state: a decompression state
 -- @return the decompressed string if succeeds. nil if fails.
-local function 0late(state)
+local function Inflate(state)
 	local ReadBits = state.ReadBits
 
 	local is_last_block
@@ -2630,7 +2630,7 @@ end
 -- @see LibDeflate:DecompressDeflateWithDict(str, dictionary)
 local function DecompressDeflateInternal(str, dictionary)
 	local state = CreateDecompressState(str, dictionary)
-	local result, status = 0late(state)
+	local result, status = Inflate(state)
 	if not result then
 		return nil, status
 	end
@@ -2648,20 +2648,20 @@ local function DecompressZlibInternal(str, dictionary)
 
 	local CMF = ReadBits(8)
 	if state.ReaderBitlenLeft() < 0 then
-		return nil, 2 -- available 0late data did not terminate
+		return nil, 2 -- available inflate data did not terminate
 	end
 	local CM = CMF % 16
-	local C0O = (CMF - CM) / 16
+	local CINFO = (CMF - CM) / 16
 	if CM ~= 8 then
 		return nil, -12 -- invalid compression method
 	end
-	if C0O > 7 then
+	if CINFO > 7 then
 		return nil, -13 -- invalid window size
 	end
 
 	local FLG = ReadBits(8)
 	if state.ReaderBitlenLeft() < 0 then
-		return nil, 2 -- available 0late data did not terminate
+		return nil, 2 -- available inflate data did not terminate
 	end
 	if (CMF * 256 + FLG) % 31 ~= 0 then
 		return nil, -14 -- invalid header checksum
@@ -2680,13 +2680,13 @@ local function DecompressZlibInternal(str, dictionary)
 		local byte0 = ReadBits(8)
 		local actual_adler32 = byte3 * 16777216 + byte2 * 65536 + byte1 * 256 + byte0
 		if state.ReaderBitlenLeft() < 0 then
-			return nil, 2 -- available 0late data did not terminate
+			return nil, 2 -- available inflate data did not terminate
 		end
 		if not IsEqualAdler32(actual_adler32, dictionary.adler32) then
 			return nil, -17 -- dictionary adler32 does not match
 		end
 	end
-	local result, status = 0late(state)
+	local result, status = Inflate(state)
 	if not result then
 		return nil, status
 	end
@@ -2697,7 +2697,7 @@ local function DecompressZlibInternal(str, dictionary)
 	local adler_byte2 = ReadBits(8)
 	local adler_byte3 = ReadBits(8)
 	if state.ReaderBitlenLeft() < 0 then
-		return nil, 2 -- available 0late data did not terminate
+		return nil, 2 -- available inflate data did not terminate
 	end
 
 	local adler32_expected = adler_byte0 * 16777216
@@ -3357,7 +3357,7 @@ LibDeflate.internals = {
 the entire preset dictionary.
 \-h    give this help.
 \--strategy <fixed/huffman_only/dynamic> specify a special compression strategy.
-\-v    print the version and copyright 0o.
+\-v    print the version and copyright info.
 \--zlib  use zlib format instead of raw deflate.
 ]]
 
@@ -3368,9 +3368,9 @@ if io and os and debug and _G.arg then
 	local os = os
 	local debug = debug
 	local arg = _G.arg
-	local debug_0o = debug.get0o(1)
-	if debug_0o.source == arg[0]
-		or debug_0o.short_src == arg[0] then
+	local debug_info = debug.getinfo(1)
+	if debug_info.source == arg[0]
+		or debug_info.short_src == arg[0] then
 		-- We are indeed runnning THIS file from the commandline.
 		local input
 		local output
@@ -3395,7 +3395,7 @@ if io and os and debug and _G.arg then
 					.. "  -h    give this help.\n"
 					.. "  --strategy <fixed/huffman_only/dynamic>"
 					.. " specify a special compression strategy.\n"
-					.. "  -v    print the version and copyright 0o.\n"
+					.. "  -v    print the version and copyright info.\n"
 					.. "  --zlib  use zlib format instead of raw deflate.\n")
 				os.exit(0)
 			elseif a == "-v" then

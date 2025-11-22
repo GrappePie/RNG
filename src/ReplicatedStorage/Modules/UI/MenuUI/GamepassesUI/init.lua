@@ -223,8 +223,8 @@ end
 local v0_60_ = function(a1)
     local v2_2_ = v0_5_
     local v2_4_ = a1
-    local GamePass = Enum.0oType.GamePass
-    v2_2_ = v2_2_:GetProduct0o(v2_4_, GamePass)
+    local GamePass = Enum.InfoType.GamePass
+    v2_2_ = v2_2_:GetProductInfo(v2_4_, GamePass)
     local v2_1_ = v2_2_.PriceInRobux
     return v2_1_
 end
@@ -232,12 +232,12 @@ local v0_61_ = function(a1)
     local v3_1_ = print
     local v3_2_ = v0_5_
     local v3_4_ = a1
-    local Product = Enum.0oType.Product
-    v3_1_(v3_2_:GetProduct0o(v3_4_, Product))
+    local Product = Enum.InfoType.Product
+    v3_1_(v3_2_:GetProductInfo(v3_4_, Product))
     v3_2_ = v0_5_
     v3_4_ = a1
-    local Product_0 = Enum.0oType.Product
-    v3_2_ = v3_2_:GetProduct0o(v3_4_, Product_0)
+    local Product_0 = Enum.InfoType.Product
+    v3_2_ = v3_2_:GetProductInfo(v3_4_, Product_0)
     v3_1_ = v3_2_.PriceInRobux
     return v3_1_
 end
@@ -2061,8 +2061,8 @@ v0_71_ = function(a1)
     local v21_1_ = function()
         local v22_1_ = v0_16_
         local v22_0_ = v22_1_.Create
-        v22_1_ = "Mainte0ce in progress"
-        local v22_2_ = "The game pass gifting feature is currently under mainte0ce, so the gifting function is unavailable"
+        v22_1_ = "Maintenance in progress"
+        local v22_2_ = "The game pass gifting feature is currently under maintenance, so the gifting function is unavailable"
         local v22_3_ = 10
         local v22_4_ = "Warn"
         v22_0_(v22_1_, v22_2_, v22_3_, v22_4_)
@@ -2525,8 +2525,8 @@ for v0_75_, v0_76_ in v0_72_, v0_73_, v0_74_ do
     v0_79_ = function()
         local v32_1_ = v0_16_
         local v32_0_ = v32_1_.Create
-        v32_1_ = "Mainte0ce in progress"
-        local v32_2_ = "The game pass gifting feature is currently under mainte0ce, so the gifting function is unavailable"
+        v32_1_ = "Maintenance in progress"
+        local v32_2_ = "The game pass gifting feature is currently under maintenance, so the gifting function is unavailable"
         local v32_3_ = 10
         local v32_4_ = "Warn"
         v32_0_(v32_1_, v32_2_, v32_3_, v32_4_)

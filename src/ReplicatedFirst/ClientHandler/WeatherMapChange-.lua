@@ -8,7 +8,7 @@
 	local HttpService = game:GetService("HttpService")
 	local TweenService = game:GetService("TweenService")
 
-	local Server0o = game:GetService("ReplicatedStorage"):WaitForChild("Server0o")
+	local ServerInfo = game:GetService("ReplicatedStorage"):WaitForChild("ServerInfo")
 
 	local Map = workspace:WaitForChild("Map")
 	local SkyParticles = workspace:WaitForChild("SkyParticles")
@@ -26,13 +26,13 @@
 	end
 
 	local function restructure()
-		local CurrentBiome = Server0o:GetAttribute("CurrentBiome")
+		local CurrentBiome = ServerInfo:GetAttribute("CurrentBiome")
 
-		local _Structures = color(HttpService:JSONDecode(Server0o:GetAttribute("Structures")))
-		local _Lighting = color(HttpService:JSONDecode(Server0o:GetAttribute("Lighting"))) :: any
+		local _Structures = color(HttpService:JSONDecode(ServerInfo:GetAttribute("Structures")))
+		local _Lighting = color(HttpService:JSONDecode(ServerInfo:GetAttribute("Lighting"))) :: any
 		local _Atmosphere = color(_Lighting.Atmosphere)
 
-		local Tween0ormation = Tween0o.new(_Lighting.TweenTime, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+		local TweenInformation = TweenInfo.new(_Lighting.TweenTime, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
 
 		_Lighting.Atmosphere = nil
 		_Lighting.TweenTime = nil
@@ -63,13 +63,13 @@
 			end
 		end
 
-		TweenService:Create(Atmosphere, Tween0ormation, _Atmosphere):Play()
-		TweenService:Create(Lighting, Tween0ormation, _Lighting):Play()
+		TweenService:Create(Atmosphere, TweenInformation, _Atmosphere):Play()
+		TweenService:Create(Lighting, TweenInformation, _Lighting):Play()
 	end
 
 	restructure()
 
-	Server0o:GetAttributeChangedSignal("Lighting"):Connect(restructure)
+	ServerInfo:GetAttributeChangedSignal("Lighting"):Connect(restructure)
 
 	return nil
 ]]

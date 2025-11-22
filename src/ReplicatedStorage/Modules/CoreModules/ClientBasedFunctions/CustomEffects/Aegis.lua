@@ -1,8 +1,8 @@
 local TweenService_upvr = game:GetService("TweenService")
-local Tween0o_new_result1_upvr_5 = Tween0o.new(0.5, Enum.EasingStyle.Quart)
-local Tween0o_new_result1_upvr_2 = Tween0o.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local Tween0o_new_result1_upvr = Tween0o.new(2, Enum.EasingStyle.Quart)
-local Tween0o_new_result1_upvr_3 = Tween0o.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut)
+local TweenInfo_new_result1_upvr_5 = TweenInfo.new(0.5, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_2 = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local TweenInfo_new_result1_upvr = TweenInfo.new(2, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_3 = TweenInfo.new(1, Enum.EasingStyle.Quart, Enum.EasingDirection.InOut)
 local RunService_upvr = game:GetService("RunService")
 local tbl_upvr_3 = {
 	BackgroundTransparency = 0.6;
@@ -25,7 +25,7 @@ local function v27_upvr(arg1, arg2, arg3)
 	ImageLabel_2_upvr.AnchorPoint = Vector2.new(0.5, 0.5)
 	ImageLabel_2_upvr.Size = UDim2.fromScale(var12, var12)
 	ImageLabel_2_upvr.ImageTransparency = 1
-	TweenService_upvr:Create(ImageLabel_2_upvr, Tween0o_new_result1_upvr_5, {
+	TweenService_upvr:Create(ImageLabel_2_upvr, TweenInfo_new_result1_upvr_5, {
 		ImageTransparency = 0;
 	}):Play()
 	local var14 = 50
@@ -41,7 +41,7 @@ local function v27_upvr(arg1, arg2, arg3)
 		while ImageLabel_2_upvr and ImageLabel_2_upvr.Parent do
 			if time_result1 + math.random(15, 20) / 10 - 0.5 <= time() and not ImageLabel_2_upvr:GetAttribute("Removing") then
 				ImageLabel_2_upvr:SetAttribute("Removing", true)
-				TweenService_upvr:Create(ImageLabel_2_upvr, Tween0o_new_result1_upvr_2, {
+				TweenService_upvr:Create(ImageLabel_2_upvr, TweenInfo_new_result1_upvr_2, {
 					Size = UDim2.fromScale(0, 0);
 				}):Play()
 				Debris_upvr:AddItem(ImageLabel_2_upvr, 0.5)
@@ -61,7 +61,7 @@ local function v37_upvr(arg1, arg2)
 	ImageLabel_3_upvr.ImageTransparency = 1
 	ImageLabel_3_upvr.Rotation = math.random(0, 360)
 	ImageLabel_3_upvr.AnchorPoint = Vector2.new(0.5, 0.5)
-	TweenService_upvr:Create(ImageLabel_3_upvr, Tween0o_new_result1_upvr_5, {
+	TweenService_upvr:Create(ImageLabel_3_upvr, TweenInfo_new_result1_upvr_5, {
 		ImageTransparency = 0.9;
 	}):Play()
 	local randint = math.random(2, 5)
@@ -85,7 +85,7 @@ local function v37_upvr(arg1, arg2)
 		while ImageLabel_3_upvr and ImageLabel_3_upvr.Parent do
 			if time_result1_2 + math.random(20, 30) / 10 - 0.5 <= time() and not ImageLabel_3_upvr:GetAttribute("Removing") then
 				ImageLabel_3_upvr:SetAttribute("Removing", true)
-				TweenService_upvr:Create(ImageLabel_3_upvr, Tween0o_new_result1_upvr_2, {
+				TweenService_upvr:Create(ImageLabel_3_upvr, TweenInfo_new_result1_upvr_2, {
 					ImageTransparency = 1;
 				}):Play()
 				Debris_upvr:AddItem(ImageLabel_3_upvr, 0.5)
@@ -110,7 +110,7 @@ local function v43_upvr(arg1, arg2, arg3, arg4)
 	ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 	ImageLabel.Position = UDim2.fromScale(0.5, 0.5)
 	ImageLabel.ZIndex = math.huge
-	TweenService_upvr:Create(ImageLabel, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(ImageLabel, TweenInfo_new_result1_upvr, {
 		Size = UDim2.fromScale(0.7, 0.7);
 		ImageTransparency = 1;
 	}):Play()
@@ -124,7 +124,7 @@ local function v48_upvr(arg1, arg2, arg3)
 	Frame_2.Position = UDim2.fromScale(-1, math.random(0, 100) / 100)
 	Instance.new("UIGradient", Frame_2).Transparency = NumberSequence.new(1, 0)
 	Frame_2.BackgroundTransparency = math.random(60, 90) / 100
-	TweenService_upvr:Create(Frame_2, Tween0o_new_result1_upvr_3, {
+	TweenService_upvr:Create(Frame_2, TweenInfo_new_result1_upvr_3, {
 		Position = UDim2.fromScale(1, Frame_2.Position.Y.Scale);
 	}):Play()
 	Debris_upvr:AddItem(Frame_2, 1)
@@ -137,15 +137,15 @@ local function v53_upvr(arg1, arg2, arg3)
 	Frame.Position = UDim2.fromScale(1, math.random(0, 100) / 100)
 	Instance.new("UIGradient", Frame).Transparency = NumberSequence.new(0, 1)
 	Frame.BackgroundTransparency = math.random(60, 90) / 100
-	TweenService_upvr:Create(Frame, Tween0o_new_result1_upvr_3, {
+	TweenService_upvr:Create(Frame, TweenInfo_new_result1_upvr_3, {
 		Position = UDim2.fromScale(-1, Frame.Position.Y.Scale);
 	}):Play()
 	Debris_upvr:AddItem(Frame, 1)
 end
 local StarterGui_upvr = game:GetService("StarterGui")
 local SFXs_upvr = game:GetService("ReplicatedStorage").Assets.SFXs
-local Tween0o_new_result1_upvr_4 = Tween0o.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
-local Tween0o_new_result1_upvr_6 = Tween0o.new(1, Enum.EasingStyle.Quart)
+local TweenInfo_new_result1_upvr_4 = TweenInfo.new(6, Enum.EasingStyle.Quart, Enum.EasingDirection.In)
+local TweenInfo_new_result1_upvr_6 = TweenInfo.new(1, Enum.EasingStyle.Quart)
 return function(arg1, arg2, arg3, arg4, arg5)
 	script:WaitForChild("Ambient"):Play()
 	local Blackboard_upvr = arg2.Blackboard
@@ -157,7 +157,7 @@ return function(arg1, arg2, arg3, arg4, arg5)
 	local var50_upvw = true
 	StarterGui_upvr:SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 	arg4.Visible = false
-	TweenService_upvr:Create(Blackboard_upvr, Tween0o_new_result1_upvr_5, tbl_upvr):Play()
+	TweenService_upvr:Create(Blackboard_upvr, TweenInfo_new_result1_upvr_5, tbl_upvr):Play()
 	Colorboard.Image = "http://www.roblox.com/asset/?id=12353440665"
 	Colorboard.ImageTransparency = 1
 	Colorboard.ImageColor3 = Color3.new(1, 1, 1)
@@ -172,7 +172,7 @@ return function(arg1, arg2, arg3, arg4, arg5)
 	Star.Visible = true
 	local clone_upvr = script:WaitForChild("Corners"):Clone()
 	clone_upvr.Parent = Blackboard_upvr
-	TweenService_upvr:Create(clone_upvr, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(clone_upvr, TweenInfo_new_result1_upvr, {
 		Size = UDim2.fromScale(0.97, 0.94);
 	}):Play()
 	local clone_upvr_2 = script:WaitForChild("CodeText"):Clone()
@@ -198,23 +198,23 @@ return function(arg1, arg2, arg3, arg4, arg5)
 			v37_upvr(Blackboard_upvr, Color3.fromRGB(74, 101, 255))
 		end
 	end)()
-	TweenService_upvr:Create(Star, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(Star, TweenInfo_new_result1_upvr, {
 		Size = UDim2.fromScale(0.6, 0.6);
 	}):Play()
 	StarSpinSpeed.Value = 5
-	TweenService_upvr:Create(StarSpinSpeed, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(StarSpinSpeed, TweenInfo_new_result1_upvr, {
 		Value = 1;
 	}):Play()
 	task.wait(3.23)
-	TweenService_upvr:Create(StarSpinSpeed, Tween0o_new_result1_upvr_4, {
+	TweenService_upvr:Create(StarSpinSpeed, TweenInfo_new_result1_upvr_4, {
 		Value = 4;
 	}):Play()
-	TweenService_upvr:Create(Star, Tween0o_new_result1_upvr_4, {
+	TweenService_upvr:Create(Star, TweenInfo_new_result1_upvr_4, {
 		Size = UDim2.fromScale(1.5, 1.5);
 	}):Play()
 	task.wait(4)
 	arg4.Visible = true
-	TweenService_upvr:Create(Colorboard, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+	TweenService_upvr:Create(Colorboard, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
 		ImageTransparency = 0;
 	}):Play()
 	v43_upvr(Blackboard_upvr, Color3.fromRGB(74, 101, 255), 0.6, "rbxassetid://137506152729909")
@@ -232,16 +232,16 @@ return function(arg1, arg2, arg3, arg4, arg5)
 	if Colorboard:FindFirstChildOfClass("UIGradient") then
 		Colorboard:FindFirstChildOfClass("UIGradient"):Destroy()
 	end
-	TweenService_upvr:Create(Colorboard, Tween0o.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+	TweenService_upvr:Create(Colorboard, TweenInfo.new(2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
 		ImageTransparency = 1;
 	}):Play()
 	ShakeAmount.Value = 0.02
-	TweenService_upvr:Create(ShakeAmount, Tween0o_new_result1_upvr, {
+	TweenService_upvr:Create(ShakeAmount, TweenInfo_new_result1_upvr, {
 		Value = 0;
 	}):Play()
 	arg4.Position = UDim2.fromScale(0.5, 0.5)
 	arg4.Size = UDim2.fromScale(0.6, 0.2)
-	TweenService_upvr:Create(arg4, Tween0o_new_result1_upvr_6, {
+	TweenService_upvr:Create(arg4, TweenInfo_new_result1_upvr_6, {
 		Size = UDim2.fromScale(0.4, 0.1);
 	}):Play()
 	Blackboard_upvr.BackgroundTransparency = 1

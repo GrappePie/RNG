@@ -17,7 +17,7 @@ function module.GetValue(arg1, arg2) -- Line 78
 		[3]: module_2_upvr (readonly)
 	]]
 	if arg2 == "" then
-		print(debug.0o(2, "sl"))
+		print(debug.info(2, "sl"))
 	end
 	if module_5_upvr[arg2] then
 		return module_5_upvr[arg2]
